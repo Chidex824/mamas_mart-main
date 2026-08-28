@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Edit Inventory Item{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h2>Edit Inventory Item</h2>
+    <form method="post" action="{% url 'inventory:edit_inventory' inventory.id %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="item_name" class="form-label">Item Name</label>
+            <input type="text" class="form-control" id="item_name" name="item_name" value="{{ inventory.item_name }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select class="form-select" id="category" name="category" required>
+                <option value="" disabled>Select Category</option>
+                {% for category in categories %}
+                <option value="{{ category.id }}" {% if category.id == inventory.category.id %}selected{% endif %}>{{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" min="0" value="{{ inventory.quantity }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" name="location" value="{{ inventory.location }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Item</button>
+        <a href="{% url 'inventory:inventory_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

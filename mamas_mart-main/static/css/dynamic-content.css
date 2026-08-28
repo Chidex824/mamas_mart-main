@@ -1,0 +1,16 @@
+.sidebar-link.active {
+    background-color: var(--bs-primary);
+    color: white !important;
+}
+
+.sidebar-link.active i {
+    color: white !important;
+}
+
+#dynamic-content {
+    transition: opacity 0.3s ease;
+}
+
+#dynamic-content.loading {
+    opacity: 0.6;
+}

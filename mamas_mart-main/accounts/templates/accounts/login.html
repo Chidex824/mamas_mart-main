@@ -1,0 +1,83 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Login - Mama's Mart{% endblock %}
+
+{% block body %}
+<div class="page-wrapper auth-page" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+  data-sidebar-position="fixed" data-header-position="fixed">
+  <div class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="d-flex align-items-center justify-content-center w-100">
+      <div class="row justify-content-center w-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+          <div class="card mb-0">
+            <div class="card-body">
+              <a href="/" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                <img src="{% static 'images/logos/dark-logo.svg' %}" width="180" alt="">
+              </a>
+              <div class="text-center mb-4">
+                <h4 class="mb-2">Staff Login</h4>
+                <p class="text-muted">Please sign in to manage Mama's Mart</p>
+              </div>
+              <form method="post" id="loginForm">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="id_username" class="form-label">Username</label>
+                  <input type="text" name="username" class="form-control {% if messages %}is-invalid{% endif %}" 
+                         id="id_username" required autocomplete="username" autofocus
+                         placeholder="Enter your username">
+                </div>
+                <div class="mb-4">
+                  <label for="id_password" class="form-label">Password</label>
+                  <div class="input-group has-validation">
+                    <input type="password" name="password" class="form-control {% if messages %}is-invalid{% endif %}" 
+                           id="id_password" required autocomplete="current-password"
+                           placeholder="Enter your password">
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                      <i class="ti ti-eye"></i>
+                    </button>
+                    {% if messages %}
+                    <div class="invalid-feedback">
+                      Please check your username and password and try again.
+                    </div>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                  <div class="form-check">
+                    <input class="form-check-input primary" type="checkbox" name="remember" id="remember">
+                    <label class="form-check-label text-dark" for="remember">
+                      Remember me
+                    </label>
+                  </div>
+                  <a class="text-primary fw-bold" href="{% url 'accounts:password_reset' %}">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In to Dashboard</button>
+                <div class="d-flex align-items-center justify-content-center mb-3">
+                  <p class="fs-4 mb-0">First time setup?</p>
+                  <a class="text-primary fw-bold ms-2" href="{% url 'accounts:register' %}">Create Admin Account</a>
+                </div>
+                <div class="text-center text-muted mb-4">
+                  <small>Existing administrators can also register new staff members after logging in</small>
+                </div>
+                {% if messages %}
+                <div class="alert alert-danger mb-4">
+                  {% for message in messages %}
+                    {{ message }}
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/auth.js' %}"></script>
+{% endblock %}

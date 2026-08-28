@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% block title %}Transfer Product{% endblock %}
+
+{% block body %}
+<h2>Transfer Product</h2>
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="product" class="form-label">Product</label>
+        <select id="product" name="product" class="form-select" required>
+            <option value="" selected disabled>Select a product</option>
+            {% for product in products %}
+            <option value="{{ product.id }}">{{ product.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="from_location" class="form-label">From Location</label>
+        <select id="from_location" name="from_location" class="form-select" required>
+            <option value="" selected disabled>Select source location</option>
+            {% for location in locations %}
+            <option value="{{ location }}">{{ location }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="to_location" class="form-label">To Location</label>
+        <select id="to_location" name="to_location" class="form-select" required>
+            <option value="" selected disabled>Select destination location</option>
+            {% for location in locations %}
+            <option value="{{ location }}">{{ location }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" id="quantity" name="quantity" class="form-control" min="1" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Transfer</button>
+</form>
+{% endblock %}

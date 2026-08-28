@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% block title %}Inventory Details{% endblock %}
+{% block body %}
+<div class="container mt-4">
+    <h2>Inventory Item Details</h2>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">{{ inventory.item_name }}</h4>
+            <p><strong>Category:</strong> {{ inventory.category.name }}</p>
+            <p><strong>Supplier:</strong> {{ inventory.supplier }}</p>
+            <p><strong>Price:</strong> ₦{{ inventory.price }}</p>
+            <p><strong>Stock:</strong> {{ inventory.quantity }}</p>
+            <p><strong>Location:</strong> {{ inventory.location }}</p>
+            <p><strong>Description:</strong> {{ inventory.description }}</p>
+            {% if inventory.image %}
+            <img src="{{ inventory.image.url }}" alt="Product Image" style="max-width:200px; max-height:200px;">
+            {% endif %}
+        </div>
+    </div>
+    <a href="{% url 'inventory:inventory_list' %}" class="btn btn-secondary">Back to Inventory List</a>
+</div>
+{% endblock %}

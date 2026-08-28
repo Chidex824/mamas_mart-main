@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% block title %}User Settings - Mama's Mart{% endblock %}
+
+{% block body %}
+<h1>User Settings</h1>
+<p>Manage your account settings and preferences here.</p>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <h3>Profile Information</h3>
+    {{ profile_form.as_p }}
+
+    <h3>Change Password</h3>
+    {{ password_form.as_p }}
+
+    <h3>Notification Preferences</h3>
+    {{ notification_form.as_p }}
+
+    <h3>Account Preferences</h3>
+    {{ preferences_form.as_p }}
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+{% endblock %}

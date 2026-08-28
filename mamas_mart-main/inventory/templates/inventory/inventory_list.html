@@ -1,0 +1,110 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Inventory{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <!-- Inventory content only -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0">Inventory</h3>
+        <div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addInventoryModal">
+                <i class="bi bi-plus-lg"></i> Add Inventory
+            </button>
+        </div>
+    </div>
+
+    <!-- Search and filter -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <input type="text" class="form-control w-50" placeholder="Search anything here" id="inventorySearch">
+        <button class="btn btn-outline-secondary">
+            <i class="bi bi-funnel"></i> Filter
+        </button>
+    </div>
+
+    <!-- Inventory table -->
+    {% include 'inventory/inventory_table.html' %}
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example" class="mt-3">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Add Inventory Modal -->
+    <div class="modal fade" id="addInventoryModal" tabindex="-1" aria-labelledby="addInventoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addInventoryModalLabel">Add Inventory Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" enctype="multipart/form-data" action="{% url 'inventory:add_inventory' %}" id="addInventoryForm" novalidate>
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Product Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="item_name" required>
+                                <div class="invalid-feedback">Please enter a product name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Category <span class="text-danger">*</span></label>
+                                <select class="form-select" name="category" required>
+                                    <option value="">Select Category</option>
+                                    {% for category in categories %}
+                                    <option value="{{ category.id }}">{{ category.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Supplier <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="supplier" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Price <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">₦</span>
+                                    <input type="number" class="form-control" name="price" step="0.01" min="0" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Stock <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" name="quantity" min="0" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Location <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="location" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Description</label>
+                                <textarea class="form-control" name="description" rows="3"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Product Image</label>
+                                <input type="file" class="form-control" name="image" accept="image/*">
+                                <div class="image-preview mt-2" style="display: none;">
+                                    <img src="#" alt="Preview" style="max-width: 200px; max-height: 200px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer mt-3">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Add Item</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

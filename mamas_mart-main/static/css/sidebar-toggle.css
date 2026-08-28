@@ -1,0 +1,111 @@
+/* Mini Sidebar styles */
+[data-sidebartype="mini-sidebar"] .left-sidebar {
+    width: 5rem;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+[data-sidebartype="full"] .left-sidebar {
+    width: 260px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.brand-logo {
+    padding: 15px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo .sidebar-toggle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--bs-secondary);
+    transition: all 0.2s ease;
+}
+
+.brand-logo .sidebar-toggle:hover {
+    background-color: var(--bs-light);
+    color: var(--bs-primary);
+}
+
+[data-sidebartype="mini-sidebar"] .brand-logo .sidebar-toggle i {
+    transform: rotate(180deg);
+}
+
+.brand-logo .sidebar-toggle i {
+    transition: transform 0.3s ease;
+    font-size: 1.25rem;
+}
+
+.sidebar-toggle .ti-menu-2 {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-toggle .ti-menu-2 {
+    transform: rotate(180deg);
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav .hide-menu,
+[data-sidebartype="mini-sidebar"] .sidebar-nav .nav-small-cap,
+[data-sidebartype="mini-sidebar"] .logo-img img {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+[data-sidebartype="full"] .sidebar-nav .hide-menu,
+[data-sidebartype="full"] .sidebar-nav .nav-small-cap,
+[data-sidebartype="full"] .logo-img img {
+    display: block;
+    opacity: 1;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav .sidebar-item {
+    text-align: center;
+}
+
+[data-sidebartype="mini-sidebar"] .left-sidebar:hover .sidebar-nav .sidebar-item {
+    text-align: left;
+}
+
+/* Transition effects */
+.left-sidebar,
+.logo-img img,
+.sidebar-nav .hide-menu,
+.sidebar-nav .nav-small-cap,
+.body-wrapper {
+    transition: all 0.3s ease;
+}
+
+.sidebar-transitioning * {
+    pointer-events: none;
+}
+
+.sidebar-transitioning .left-sidebar {
+    transition: width 0.3s ease;
+}
+
+/* Logo adjustment for mini sidebar */
+[data-sidebartype="mini-sidebar"] .brand-logo {
+    justify-content: center;
+    padding: 0;
+}
+
+[data-sidebartype="mini-sidebar"] .left-sidebar:hover .brand-logo {
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+/* Adjust main content area */
+[data-sidebartype="mini-sidebar"] .body-wrapper {
+    margin-left: 5rem;
+}
+
+.body-wrapper {
+    transition: margin-left 0.3s ease;
+}

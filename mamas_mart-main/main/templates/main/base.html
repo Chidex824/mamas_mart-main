@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Mama's Mart - Inventory Management{% endblock %}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logos/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'libs/simplebar/dist/simplebar.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/sidebar-toggle.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/sidebar-submenu.css' %}">
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+    
+    <!-- Core JS -->
+    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'libs/simplebar/dist/simplebar.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+    <script src="{% static 'js/sidebarmenu.js' %}"></script>
+    <script src="{% static 'js/sidebar-toggle.js' %}"></script>
+    <script src="{% static 'js/app.min.js' %}"></script>
+</body>
+
+</html>

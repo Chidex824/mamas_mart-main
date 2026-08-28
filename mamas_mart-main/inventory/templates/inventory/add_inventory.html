@@ -1,0 +1,65 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Add Inventory Item{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h2>Add Inventory Item</h2>
+    <form method="post" enctype="multipart/form-data" action="{% url 'inventory:add_inventory' %}" id="addInventoryForm" novalidate>
+        {% csrf_token %}
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Product Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="item_name" required>
+                <div class="invalid-feedback">Please enter a product name.</div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Category <span class="text-danger">*</span></label>
+                <select class="form-select" name="category" required>
+                    <option value="">Select Category</option>
+                    {% for category in categories %}
+                    <option value="{{ category.id }}">{{ category.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Supplier <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="supplier" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Price <span class="text-danger">*</span></label>
+                <div class="input-group">
+                    <span class="input-group-text">₦</span>
+                    <input type="number" class="form-control" name="price" step="0.01" min="0" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Stock <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" name="quantity" min="0" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Location <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="location" required>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" name="description" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Product Image</label>
+                <input type="file" class="form-control" name="image" accept="image/*">
+                <div class="image-preview mt-2" style="display: none;">
+                    <img src="#" alt="Preview" style="max-width: 200px; max-height: 200px;">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer mt-3">
+            <a href="{% url 'inventory:inventory_list' %}" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                Add Item
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% block title %}Invoice - Mama's Mart{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Invoices</h1>
+    {% if purchases %}
+    <div class="table-responsive">
+        <table class="table align-middle table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Unit Cost</th>
+                    <th scope="col">Total Amount</th>
+                    <th scope="col">Supplier</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for purchase in purchases %}
+                <tr>
+                    <td>{{ forloop.counter|stringformat:"02d" }}</td>
+                    <td>{{ purchase.product.name }}</td>
+                    <td>{{ purchase.quantity }}</td>
+                    <td>{{ purchase.unit_cost }}</td>
+                    <td>{{ purchase.total_amount }}</td>
+                    <td>{{ purchase.supplier.name }}</td>
+                    <td>{{ purchase.date|date:"Y-m-d H:i" }}</td>
+                    <td>{{ purchase.notes }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p>No invoices found.</p>
+    {% endif %}
+</div>
+{% endblock %}

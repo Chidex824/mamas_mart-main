@@ -1,0 +1,60 @@
+<div class="table-responsive">
+    <table class="table align-middle table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox" id="selectAll"></th>
+                <th scope="col">No</th>
+                <th scope="col">Product</th>
+                <th scope="col">Product ID</th>
+                <th scope="col">Category</th>
+                <th scope="col">Location</th>
+                <th scope="col">Available</th>
+                <th scope="col">Reserved</th>
+                <th scope="col">On Hand</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for inventory in inventories %}
+            <tr>
+                <td><input type="checkbox" name="selectItem" value="{{ inventory.id }}"></td>
+                <td>{{ forloop.counter|stringformat:"02d" }}</td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img src="{{ inventory.product_image_url|default:'/static/images/default-product.png' }}" alt="Product Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                        <span>{{ inventory.item_name }}</span>
+                    </div>
+                </td>
+                <td>#LWLI{{ inventory.id|stringformat:"05d" }}</td>
+                <td>
+                    <span class="badge bg-secondary text-white">
+                        {{ inventory.category.name }}
+                    </span>
+                </td>
+                <td>{{ inventory.location }}</td>
+                <td>{{ inventory.quantity }}</td>
+                <td>{{ inventory.reserved_quantity|default:"0" }}</td>
+                <td>{{ inventory.on_hand_quantity|default:inventory.quantity }}</td>
+                <td>
+                    <a href="{% url 'inventory:view_inventory' inventory.id %}" class="btn btn-sm btn-info me-1" title="View">
+                        <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="{% url 'inventory:edit_inventory' inventory.id %}" class="btn btn-sm btn-primary me-1" title="Edit">
+                        <i class="bi bi-pencil"></i>
+                    </a>
+                    <form action="{% url 'inventory:delete_inventory' inventory.id %}" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-sm btn-danger" title="Delete">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="10" class="text-center">No inventory items found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

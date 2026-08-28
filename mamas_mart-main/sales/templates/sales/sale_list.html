@@ -1,0 +1,193 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags static %}
+{% block title %}Sales List{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <div class="body-wrapper p-4">
+        <div class="card shadow-sm rounded-4">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2>Sales List</h2>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSaleModal">
+                        Add Sale
+                    </button>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sale ID</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Date</th>
+                            <th>Invoice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for sale in sales %}
+                        <tr>
+                            <td>{{ sale.id }}</td>
+                            <td>{{ sale.product.name }}</td>
+                            <td>{{ sale.quantity }}</td>
+                            <td>{{ sale.price }}</td>
+                            <td>{{ sale.date }}</td>
+                            <td>
+                                <a href="{% url 'sales:edit' sale.id %}" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="{% url 'sales:delete' sale.id %}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this sale?');">Delete</a>
+                                <a href="{% url 'inventory:invoice_with_id' sale.id %}" target="_blank" class="btn btn-sm btn-outline-secondary">Generate Invoice</a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="6">No sales found.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Add Sale Modal -->
+        <div class="modal fade" id="addSaleModal" tabindex="-1" aria-labelledby="addSaleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addSaleModalLabel">Add Sale</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="{% url 'sales:add' %}">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <button type="submit" class="btn btn-primary">Add Sale</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Sale Modal -->
+        <div class="modal fade" id="editSaleModal" tabindex="-1" aria-labelledby="editSaleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editSaleModalLabel">Edit Sale</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editSaleForm">
+                            {% csrf_token %}
+                            <input type="hidden" name="sale_id" id="editSaleId">
+                            <div class="mb-3">
+                                <label for="editProduct" class="form-label">Product</label>
+                                <input type="text" class="form-control" name="product" id="editProduct" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editQuantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" name="quantity" id="editQuantity" min="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editPrice" class="form-label">Price</label>
+                                <input type="number" class="form-control" name="price" id="editPrice" step="0.01" min="0" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Sale Modal -->
+        <div class="modal fade" id="deleteSaleModal" tabindex="-1" aria-labelledby="deleteSaleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteSaleModalLabel">Delete Sale</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this sale?</p>
+                        <form id="deleteSaleForm">
+                            {% csrf_token %}
+                            <input type="hidden" name="sale_id" id="deleteSaleId">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Open Edit Modal and populate fields
+$(document).on('click', '.btn-warning', function(e) {
+    e.preventDefault();
+    var row = $(this).closest('tr');
+    var saleId = row.find('td:first').text();
+    var product = row.find('td:nth-child(2)').text();
+    var quantity = row.find('td:nth-child(3)').text();
+    var price = row.find('td:nth-child(4)').text();
+    $('#editSaleId').val(saleId);
+    $('#editProduct').val(product);
+    $('#editQuantity').val(quantity);
+    $('#editPrice').val(price);
+    $('#editSaleModal').modal('show');
+});
+
+// Open Delete Modal
+$(document).on('click', '.btn-danger', function(e) {
+    e.preventDefault();
+    var row = $(this).closest('tr');
+    var saleId = row.find('td:first').text();
+    $('#deleteSaleId').val(saleId);
+    $('#deleteSaleModal').modal('show');
+});
+
+// AJAX for Edit Sale
+$('#editSaleForm').submit(function(e) {
+    e.preventDefault();
+    var saleId = $('#editSaleId').val();
+    var quantity = $('#editQuantity').val();
+    var price = $('#editPrice').val();
+    $.ajax({
+        url: '/sales/edit/' + saleId + '/',
+        type: 'POST',
+        data: {
+            'quantity': quantity,
+            'price': price,
+            'csrfmiddlewaretoken': $('input[name="csrfmiddlewaretoken"]').val()
+        },
+        success: function() {
+            location.reload();
+        }
+    });
+});
+
+// AJAX for Delete Sale
+$('#deleteSaleForm').submit(function(e) {
+    e.preventDefault();
+    var saleId = $('#deleteSaleId').val();
+    $.ajax({
+        url: '/sales/delete/' + saleId + '/',
+        type: 'POST',
+        data: {
+            'csrfmiddlewaretoken': $('input[name="csrfmiddlewaretoken"]').val()
+        },
+        success: function() {
+            location.reload();
+        }
+    });
+});
+</script>
+{% endblock %}

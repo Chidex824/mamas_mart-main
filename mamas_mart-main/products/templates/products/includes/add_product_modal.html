@@ -1,0 +1,70 @@
+<!-- Add Product Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post" enctype="multipart/form-data" id="addProductForm" action="{% url 'products:add_product' %}" novalidate>
+                {% csrf_token %}
+                <input type="hidden" name="action" value="add_product">
+                <div class="modal-body">
+                    <!-- Error message container -->
+                    <div class="alert alert-danger d-none" id="addProductError"></div>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Product Name <span class="text-danger">*</span></label>
+                            <select class="form-select" name="inventory_item" required>
+                                <option value="">Select Product from Inventory</option>
+                                {% for item in inventory_items %}
+                                <option value="{{ item.id }}">{{ item.item_name }}</option>
+                                {% endfor %}
+                            </select>
+                            <div class="invalid-feedback">Please select a product from inventory.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Category <span class="text-danger">*</span></label>
+                            <select class="form-select" name="category" required>
+                                <option value="">Select Category</option>
+                                {% for category in categories %}
+                                <option value="{{ category.id }}">{{ category.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Price <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text">₦</span>
+                                <input type="number" class="form-control" name="price" step="0.01" min="0" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Stock <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" name="stock" min="0" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" name="description" rows="3"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Product Image</label>
+                            <input type="file" class="form-control" name="image" accept="image/*">
+                            <div class="image-preview mt-2" style="display: none;">
+                                <img src="#" alt="Preview" style="max-width: 200px; max-height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        Add Product
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
