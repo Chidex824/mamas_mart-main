@@ -20,12 +20,28 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8&b(_ii@(o#(2*l0hwna_wb5i^v-iku-wi95ncag6zw619gnhs'
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY',
+    '8x!3r$@#m7v^l&b2c8d4q0p9z!k6t$y1g5u8h2m4n6p7r9w0q3s5d7f1v9k2a6'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False').lower() in {'1', 'true', 'yes', 'on'}
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get(
+    'ALLOWED_HOSTS',
+    'localhost,127.0.0.1,[::1]'
+).split(',')
+
+USE_HTTPS = os.environ.get('USE_HTTPS', 'False').lower() in {'1', 'true', 'yes', 'on'}
+
+SECURE_HSTS_SECONDS = 31536000 if USE_HTTPS else 0
+SECURE_HSTS_INCLUDE_SUBDOMAINS = USE_HTTPS
+SECURE_HSTS_PRELOAD = USE_HTTPS
+SECURE_SSL_REDIRECT = USE_HTTPS
+SESSION_COOKIE_SECURE = USE_HTTPS
+CSRF_COOKIE_SECURE = USE_HTTPS
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') if USE_HTTPS else None
 
 
 # Application definition
@@ -82,10 +98,20 @@ WSGI_APPLICATION = 'mamas_mart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+DB_NAME = os.environ.get('DB_NAME', 'mamas_mart')
+DB_USER = os.environ.get('DB_USER', 'postgres')
+DB_PASSWORD = os.environ.get('DB_PASSWORD', 'postgres')
+DB_HOST = os.environ.get('DB_HOST', 'localhost')
+DB_PORT = os.environ.get('DB_PORT', '5432')
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
     }
 }
 

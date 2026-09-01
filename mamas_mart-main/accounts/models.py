@@ -12,15 +12,6 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
-class Department(models.Model):
-    """
-    Department model for staff assignment
-    """
-    name = models.CharField(max_length=100, unique=True)
-
-    def __str__(self):
-        return self.name
-
 
 class Role(models.Model):
     """

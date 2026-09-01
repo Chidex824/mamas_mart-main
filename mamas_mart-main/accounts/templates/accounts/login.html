@@ -1,3 +1,4 @@
+-- Active: 1787888630822@@127.0.0.1@3306
 {% extends 'main/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -7,34 +8,29 @@
 {% block body %}
 <div class="page-wrapper auth-page" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
   data-sidebar-position="fixed" data-header-position="fixed">
-  <div class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+  <div class="position-relative overflow-hidden min-vh-100 d-flex align-items-center justify-content-center auth-background">
     <div class="d-flex align-items-center justify-content-center w-100">
       <div class="justify-content-center w-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
-          <div class="card mb-0">
-            <div class="card-body">
-              <a href="/" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                <img src="{% static 'images/logos/dark-logo.svg' %}" width="180" alt="">
-              </a>
-              <div class="text-center mb-4">
-                <h4 class="mb-2">Staff Login</h4>
-                <p class="text-muted">Please sign in to manage Mama's Mart</p>
-              </div>
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4 mx-auto">
+          <div class="card auth-card">
+            <div class="card-body px-4 py-4">
+              <h4 class="text-center auth-title">Login</h4>
+
               <form method="post" id="loginForm">
                 {% csrf_token %}
                 <div class="mb-3">
-                  <label for="id_username" class="form-label">Username</label>
-                  <input type="text" name="username" class="form-control {% if messages %}is-invalid{% endif %}" 
+                  <label for="id_username" class="form-label text-dark small-label">Username</label>
+                  <input type="text" name="username" class="form-control custom-input {% if messages %}is-invalid{% endif %}" 
                          id="id_username" required autocomplete="username" autofocus
                          placeholder="Enter your username">
                 </div>
                 <div class="mb-4">
-                  <label for="id_password" class="form-label">Password</label>
+                  <label for="id_password" class="form-label text-dark small-label">Password</label>
                   <div class="input-group has-validation">
-                    <input type="password" name="password" class="form-control {% if messages %}is-invalid{% endif %}" 
+                    <input type="password" name="password" class="form-control custom-input {% if messages %}is-invalid{% endif %}" 
                            id="id_password" required autocomplete="current-password"
                            placeholder="Enter your password">
-                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                    <button class="btn btn-outline-secondary password-toggle" type="button" id="togglePassword">
                       <i class="ti ti-eye"></i>
                     </button>
                     {% if messages %}
@@ -44,30 +40,29 @@
                     {% endif %}
                   </div>
                 </div>
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                  <div class="form-check">
-                    <input class="form-check-input primary" type="checkbox" name="remember" id="remember">
-                    <label class="form-check-label text-dark" for="remember">
-                      Remember me
-                    </label>
+
+                <div class="d-flex align-items-center justify-content-between mb-4 small-login-row">
+                  <div class="form-check d-flex align-items-center gap-2">
+                    <input class="form-check-input custom-checkbox" type="checkbox" name="remember" id="remember">
+                    <label class="form-check-label text-dark" for="remember">Remember me</label>
                   </div>
-                  <a class="text-primary fw-bold" href="{% url 'accounts:password_reset' %}">Forgot Password?</a>
+                  <a class="text-primary fw-semibold" href="{% url 'accounts:password_reset' %}">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In to Dashboard</button>
-                <div class="d-flex align-items-center justify-content-center mb-3">
-                  <p class="fs-4 mb-0">First time setup?</p>
-                  <a class="text-primary fw-bold ms-2" href="{% url 'accounts:register' %}">Create Admin Account</a>
-                </div>
-                <div class="text-center text-muted mb-4">
-                  <small>Existing administrators can also register new staff members after logging in</small>
-                </div>
+
+                <button type="submit" class="btn w-100 auth-submit-btn">Login</button>
+
                 {% if messages %}
-                <div class="alert alert-danger mb-4">
+                <div class="alert alert-danger mt-3 mb-0">
                   {% for message in messages %}
                     {{ message }}
                   {% endfor %}
                 </div>
                 {% endif %}
+
+                <div class="text-center mt-4 small-login-row">
+                  <span class="text-dark">New user?</span>
+                  <a class="text-primary fw-semibold ms-2" href="{% url 'accounts:register' %}">Create account</a>
+                </div>
               </form>
             </div>
           </div>
@@ -81,3 +76,84 @@
 {% block extra_js %}
 <script src="{% static 'js/auth.js' %}"></script>
 {% endblock %}
+
+<style>
+  .auth-background {
+    background: linear-gradient(135deg, #4cb4d6 0%, #7f9ae8 38%, #c17ae6 100%);
+  }
+
+  .auth-card {
+    width: 100%;
+    max-width: 480px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 12px;
+    box-shadow: 0 20px 45px rgba(27, 31, 66, 0.15);
+    background: rgba(255,255,255,0.96);
+  }
+
+  .auth-title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .small-label {
+    font-size: 0.83rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+
+  .custom-input {
+    height: 42px;
+    border: 1px solid #d6d9e0;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: none;
+    font-size: 0.94rem;
+    color: #333;
+  }
+
+  .custom-input:focus {
+    border-color: #8ab7ff;
+    box-shadow: 0 0 0 0.15rem rgba(109, 146, 255, 0.15);
+  }
+
+  .password-toggle {
+    border-color: #d6d9e0;
+    color: #58677d;
+    background: #fff;
+  }
+
+  .custom-checkbox {
+    width: 0.95rem;
+    height: 0.95rem;
+    margin-top: 0;
+    border-color: #9aa6bb;
+  }
+
+  .auth-submit-btn {
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #5abef4 0%, #7d7fe6 52%, #be67d7 100%);
+    color: white;
+    font-weight: 600;
+    height: 46px;
+    box-shadow: 0 8px 18px rgba(118, 93, 240, 0.25);
+  }
+
+  .auth-submit-btn:hover {
+    color: white;
+    filter: brightness(1.02);
+  }
+
+  .small-login-row {
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 576px) {
+    .auth-card {
+      max-width: 92vw;
+    }
+  }
+</style>

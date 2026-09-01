@@ -7,98 +7,72 @@
 {% block body %}
 <div class="page-wrapper auth-page" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
   data-sidebar-position="fixed" data-header-position="fixed">
-  <div class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+  <div class="position-relative overflow-hidden min-vh-100 d-flex align-items-center justify-content-center auth-background">
     <div class="d-flex align-items-center justify-content-center w-100">
       <div class="row justify-content-center w-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
           <div class="card mb-0 register-card">
-            <div class="card-body">
-              <a href="/" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                <img src="{% static 'images/logos/dark-logo.svg' %}" width="180" alt="">
-              </a>
-              <div class="text-center mb-4">
-                <h4 class="mb-2">Create An Account</h4>
-              </div>
+            <div class="card-body px-4 py-4">
+              <h4 class="mb-4 text-center registration-title">Registration</h4>
+
               <form method="post" id="registerForm" novalidate>
                 {% csrf_token %}
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <label for="id_first_name" class="form-label">First Name <span class="text-danger">*</span></label>
-                    <input type="text" name="first_name" class="form-control" id="id_first_name" required 
-                           pattern="[A-Za-z ]+" title="Please enter a valid name (letters and spaces only)">
-                    <div class="invalid-feedback">Please enter your first name (letters only)</div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="id_first_name" class="form-label text-dark small-label">Full Name</label>
+                    <input type="text" name="first_name" class="form-control custom-input" id="id_first_name" placeholder="Enter your name" required>
+                    <input type="hidden" name="last_name" id="id_last_name" value="">
                   </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="id_last_name" class="form-label">Last Name <span class="text-danger">*</span></label>
-                    <input type="text" name="last_name" class="form-control" id="id_last_name" required
-                           pattern="[A-Za-z ]+" title="Please enter a valid name (letters and spaces only)">
-                    <div class="invalid-feedback">Please enter your last name (letters only)</div>
+                  <div class="col-md-6">
+                    <label for="id_username" class="form-label text-dark small-label">Username</label>
+                    <input type="text" name="username" class="form-control custom-input" id="id_username" placeholder="Enter your username" required>
                   </div>
-                </div>
-                <div class="mb-3">
-                  <label for="id_username" class="form-label">Username <span class="text-danger">*</span></label>
-                  <input type="text" name="username" class="form-control" id="id_username" required
-                         pattern="^[a-zA-Z0-9_]{3,}$" title="Username must be at least 3 characters (letters, numbers, and underscore only)">
-                  <div class="invalid-feedback">Username must be at least 3 characters (letters, numbers, and underscore only)</div>
-                </div>
-                <div class="mb-3">
-                  <label for="id_email" class="form-label">Email Address <span class="text-danger">*</span></label>
-                  <input type="email" name="email" class="form-control" id="id_email" required>
-                  <div class="invalid-feedback">Please enter a valid email address</div>
-                </div>
-                <div class="mb-3">
-                  <label for="id_password1" class="form-label">Password <span class="text-danger">*</span></label>
-                  <div class="input-group">
-                    <input type="password" name="password1" class="form-control" id="id_password1" required
-                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                           title="Password must be at least 8 characters and include uppercase, lowercase, number and special character">
-                    <button class="btn btn-outline-secondary" type="button" id="togglePassword1">
-                      <i class="ti ti-eye" id="toggleIcon1"></i>
-                    </button>
+
+                  <div class="col-md-6">
+                    <label for="id_email" class="form-label text-dark small-label">Email</label>
+                    <input type="email" name="email" class="form-control custom-input" id="id_email" placeholder="Enter your email" required>
                   </div>
-                  <div id="passwordStrength" class="form-text mt-2"></div>
-                  <div class="password-requirements small mt-2">
-                    <div id="length-check" class="text-muted"><i class="ti ti-circle"></i> At least 8 characters</div>
-                    <div id="uppercase-check" class="text-muted"><i class="ti ti-circle"></i> One uppercase letter</div>
-                    <div id="lowercase-check" class="text-muted"><i class="ti ti-circle"></i> One lowercase letter</div>
-                    <div id="number-check" class="text-muted"><i class="ti ti-circle"></i> One number</div>
-                    <div id="special-check" class="text-muted"><i class="ti ti-circle"></i> One special character</div>
+                  <div class="col-md-6">
+                    <label for="id_phone_number" class="form-label text-dark small-label">Phone Number</label>
+                    <input type="tel" name="phone_number" class="form-control custom-input" id="id_phone_number" placeholder="Enter your number">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="id_password1" class="form-label text-dark small-label">Password</label>
+                    <input type="password" name="password1" class="form-control custom-input" id="id_password1" placeholder="Enter your password" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="id_password2" class="form-label text-dark small-label">Confirm Password</label>
+                    <input type="password" name="password2" class="form-control custom-input" id="id_password2" placeholder="Confirm your password" required>
                   </div>
                 </div>
-                <div class="mb-3">
-                  <label for="id_password2" class="form-label">Confirm Password <span class="text-danger">*</span></label>
-                  <div class="input-group">
-                    <input type="password" name="password2" class="form-control" id="id_password2" required>
-                    <button class="btn btn-outline-secondary" type="button" id="togglePassword2">
-                      <i class="ti ti-eye" id="toggleIcon2"></i>
-                    </button>
-                  </div>
-                  <div id="passwordMatch" class="form-text mt-2"></div>
-                </div>
-                {% if user.is_staff %}
-                <div class="mb-3">
-                  <div class="form-check">
-                    {{ form.is_staff }}
-                    <label class="form-check-label" for="{{ form.is_staff.id_for_label }}" id="checkbox">
-                      <input type="checkbox" class="form-check-input" name="is_staff" id="{{ form.is_staff.id_for_label }}">
-                      Register as staff member
-                    </label>
-                    <div class="form-text" id="checkbox">Check this to grant staff privileges to the new user</div>
+
+                <div class="mt-4 mb-3">
+                  <label class="form-label d-block text-dark small-label mb-2">Gender</label>
+                  <div class="d-flex align-items-center gap-4 flex-wrap">
+                    <div class="form-check d-flex align-items-center gap-2">
+                      <input class="form-check-input custom-radio" type="radio" name="gender" id="gender_male" value="male">
+                      <label class="form-check-label text-dark" for="gender_male">Male</label>
+                    </div>
+                    <div class="form-check d-flex align-items-center gap-2">
+                      <input class="form-check-input custom-radio" type="radio" name="gender" id="gender_female" value="female">
+                      <label class="form-check-label text-dark" for="gender_female">Female</label>
+                    </div>
+                    <div class="form-check d-flex align-items-center gap-2">
+                      <input class="form-check-input custom-radio" type="radio" name="gender" id="gender_other" value="prefer_not_to_say">
+                      <label class="form-check-label text-dark" for="gender_other">Prefer not to say</label>
+                    </div>
                   </div>
                 </div>
-                {% endif %}
-                <button type="submit" class="btn btn-primary w-100 py-8 mb-4 rounded-2" id="submitBtn">
-                  <span class="spinner-border spinner-border-sm d-none me-2" role="status" aria-hidden="true"></span>
-                  Create Account
+
+                <button type="submit" class="btn w-100 mt-3 register-submit-btn" id="submitBtn">
+                  Register
                 </button>
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                  <p class="fs-4 mb-0 fw-bold">Already have an Account?</p>
-                  <a class="text-primary fw-bold ms-2" href="{% url 'accounts:login' %}">Sign In</a>
-                </div>
               </form>
 
               {% if messages %}
-              <div class="messages">
+              <div class="messages mt-3">
                 {% for message in messages %}
                   <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
                     {{ message }}
@@ -107,134 +81,11 @@
                 {% endfor %}
               </div>
               {% endif %}
-              <div class="d-flex align-items-center justify-content-center">
-                <a href="{% url 'main:index' %}" class="btn btn-outline-primary">Back to Dashboard</a>
+
+              <div class="text-center mt-4 small-login-row">
+                <span class="text-dark">Already have account?</span>
+                <a class="text-primary fw-semibold ms-2" href="{% url 'accounts:login' %}">Login</a>
               </div>
-
-              <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const form = document.getElementById('registerForm');
-                    const password1 = document.getElementById('id_password1');
-                    const password2 = document.getElementById('id_password2');
-                    const strengthDiv = document.getElementById('passwordStrength');
-                    const matchDiv = document.getElementById('passwordMatch');
-                    const submitBtn = document.getElementById('submitBtn');
-                    const spinner = submitBtn.querySelector('.spinner-border');
-
-                    // Password requirement checks
-                    const lengthCheck = document.getElementById('length-check');
-                    const uppercaseCheck = document.getElementById('uppercase-check');
-                    const lowercaseCheck = document.getElementById('lowercase-check');
-                    const numberCheck = document.getElementById('number-check');
-                    const specialCheck = document.getElementById('special-check');
-
-                    function updateRequirementCheck(element, check, isValid) {
-                        element.className = isValid ? 'text-success' : 'text-muted';
-                        element.querySelector('i').className = isValid ? 'ti ti-circle-check' : 'ti ti-circle';
-                    }
-
-                    function checkPasswordRequirements(password) {
-                        updateRequirementCheck(lengthCheck, 'length', password.length >= 8);
-                        updateRequirementCheck(uppercaseCheck, 'uppercase', /[A-Z]/.test(password));
-                        updateRequirementCheck(lowercaseCheck, 'lowercase', /[a-z]/.test(password));
-                        updateRequirementCheck(numberCheck, 'number', /[0-9]/.test(password));
-                        updateRequirementCheck(specialCheck, 'special', /[@$!%*?&]/.test(password));
-                    }
-
-                    function checkPasswordStrength(password) {
-                        let strength = 0;
-                        if (password.length >= 8) strength++;
-                        if (password.match(/[a-z]+/)) strength++;
-                        if (password.match(/[A-Z]+/)) strength++;
-                        if (password.match(/[0-9]+/)) strength++;
-                        if (password.match(/[@$!%*?&]+/)) strength++;
-
-                        checkPasswordRequirements(password);
-
-                        switch(strength) {
-                            case 0:
-                            case 1:
-                                strengthDiv.className = 'form-text text-danger';
-                                strengthDiv.textContent = 'Weak password';
-                                break;
-                            case 2:
-                            case 3:
-                                strengthDiv.className = 'form-text text-warning';
-                                strengthDiv.textContent = 'Medium password';
-                                break;
-                            case 4:
-                            case 5:
-                                strengthDiv.className = 'form-text text-success';
-                                strengthDiv.textContent = 'Strong password';
-                                break;
-                        }
-                    }
-
-                    // Toggle password visibility
-                    ['togglePassword1', 'togglePassword2'].forEach((toggleId, index) => {
-                        const toggle = document.getElementById(toggleId);
-                        const input = document.getElementById(`id_password${index + 1}`);
-                        const icon = document.getElementById(`toggleIcon${index + 1}`);
-                        
-                        toggle.addEventListener('click', () => {
-                            const type = input.type === 'password' ? 'text' : 'password';
-                            input.type = type;
-                            icon.className = type === 'password' ? 'ti ti-eye' : 'ti ti-eye-off';
-                        });
-                    });
-
-                    // Form validation
-                    form.addEventListener('submit', function(event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        } else {
-                            submitBtn.disabled = true;
-                            spinner.classList.remove('d-none');
-                        }
-                        form.classList.add('was-validated');
-                    });
-
-                    // Realtime validation
-                    const inputs = form.querySelectorAll('input[required]');
-                    inputs.forEach(input => {
-                        input.addEventListener('input', () => {
-                            if (input.checkValidity()) {
-                                input.classList.remove('is-invalid');
-                                input.classList.add('is-valid');
-                            } else {
-                                input.classList.remove('is-valid');
-                                input.classList.add('is-invalid');
-                            }
-                        });
-                    });
-
-                    // Password validation
-                    function checkPasswordMatch() {
-                        if (password2.value) {
-                            if (password1.value === password2.value) {
-                                matchDiv.className = 'form-text text-success';
-                                matchDiv.textContent = 'Passwords match';
-                                password2.setCustomValidity('');
-                            } else {
-                                matchDiv.className = 'form-text text-danger';
-                                matchDiv.textContent = 'Passwords do not match';
-                                password2.setCustomValidity('Passwords do not match');
-                            }
-                        } else {
-                            matchDiv.textContent = '';
-                            password2.setCustomValidity('');
-                        }
-                    }
-
-                    password1.addEventListener('input', function() {
-                        checkPasswordStrength(this.value);
-                        checkPasswordMatch();
-                    });
-
-                    password2.addEventListener('input', checkPasswordMatch);
-                });
-              </script>
             </div>
           </div>
         </div>
@@ -246,4 +97,95 @@
 
 {% block extra_js %}
 <script src="{% static 'js/auth.js' %}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const fullNameInput = document.getElementById('id_first_name');
+    const lastNameInput = document.getElementById('id_last_name');
+    const form = document.getElementById('registerForm');
+
+    if (fullNameInput && lastNameInput) {
+      const syncLastName = function () {
+        const value = fullNameInput.value.trim();
+        lastNameInput.value = value || '';
+      };
+      fullNameInput.addEventListener('input', syncLastName);
+      form.addEventListener('submit', syncLastName);
+    }
+  });
+</script>
 {% endblock %}
+
+<style>
+  .auth-background {
+    background: linear-gradient(135deg, #4cb4d6 0%, #7f9ae8 38%, #c17ae6 100%);
+  }
+
+  .register-card {
+    width: 100%;
+    max-width: 560px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 12px;
+    box-shadow: 0 20px 45px rgba(27, 31, 66, 0.15);
+    background: rgba(255,255,255,0.96);
+  }
+
+  .registration-title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .small-label {
+    font-size: 0.83rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+
+  .custom-input {
+    height: 42px;
+    border: 1px solid #d6d9e0;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: none;
+    font-size: 0.94rem;
+    color: #333;
+  }
+
+  .custom-input:focus {
+    border-color: #8ab7ff;
+    box-shadow: 0 0 0 0.15rem rgba(109, 146, 255, 0.15);
+  }
+
+  .custom-radio {
+    width: 0.95rem;
+    height: 0.95rem;
+    margin-top: 0;
+    border-color: #9aa6bb;
+  }
+
+  .register-submit-btn {
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #5abef4 0%, #7d7fe6 52%, #be67d7 100%);
+    color: white;
+    font-weight: 600;
+    height: 46px;
+    box-shadow: 0 8px 18px rgba(118, 93, 240, 0.25);
+  }
+
+  .register-submit-btn:hover {
+    color: white;
+    filter: brightness(1.02);
+  }
+
+  .small-login-row {
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 576px) {
+    .register-card {
+      max-width: 92vw;
+    }
+  }
+</style>
