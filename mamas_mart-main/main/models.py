@@ -74,34 +74,4 @@ class Inventory(models.Model):
         return self.item_name
     
     
-class Sales(models.Model):
-    """
-    Sales model to track sales transactions
-    """
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField(default=1)
-    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
-    date = models.DateTimeField(default=timezone.now)
-
-    class Meta:
-        ordering = ['-date']
-
-    def __str__(self):
-        return f"Sale of {self.product.name} on {self.date.strftime('%Y-%m-%d %H:%M:%S')}"
-
-
-class Purchase(models.Model):
-    """
-    Purchase model to track purchase transactions
-    """
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    supplier = models.ForeignKey(Supplier, on_delete=models.SET_NULL, null=True, blank=True)
-    quantity = models.PositiveIntegerField(default=1)
-    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
-    date = models.DateTimeField(default=timezone.now)
-
-    class Meta:
-        ordering = ['-date']
-
-    def __str__(self):
-        return f"Purchase of {self.product.name} from {self.supplier.name if self.supplier else 'Unknown'} on {self.date.strftime('%Y-%m-%d %H:%M:%S')}"   
+  
