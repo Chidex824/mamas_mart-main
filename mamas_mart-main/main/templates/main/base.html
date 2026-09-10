@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    {% block navigation %}
+    {% include 'main/includes/navigation.html' %}
+    {% endblock %}
     {% block body %}{% endblock %}
     
     <!-- Core JS -->

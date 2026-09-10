@@ -7,7 +7,7 @@ User = get_user_model()
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'email', 'phone_number', 'address']
+        fields = ['first_name', 'last_name', 'email', 'phone_number', 'address', 'profile_picture']
 
 class UserNotificationForm(forms.Form):
     email_notifications = forms.BooleanField(required=False, label='Email Notifications')

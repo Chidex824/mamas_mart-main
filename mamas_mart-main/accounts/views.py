@@ -236,7 +236,12 @@ def user_delete(request, pk):
 
 @login_required
 def user_management(request):
-    return render(request, 'accounts/user_management.html')
+    users = User.objects.all().order_by('-date_joined')
+    roles = Role.objects.all()
+    return render(request, 'accounts/user_management.html', {
+        'users': users,
+        'roles': roles,
+    })
 
 from .forms import UserProfileForm, UserNotificationForm, UserPreferencesForm
 from django.contrib.auth.forms import PasswordChangeForm
@@ -246,7 +251,7 @@ from django.contrib.auth import update_session_auth_hash
 def settings_view(request):
     user = request.user
     if request.method == 'POST':
-        profile_form = UserProfileForm(request.POST, instance=user)
+        profile_form = UserProfileForm(request.POST, request.FILES, instance=user)
         password_form = PasswordChangeForm(user, request.POST)
         notification_form = UserNotificationForm(request.POST)
         preferences_form = UserPreferencesForm(request.POST)

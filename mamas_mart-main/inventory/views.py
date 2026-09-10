@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Inventory, Category
+from .models import Inventory
 from django.urls import reverse
 from django.contrib import messages
 from products.models import Purchase, Category as ProductCategory
@@ -9,7 +9,11 @@ from sales.models import Sale
 
 def inventory_list(request):
     inventories = Inventory.objects.select_related('category').all()
-    return render(request, 'inventory/inventory_list.html', {'inventories': inventories})
+    categories = ProductCategory.objects.all()
+    return render(request, 'inventory/inventory_list.html', {
+        'inventories': inventories,
+        'categories': categories,
+    })
 
 def add_inventory(request):
     categories = ProductCategory.objects.all()

@@ -5,7 +5,7 @@
 <h1>User Settings</h1>
 <p>Manage your account settings and preferences here.</p>
 
-<form method="post" action="">
+<form method="post" action="" enctype="multipart/form-data">
     {% csrf_token %}
     <h3>Profile Information</h3>
     {{ profile_form.as_p }}

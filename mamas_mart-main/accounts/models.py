@@ -50,6 +50,7 @@ class User(AbstractUser):
     """
     phone_number = models.CharField(max_length=15, blank=True)
     address = models.TextField(blank=True)
+    profile_picture = models.ImageField(upload_to='profiles/', blank=True, null=True)
     role = models.ForeignKey(
         Role,
         on_delete=models.SET_NULL,

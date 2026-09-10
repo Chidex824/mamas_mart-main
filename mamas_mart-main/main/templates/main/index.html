@@ -23,6 +23,7 @@
 }
 </style>
 {% endblock %}
+{% block navigation %}{% endblock %}
 {% block body %}
 <!--  Body Wrapper -->
 <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
@@ -90,8 +91,12 @@
                     </span>
                 </button>
                 <div class="d-flex align-items-center">
+                    {% if request.user.profile_picture %}
+                    <img src="{{ request.user.profile_picture.url }}" alt="Profile" class="rounded-circle me-2" width="40" height="40">
+                    {% else %}
                     <img src="{% static 'images/profile/user-1.jpg' %}" alt="Profile" class="rounded-circle me-2" width="40" height="40">
-                    <span>Welcome Back, Oliver 👋</span>
+                    {% endif %}
+                    <span>Welcome Back, {{ request.user.get_short_name|default:request.user.username }}!</span>
                 </div>
             </div>
         </div>
