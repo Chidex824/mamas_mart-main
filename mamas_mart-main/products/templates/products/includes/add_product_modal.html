@@ -16,13 +16,8 @@
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="form-label">Product Name <span class="text-danger">*</span></label>
-                            <select class="form-select" name="inventory_item" required>
-                                <option value="">Select Product from Inventory</option>
-                                {% for item in inventory_items %}
-                                <option value="{{ item.id }}">{{ item.item_name }}</option>
-                                {% endfor %}
-                            </select>
-                            <div class="invalid-feedback">Please select a product from inventory.</div>
+                            <input type="text" class="form-control" name="name" required placeholder="Enter product name">
+                            <div class="invalid-feedback">Please enter a product name.</div>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Category <span class="text-danger">*</span></label>

@@ -8,7 +8,7 @@ let dashboardCharts = {
 // Function to fetch dashboard data
 async function fetchDashboardData() {
     try {
-        const response = await fetch('/main/api/dashboard/', {
+        const response = await fetch('/api/dashboard/', {
             headers: {
                 'X-Requested-With': 'XMLHttpRequest',
             }
@@ -24,22 +24,18 @@ async function fetchDashboardData() {
 // Function to update dashboard stats
 function updateDashboardStats(data) {
     const stats = data.current_stats;
-    
-    // Update total products
-    const totalProductsEl = document.getElementById('totalProducts');
-    if (totalProductsEl) totalProductsEl.textContent = stats.total_products;
-    
-    // Update low stock alerts
-    const lowStockEl = document.getElementById('lowStockAlerts');
-    if (lowStockEl) lowStockEl.textContent = stats.low_stock_products;
-    
-    // Update today's sales
-    const todaySalesEl = document.getElementById('todaysSales');
-    if (todaySalesEl) {
-        todaySalesEl.textContent = `$${stats.todays_sales.total_sales || '0.00'}`;
-        const transactionsEl = document.getElementById('todaysTransactions');
-        if (transactionsEl) transactionsEl.textContent = stats.todays_sales.total_transactions || '0';
-    }
+
+    const values = {
+        newCustomersCount: stats.new_customers,
+        productsSoldCount: stats.products_sold,
+        salesRevenueCount: `₦${Number(stats.sales_revenue || 0).toFixed(2)}`,
+        inventoryValueCount: `₦${Number(stats.inventory_value || 0).toFixed(2)}`
+    };
+
+    Object.entries(values).forEach(([id, value]) => {
+        const element = document.getElementById(id);
+        if (element) element.textContent = value;
+    });
 }
 
 // Function to safely initialize a chart
@@ -381,37 +377,10 @@ window.destroyDashboardCharts = async function() {
     await cleanupCharts();
 };
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const tryInitializeCharts = () => {
-        const dashboardContent = document.getElementById('dashboardContent');
-        if (dashboardContent) {
-            if (dashboardContent.style.display !== 'none') {
-                console.log('Dashboard content found, initializing charts...');
-                initializeDashboardCharts().catch(err => {
-                    console.error('Failed to initialize dashboard charts:', err);
-                });
-            } else {
-                console.log('Dashboard content hidden, skipping chart initialization');
-            }
-        } else {
-            console.log('Dashboard content not found yet, retrying...');
-            setTimeout(tryInitializeCharts, 100);
-        }
-    };
-
-    // Add resize handler
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            if (document.getElementById('dashboardContent')?.style.display !== 'none') {
-                console.log('Window resized, reinitializing charts...');
-                initializeDashboardCharts();
-            }
-        }, 250);
-    });
-
-    // Start initialization
-    setTimeout(tryInitializeCharts, 500);
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        updateDashboardStats(await fetchDashboardData());
+    } catch (error) {
+        console.error('Failed to load dashboard statistics:', error);
+    }
 });

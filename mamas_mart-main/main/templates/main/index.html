@@ -6,100 +6,9 @@
 <link rel="stylesheet" href="{% static 'css/product-content.css' %}">
 <link rel="stylesheet" href="{% static 'css/index_custom.css' %}">
 <style>
-/* Ensure sidebar and main content are close together */
-.page-wrapper {
-    display: flex;
-    flex-direction: row;
-}
-.left-sidebar {
-    flex: 0 0 250px; /* Sidebar width */
-    max-width: 250px;
-    min-width: 200px;
-}
-.body-wrapper#main-content-wrapper {
-    flex: 1 1 auto;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-}
 </style>
 {% endblock %}
-{% block navigation %}{% endblock %}
 {% block body %}
-<!--  Body Wrapper -->
-<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-    data-sidebar-position="fixed" data-header-position="fixed">
-    <!-- Sidebar Start -->
-    <aside class="left-sidebar">
-        <!-- Sidebar scroll-->
-        <div style="height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-                <div class="brand-logo d-flex align-items-center justify-content-between p-3">
-                    <a href="{% url 'main:index' %}" class="text-nowrap logo-img">
-                        <img src="{% static 'images/logos/dark-logo.svg' %}" width="160" alt="Logo" />
-                    </a>
-                    <a class="sidebar-link sidebar-toggle nav-icon-hover" href="javascript:void(0)" id="sidebarToggle">
-                        <i class="ti ti-menu-2"></i>
-                    </a>
-                </div>
-                <nav class="sidebar-nav">
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a href="{% url 'main:index' %}" class="nav-link sidebar-link" data-url="{% url 'main:index' %}"><i class="ti ti-layout-dashboard me-2"></i><span>Dashboard</span></a></li>
-                        <li class="nav-item"><a href="{% url 'products:product_list' %}" class="nav-link sidebar-link" data-url="{% url 'products:product_list' %}"><i class="ti ti-box me-2"></i><span>Products</span></a></li>
-                        <li class="nav-item"><a href="{% url 'inventory:inventory_list' %}" class="nav-link sidebar-link" data-url="{% url 'inventory:inventory_list' %}"><i class="ti ti-stack me-2"></i><span>Inventory</span></a></li>
-                        <li class="nav-item"><a href="{% url 'sales:index' %}" class="nav-link sidebar-link" data-url="{% url 'sales:index' %}"><i class="ti ti-chart-bar me-2"></i><span>Sales</span></a></li>
-                        <li class="nav-item"><a href="{% url 'inventory:warehouse' %}" class="nav-link sidebar-link" data-url="{% url 'inventory:warehouse' %}"><i class="ti ti-building me-2"></i><span>Warehouse</span></a></li>
-                        <li class="nav-item"><a href="{% url 'inventory:supplier' %}" class="nav-link sidebar-link" data-url="{% url 'inventory:supplier' %}"><i class="ti ti-truck me-2"></i><span>Suppliers</span></a></li>
-                        <li class="nav-item"><a href="{% url 'inventory:transfer_product' %}" class="nav-link sidebar-link" data-url="{% url 'inventory:transfer_product' %}"><i class="ti ti-arrows-right-left me-2"></i><span>Transfer Product</span></a></li>
-                        <li class="nav-item"><a href="{% url 'inventory:stock' %}" class="nav-link sidebar-link" data-url="{% url 'inventory:stock' %}"><i class="ti ti-stack-2 me-2"></i><span>Stock</span></a></li>
-                        <li class="nav-item"><a href="{% url 'inventory:invoice' %}" class="nav-link sidebar-link" data-url="{% url 'inventory:invoice' %}"><i class="ti ti-file-invoice me-2"></i><span>Invoice</span></a></li>
-                        <li class="nav-item"><a href="{% url 'accounts:user_management' %}" class="nav-link sidebar-link" data-url="{% url 'accounts:user_management' %}"><i class="ti ti-users me-2"></i><span>User Management</span></a></li>
-                        <li class="nav-item"><a href="{% url 'help:index' %}" class="nav-link sidebar-link" data-url="{% url 'help:index' %}"><i class="ti ti-help-circle me-2"></i><span>Help</span></a></li>
-                        <li class="nav-item"><a href="{% url 'accounts:settings' %}" class="nav-link sidebar-link" data-url="{% url 'accounts:settings' %}"><i class="ti ti-settings me-2"></i><span>Settings</span></a></li>
-                        <li class="nav-item">
-                            <button id="dark-light-toggle" class="btn btn-link nav-link"><i class="ti ti-moon me-2"></i></button>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'accounts:logout' %}" class="nav-link sidebar-link"><i class="ti ti-logout me-2"></i><span>Logout</span></a>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </aside>
-    <!-- Main content wrapper -->
-    <div class="body-wrapper" id="main-content-wrapper">
-        <!-- Top bar with search, notifications, profile, welcome -->
-        <div class="d-flex justify-content-between align-items-center p-3 bg-white shadow-sm rounded-4 mb-4">
-            <div class="d-flex align-items-center">
-                <input type="text" class="form-control me-3" placeholder="Search...">
-                <button class="btn btn-outline-secondary">
-                    <i class="ti ti-search"></i>
-                </button>
-            </div>
-            <div class="d-flex align-items-center">
-                <button class="btn btn-link position-relative me-3">
-                    <i class="ti ti-bell"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        2
-                        <span class="visually-hidden">unread notifications</span>
-                    </span>
-                </button>
-                <button class="btn btn-link position-relative me-3">
-                    <i class="ti ti-mail"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        3
-                        <span class="visually-hidden">unread messages</span>
-                    </span>
-                </button>
-                <div class="d-flex align-items-center">
-                    {% if request.user.profile_picture %}
-                    <img src="{{ request.user.profile_picture.url }}" alt="Profile" class="rounded-circle me-2" width="40" height="40">
-                    {% else %}
-                    <img src="{% static 'images/profile/user-1.jpg' %}" alt="Profile" class="rounded-circle me-2" width="40" height="40">
-                    {% endif %}
-                    <span>Welcome Back, {{ request.user.get_short_name|default:request.user.username }}!</span>
-                </div>
-            </div>
-        </div>
         <!-- Dashboard main content -->
         <div class="container-fluid p-4" id="dynamic-content">
             <div class="row g-6 mb-4">
@@ -112,8 +21,8 @@
                             </div>
                             <div>
                                 <h6>New Customers</h6>
-                                <h4 id="newCustomersCount">4684</h4>
-                                <small class="text-success" id="newCustomersChange"><i class="ti ti-arrow-up-right"></i> 32.5%</small>
+                                <h4 id="newCustomersCount">{{ dashboard_data.current_stats.new_customers }}</h4>
+                                <small class="text-success">{{ dashboard_data.current_stats.new_customers_change }}% from last month</small>
                             </div>
                         </div>
                     </div>
@@ -126,8 +35,8 @@
                             </div>
                             <div>
                                 <h6>Products Sold</h6>
-                                <h4 id="productsSoldCount">1230</h4>
-                                <small class="text-success" id="productsSoldChange"><i class="ti ti-arrow-up-right"></i> 15.2%</small>
+                                <h4 id="productsSoldCount">{{ dashboard_data.current_stats.products_sold }}</h4>
+                                <small class="text-success">{{ dashboard_data.current_stats.products_sold_change }}% from last month</small>
                             </div>
                         </div>
                     </div>
@@ -140,8 +49,8 @@
                             </div>
                             <div>
                                 <h6>Sales Revenue</h6>
-                                <h4 id="salesRevenueCount">$25,000</h4>
-                                <small class="text-danger" id="salesRevenueChange"><i class="ti ti-arrow-down-left"></i> 8.7%</small>
+                                <h4 id="salesRevenueCount">₦{{ dashboard_data.current_stats.sales_revenue|floatformat:2 }}</h4>
+                                <small class="text-success">{{ dashboard_data.current_stats.sales_revenue_change }}% from last month</small>
                             </div>
                         </div>
                     </div>
@@ -154,15 +63,42 @@
                             </div>
                             <div>
                                 <h6>Inventory Value</h6>
-                                <h4 id="inventoryValueCount">$10,500</h4>
-                                <small class="text-success" id="inventoryValueChange"><i class="ti ti-arrow-up-right"></i> 5.1%</small>
+                                <h4 id="inventoryValueCount">₦{{ dashboard_data.current_stats.inventory_value|floatformat:2 }}</h4>
+                                <small class="text-success">{{ dashboard_data.current_stats.inventory_value_change }}% from last month</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Additional content can go here -->
+            <div class="card shadow-sm border-0 mt-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">Recently added inventory</h5>
+                        <a href="{% url 'inventory:inventory_list' %}" class="btn btn-sm btn-outline-primary">View inventory</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-middle mb-0">
+                            <thead><tr><th>Product</th><th>Category</th><th>Quantity</th><th>Location</th><th>Price</th></tr></thead>
+                            <tbody>
+                            {% for inventory in inventories %}
+                                <tr>
+                                    <td>{{ inventory.item_name }}</td>
+                                    <td>{{ inventory.category.name }}</td>
+                                    <td>{{ inventory.quantity }}</td>
+                                    <td>{{ inventory.location }}</td>
+                                    <td>₦{{ inventory.price|floatformat:2 }}</td>
+                                </tr>
+                            {% empty %}
+                                <tr><td colspan="5" class="text-muted text-center py-4">No inventory has been added yet.</td></tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/dashboard.js' %}"></script>
 {% endblock %}

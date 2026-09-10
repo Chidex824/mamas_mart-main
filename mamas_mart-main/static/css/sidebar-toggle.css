@@ -1,13 +1,32 @@
 /* Mini Sidebar styles */
 [data-sidebartype="mini-sidebar"] .left-sidebar {
     width: 5rem;
+    flex: 0 0 5rem;
     overflow: hidden;
     transition: width 0.3s ease;
 }
 
 [data-sidebartype="full"] .left-sidebar {
     width: 260px;
+    flex: 0 0 260px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-top: 0.75rem;
+}
+
+.sidebar-nav > .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
 }
 
 .brand-logo {
@@ -58,6 +77,16 @@
     transition: opacity 0.3s ease;
 }
 
+[data-sidebartype="mini-sidebar"] .sidebar-nav > .sidebar-link span {
+    display: none;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav > .sidebar-link {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 [data-sidebartype="full"] .sidebar-nav .hide-menu,
 [data-sidebartype="full"] .sidebar-nav .nav-small-cap,
 [data-sidebartype="full"] .logo-img img {
@@ -103,9 +132,52 @@
 
 /* Adjust main content area */
 [data-sidebartype="mini-sidebar"] .body-wrapper {
-    margin-left: 5rem;
+    margin-left: 0;
 }
 
 .body-wrapper {
+    min-width: 0;
     transition: margin-left 0.3s ease;
+}
+
+#main-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch;
+    width: 100%;
+    gap: 1.25rem;
+    overflow: hidden;
+}
+
+#main-wrapper > .left-sidebar {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    left: auto !important;
+    flex: 0 0 260px;
+    width: 260px;
+    height: 100vh;
+    z-index: 1;
+}
+
+#main-wrapper > .body-wrapper {
+    position: relative !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    margin: 0 !important;
+    z-index: 0;
+}
+
+#main-wrapper[data-sidebartype="mini-sidebar"] > .left-sidebar {
+    flex-basis: 5rem;
+    width: 5rem;
+}
+
+#main-wrapper[data-sidebartype="mini-sidebar"] > .body-wrapper {
+    flex-basis: 0;
+}
+
+#main-wrapper {
+    gap: 1.25rem;
 }

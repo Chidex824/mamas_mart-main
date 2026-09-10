@@ -8,44 +8,10 @@
 <link rel="stylesheet" href="{% static 'css/product-animations.css' %}">
 {% endblock %}
 
-{% block shared_content %}
-<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-    data-sidebar-position="fixed" data-header-position="fixed">
-    
-	    
-	    <div class="body-wrapper">
-	
-	        <div class="container-fluid">
-	            <div class="product-section shadow-lg rounded-4">
-	                <!-- Product Sidebar -->
-	                <div class="product-sidebar bg-light border border-secondary-subtle rounded-4 p-4">
-	                    <div class="product-nav">
-                        <h6 class="fw-bold mb-4 text-primary">Product Management</h6>
-                        <div class="nav flex-column">
-                            <a href="#" class="product-nav-item active rounded-3 mb-2 px-3 py-2 shadow-sm" id="allProducts">
-                                <i class="ti ti-list fs-5 me-2"></i>
-                                All Products
-                            </a>
-                            {% if user.is_staff %}
-                            <a href="#" class="product-nav-item rounded-3 mb-2 px-3 py-2 shadow-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
-                                <i class="ti ti-plus fs-5 me-2"></i>
-                                Add Product
-                            </a>
-                            {% endif %}
-                            <a href="{% url 'products:category_list' %}" class="product-nav-item rounded-3 mb-2 px-3 py-2 shadow-sm" id="categoryFilter">
-                                <i class="ti ti-category fs-5 me-2"></i>
-                                Categories
-                            </a>
-                            <a href="#" class="product-nav-item rounded-3 mb-2 px-3 py-2 shadow-sm" id="stockFilter" data-filter="stock">
-                                <i class="ti ti-box fs-5 me-2"></i>
-                                Low Stock
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Products Page Content -->
-                <div class="product-content bg-white rounded-4 p-4 shadow-sm">
+{% block body %}
+<div class="container-fluid">
+    <div class="product-section shadow-lg rounded-4">
+        <div class="product-content bg-white rounded-4 p-4 shadow-sm">
                     <!-- Page Header -->
                     <div class="product-header border-bottom border-secondary-subtle pb-3 mb-4 d-flex justify-content-between align-items-center">
                         <div>
@@ -69,8 +35,6 @@
                             {% include 'products/includes/product_table.html' %}
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

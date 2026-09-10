@@ -29,13 +29,29 @@
     flex-grow: 1;
     overflow-y: auto;
     padding: 20px;
-    transition: margin-left 0.3s ease;
 }
-.body-wrapper.expanded {
-    margin-left: 250px;
+
+#main-wrapper > .left-sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 100vh;
+    flex: 0 0 260px;
+    z-index: 1;
 }
-.body-wrapper.collapsed {
-    margin-left: 70px;
+
+#main-wrapper > .body-wrapper {
+    min-width: 0;
+    margin-left: 0 !important;
+}
+
+#main-wrapper[data-sidebartype="mini-sidebar"] > .left-sidebar {
+    flex-basis: 5rem;
+}
+
+#main-wrapper > .body-wrapper {
+    position: relative;
+    z-index: 0;
 }
 
 /* Add spacing between sidebar items */

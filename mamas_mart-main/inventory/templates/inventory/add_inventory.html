@@ -2,15 +2,18 @@
 {% load static %}
 {% block title %}Add Inventory Item{% endblock %}
 
-{% block shared_content %}
+{% block body %}
 <div class="container mt-4">
     <h2>Add Inventory Item</h2>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags|default:'info' }}" role="alert">{{ message }}</div>
+    {% endfor %}
     <form method="post" enctype="multipart/form-data" action="{% url 'inventory:add_inventory' %}" id="addInventoryForm" novalidate>
         {% csrf_token %}
         <div class="row g-3">
             <div class="col-md-6">
                 <label class="form-label">Product Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="item_name" required>
+                <input type="text" class="form-control" name="item_name" value="{{ form_data.item_name|default:'' }}" required>
                 <div class="invalid-feedback">Please enter a product name.</div>
             </div>
             <div class="col-md-6">
@@ -18,32 +21,32 @@
                 <select class="form-select" name="category" required>
                     <option value="">Select Category</option>
                     {% for category in categories %}
-                    <option value="{{ category.id }}">{{ category.name }}</option>
+                    <option value="{{ category.id }}" {% if form_data.category == category.id|stringformat:'s' %}selected{% endif %}>{{ category.name }}</option>
                     {% endfor %}
                 </select>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Supplier <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="supplier" required>
+                <input type="text" class="form-control" name="supplier" value="{{ form_data.supplier|default:'' }}" required>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Price <span class="text-danger">*</span></label>
                 <div class="input-group">
                     <span class="input-group-text">₦</span>
-                    <input type="number" class="form-control" name="price" step="0.01" min="0" required>
+                    <input type="number" class="form-control" name="price" value="{{ form_data.price|default:'' }}" step="0.01" min="0" required>
                 </div>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Stock <span class="text-danger">*</span></label>
-                <input type="number" class="form-control" name="quantity" min="0" required>
+                <input type="number" class="form-control" name="quantity" value="{{ form_data.quantity|default:'' }}" min="0" required>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Location <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="location" required>
+                <input type="text" class="form-control" name="location" value="{{ form_data.location|default:'' }}" required>
             </div>
             <div class="col-12">
                 <label class="form-label">Description</label>
-                <textarea class="form-control" name="description" rows="3"></textarea>
+                <textarea class="form-control" name="description" rows="3">{{ form_data.description|default:'' }}</textarea>
             </div>
             <div class="col-12">
                 <label class="form-label">Product Image</label>

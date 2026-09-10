@@ -1,4 +1,4 @@
-from django.db.models import Sum, Count, Q
+from django.db.models import Sum, Count, Q, F
 from django.db.models.functions import ExtractWeek, ExtractMonth, TruncDate
 from django.utils import timezone
 from datetime import timedelta
@@ -6,6 +6,7 @@ from .models import DailySalesReport
 from products.models import Product, Purchase, Sale
 from accounts.models import User
 from sales.models import Sale as SaleModel
+from inventory.models import Inventory
 
 def get_dashboard_data():
     """Get all dashboard data in a single API call"""
@@ -69,9 +70,15 @@ def get_dashboard_data():
         ),
         'new_customers': User.objects.filter(date_joined__gte=week_ago).count(),
         'orders': SaleModel.objects.filter(date__gte=week_ago).count(),
-        'completed': SaleModel.objects.filter(date__gte=week_ago, status='completed').count(),
-        'cancelled': SaleModel.objects.filter(date__gte=week_ago, status='cancelled').count(),
-        'refund_requests': SaleModel.objects.filter(date__gte=week_ago, status='refund_requested').count(),
+        # sales.Sale has no workflow status; every saved record is a completed sale.
+        'completed': SaleModel.objects.filter(date__gte=week_ago).count(),
+        'cancelled': 0,
+        'refund_requests': 0,
+        'products_sold': Sale.objects.filter(date__gte=month_ago).aggregate(total=Sum('quantity'))['total'] or 0,
+        'sales_revenue': Sale.objects.filter(date__gte=month_ago).aggregate(total=Sum('total_amount'))['total'] or 0,
+        'inventory_value': Inventory.objects.aggregate(
+            total=Sum(F('quantity') * F('price'))
+        )['total'] or 0,
     }
 
     return {

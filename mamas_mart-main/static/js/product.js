@@ -300,7 +300,7 @@ function initializeProductPage() {
     });
 
     // Add click handler for add product button
-    document.querySelectorAll('[data-bs-target="#addProductModal"]').forEach(btn => {
+    document.querySelectorAll('.js-add-product, [data-bs-target="#addProductModal"]').forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('addProductModal'));

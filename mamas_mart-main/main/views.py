@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from .api import get_dashboard_data, get_stock_report, get_top_selling_products
+from inventory.models import Inventory
 
 @login_required
 def index(request):
@@ -9,8 +10,12 @@ def index(request):
         # Return JSON data for AJAX requests
         return JsonResponse(get_dashboard_data())
     
-    # Initial page load - return basic template
-    return render(request, 'main/index.html')
+    dashboard_data = get_dashboard_data()
+    inventories = Inventory.objects.select_related('category').order_by('-updated_at')[:10]
+    return render(request, 'main/index.html', {
+        'dashboard_data': dashboard_data,
+        'inventories': inventories,
+    })
 
 @login_required
 def get_dashboard_updates(request):

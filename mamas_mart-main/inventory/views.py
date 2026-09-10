@@ -6,6 +6,7 @@ from products.models import Purchase, Category as ProductCategory
 from main.models import Supplier
 from collections import defaultdict
 from sales.models import Sale
+from decimal import Decimal, InvalidOperation
 
 def inventory_list(request):
     inventories = Inventory.objects.select_related('category').all()
@@ -27,15 +28,33 @@ def add_inventory(request):
         description = request.POST.get('description')
         image = request.FILES.get('image')
 
-        category = get_object_or_404(ProductCategory, id=category_id)
+        if not all([item_name, category_id, supplier_name, quantity, location, price]):
+            messages.error(request, 'Complete all required inventory fields before saving.')
+            return render(request, 'inventory/add_inventory.html', {
+                'categories': categories,
+                'form_data': request.POST,
+            }, status=400)
+
+        try:
+            category = ProductCategory.objects.get(id=category_id)
+            quantity_value = int(quantity)
+            price_value = Decimal(price)
+            if quantity_value < 0 or price_value < 0:
+                raise ValueError
+        except (ProductCategory.DoesNotExist, ValueError, TypeError, InvalidOperation):
+            messages.error(request, 'Choose a valid category and enter valid non-negative quantity and price values.')
+            return render(request, 'inventory/add_inventory.html', {
+                'categories': categories,
+                'form_data': request.POST,
+            }, status=400)
 
         inventory = Inventory.objects.create(
             item_name=item_name,
             category=category,
             supplier=supplier_name,
-            quantity=quantity,
+            quantity=quantity_value,
             location=location,
-            price=price,
+            price=price_value,
             description=description,
             image=image
         )

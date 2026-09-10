@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainWrapper = document.getElementById('main-wrapper');
     const sidebarToggle = document.querySelector('.sidebar-toggle');
     const body = document.querySelector('body');
+
+    if (!mainWrapper) return;
     
     // Set initial state
     mainWrapper.setAttribute('data-sidebartype', 'full');
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Set new sidebar type
         mainWrapper.setAttribute('data-sidebartype', newType);
+        localStorage.setItem('sidebarType', newType);
         
         // Remove transition class after animation
         setTimeout(() => {

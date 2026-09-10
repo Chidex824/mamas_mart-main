@@ -6,7 +6,7 @@ from django.core.paginator import Paginator
 from django.db.models import Sum, F, Q
 from .models import Product, Category
 from inventory.models import Inventory as InventoryItem
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 
 def staff_required(user):
     return user.is_staff
@@ -109,22 +109,33 @@ def product_list(request):
 
 @login_required
 def add_product(request):
-    """Add a new product from inventory only."""
+    """Add a product directly, optionally using an inventory item's details."""
     if request.method == 'POST':
         try:
-            inventory_id = request.POST.get('inventory_item')
-            inventory_item = InventoryItem.objects.get(id=inventory_id)
-            category_id = inventory_item.category.id
-            name = inventory_item.item_name
+            name = request.POST.get('name', '').strip()
+            category_id = request.POST.get('category')
             price = request.POST.get('price')
             stock = request.POST.get('stock')
-            description = request.POST.get('description')
+            description = request.POST.get('description', '')
             is_available = request.POST.get('is_available') == 'on'
+
+            if not name or not category_id or not price or not stock:
+                return JsonResponse({'success': False, 'error': 'Name, category, price, and stock are required.'}, status=400)
+
+            try:
+                category = Category.objects.get(id=category_id)
+                price_value = Decimal(price)
+                stock_value = int(stock)
+                if price_value < 0 or stock_value < 0:
+                    raise ValueError
+            except (Category.DoesNotExist, InvalidOperation, TypeError, ValueError):
+                return JsonResponse({'success': False, 'error': 'Choose a valid category and non-negative price and stock values.'}, status=400)
+
             product = Product.objects.create(
                 name=name,
-                category_id=category_id,
-                price=price,
-                stock=stock,
+                category=category,
+                price=price_value,
+                stock=stock_value,
                 description=description,
                 is_available=is_available
             )

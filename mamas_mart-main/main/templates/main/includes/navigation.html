@@ -1,40 +1,27 @@
 {% load static %}
-<div class="page-wrapper d-flex" id="shared-main-wrapper">
-    <aside class="left-sidebar flex-shrink-0" style="width: 250px;">
+<aside class="left-sidebar flex-shrink-0">
         <div class="brand-logo d-flex align-items-center justify-content-between p-3">
             <a href="{% url 'main:index' %}" class="text-nowrap logo-img">
                 <img src="{% static 'images/logos/dark-logo.svg' %}" width="160" alt="Mama's Mart">
             </a>
+            <button type="button" class="btn btn-link sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="ti ti-menu-2"></i>
+            </button>
         </div>
-        <nav class="sidebar-nav px-2">
-            <a href="{% url 'main:index' %}" class="nav-link"><i class="ti ti-layout-dashboard me-2"></i>Dashboard</a>
-            <a href="{% url 'products:product_list' %}" class="nav-link"><i class="ti ti-box me-2"></i>Products</a>
-            <a href="{% url 'inventory:inventory_list' %}" class="nav-link"><i class="ti ti-stack me-2"></i>Inventory</a>
-            <a href="{% url 'sales:index' %}" class="nav-link"><i class="ti ti-chart-bar me-2"></i>Sales</a>
-            <a href="{% url 'accounts:user_management' %}" class="nav-link"><i class="ti ti-users me-2"></i>User Management</a>
-            <a href="{% url 'accounts:settings' %}" class="nav-link"><i class="ti ti-settings me-2"></i>Settings</a>
-            <a href="{% url 'accounts:logout' %}" class="nav-link"><i class="ti ti-logout me-2"></i>Logout</a>
+        <nav class="sidebar-nav px-2" id="sidebarnav">
+            <a href="{% url 'main:index' %}" class="nav-link sidebar-link"><i class="ti ti-layout-dashboard me-2"></i><span>Dashboard</span></a>
+            <a href="{% url 'products:product_list' %}" class="nav-link sidebar-link"><i class="ti ti-box me-2"></i><span>Products</span></a>
+            <a href="{% url 'products:category_list' %}" class="nav-link sidebar-link"><i class="ti ti-category me-2"></i><span>Categories</span></a>
+            <a href="{% url 'inventory:inventory_list' %}" class="nav-link sidebar-link"><i class="ti ti-stack me-2"></i><span>Inventory</span></a>
+            <a href="{% url 'sales:index' %}" class="nav-link sidebar-link"><i class="ti ti-chart-bar me-2"></i><span>Sales</span></a>
+            <a href="{% url 'inventory:warehouse' %}" class="nav-link sidebar-link"><i class="ti ti-building me-2"></i><span>Warehouse</span></a>
+            <a href="{% url 'inventory:supplier' %}" class="nav-link sidebar-link"><i class="ti ti-truck me-2"></i><span>Suppliers</span></a>
+            <a href="{% url 'inventory:transfer_product' %}" class="nav-link sidebar-link"><i class="ti ti-arrows-right-left me-2"></i><span>Transfer Product</span></a>
+            <a href="{% url 'inventory:stock' %}" class="nav-link sidebar-link"><i class="ti ti-stack-2 me-2"></i><span>Stock</span></a>
+            <a href="{% url 'inventory:invoice' %}" class="nav-link sidebar-link"><i class="ti ti-file-invoice me-2"></i><span>Invoice</span></a>
+            <a href="{% url 'accounts:user_management' %}" class="nav-link sidebar-link"><i class="ti ti-users me-2"></i><span>User Management</span></a>
+            <a href="{% url 'help:index' %}" class="nav-link sidebar-link"><i class="ti ti-help-circle me-2"></i><span>Help</span></a>
+            <a href="{% url 'accounts:settings' %}" class="nav-link sidebar-link"><i class="ti ti-settings me-2"></i><span>Settings</span></a>
+            <a href="{% url 'accounts:logout' %}" class="nav-link sidebar-link"><i class="ti ti-logout me-2"></i><span>Logout</span></a>
         </nav>
     </aside>
-    <div class="body-wrapper flex-grow-1" id="shared-content-wrapper">
-        <header class="d-flex justify-content-end align-items-center gap-3 p-3 bg-white shadow-sm">
-            <a href="{% url 'accounts:settings' %}" class="btn btn-link position-relative" aria-label="Notifications">
-                <i class="ti ti-bell"></i>
-            </a>
-            <a href="{% url 'accounts:settings' %}" class="btn btn-link position-relative" aria-label="Messages">
-                <i class="ti ti-mail"></i>
-            </a>
-            <a href="{% url 'accounts:settings' %}" class="d-flex align-items-center text-decoration-none text-dark">
-                {% if request.user.profile_picture %}
-                <img src="{{ request.user.profile_picture.url }}" alt="Profile" class="rounded-circle me-2" width="40" height="40">
-                {% else %}
-                <img src="{% static 'images/profile/user-1.jpg' %}" alt="Profile" class="rounded-circle me-2" width="40" height="40">
-                {% endif %}
-                <span>Welcome Back, {{ request.user.get_short_name|default:request.user.username }}!</span>
-            </a>
-        </header>
-        <main class="container-fluid p-4">
-            {% block shared_content %}{% endblock %}
-        </main>
-    </div>
-</div>
