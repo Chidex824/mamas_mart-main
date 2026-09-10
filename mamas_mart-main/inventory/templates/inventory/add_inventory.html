@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %}Add Inventory Item{% endblock %}
 
-{% block body %}
+{% block shared_content %}
 <div class="container mt-4">
     <h2>Add Inventory Item</h2>
     <form method="post" enctype="multipart/form-data" action="{% url 'inventory:add_inventory' %}" id="addInventoryForm" novalidate>

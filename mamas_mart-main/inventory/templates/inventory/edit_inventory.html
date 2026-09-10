@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %}Edit Inventory Item{% endblock %}
 
-{% block body %}
+{% block shared_content %}
 <div class="container mt-4">
     <h2>Edit Inventory Item</h2>
     <form method="post" action="{% url 'inventory:edit_inventory' inventory.id %}">
