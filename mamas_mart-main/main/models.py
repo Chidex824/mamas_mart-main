@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from products.models import Product
+from inventory.models import Inventory
 
 class DailySalesReport(models.Model):
     """
@@ -47,3 +48,60 @@ class Supplier(models.Model):
     
     def __str__(self):
         return self.name
+    
+    
+
+class Inventory(models.Model):
+    """
+    Inventory model to track stock items
+    """
+    item_name = models.CharField(max_length=200)
+    category = models.ForeignKey('products.Category', on_delete=models.SET_NULL, null=True)
+    supplier = models.ForeignKey(Supplier, on_delete=models.SET_NULL, null=True, blank=True)
+    quantity = models.PositiveIntegerField(default=0)
+    location = models.CharField(max_length=200, blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    description = models.TextField(blank=True)
+    image = models.ImageField(upload_to='inventory_images/', blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['item_name']
+        verbose_name_plural = 'Inventories'
+
+    def __str__(self):
+        return self.item_name
+    
+    
+class Sales(models.Model):
+    """
+    Sales model to track sales transactions
+    """
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    date = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        ordering = ['-date']
+
+    def __str__(self):
+        return f"Sale of {self.product.name} on {self.date.strftime('%Y-%m-%d %H:%M:%S')}"
+
+
+class Purchase(models.Model):
+    """
+    Purchase model to track purchase transactions
+    """
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    supplier = models.ForeignKey(Supplier, on_delete=models.SET_NULL, null=True, blank=True)
+    quantity = models.PositiveIntegerField(default=1)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    date = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        ordering = ['-date']
+
+    def __str__(self):
+        return f"Purchase of {self.product.name} from {self.supplier.name if self.supplier else 'Unknown'} on {self.date.strftime('%Y-%m-%d %H:%M:%S')}"   
