@@ -1,45 +1,48 @@
 // Custom sidebar toggle functionality
 document.addEventListener('DOMContentLoaded', function() {
     const mainWrapper = document.getElementById('main-wrapper');
-    const sidebarToggle = document.querySelector('.sidebar-toggle');
-    const body = document.querySelector('body');
-
     if (!mainWrapper) return;
-    
-    // Set initial state
-    mainWrapper.setAttribute('data-sidebartype', 'full');
-    
-    // Function to handle sidebar toggle
+
+    function applySidebarType(type) {
+        const targetType = type === 'mini-sidebar' ? 'mini-sidebar' : 'full';
+        mainWrapper.setAttribute('data-sidebartype', targetType);
+        if (targetType === 'mini-sidebar') {
+            mainWrapper.classList.add('mini-sidebar');
+        } else {
+            mainWrapper.classList.remove('mini-sidebar');
+        }
+        try {
+            localStorage.setItem('sidebarType', targetType);
+        } catch (e) {}
+    }
+
     function toggleSidebar(event) {
         if (event) {
             event.preventDefault();
             event.stopPropagation();
         }
-        
-        const currentType = mainWrapper.getAttribute('data-sidebartype');
-        const newType = currentType === 'mini-sidebar' ? 'full' : 'mini-sidebar';
-        
-        // Add transition class
-        body.classList.add('sidebar-transitioning');
-        
-        // Set new sidebar type
-        mainWrapper.setAttribute('data-sidebartype', newType);
-        localStorage.setItem('sidebarType', newType);
-        
-        // Remove transition class after animation
-        setTimeout(() => {
-            body.classList.remove('sidebar-transitioning');
-        }, 300);
+        const currentType = mainWrapper.getAttribute('data-sidebartype') || 'full';
+        const nextType = currentType === 'mini-sidebar' ? 'full' : 'mini-sidebar';
+        applySidebarType(nextType);
     }
 
-    // Add click event listener to toggle button
-    if (sidebarToggle) {
-        sidebarToggle.addEventListener('click', toggleSidebar);
-    }
+    // Use event delegation so ANY toggle button in header or sidebar works reliably
+    document.addEventListener('click', function(event) {
+        const toggleBtn = event.target.closest('.sidebar-toggle, .sidebartoggler');
+        if (toggleBtn) {
+            toggleSidebar(event);
+        }
+    });
 
-    // Check local storage for saved sidebar state
-    const savedSidebarType = localStorage.getItem('sidebarType');
-    if (savedSidebarType) {
-        mainWrapper.setAttribute('data-sidebartype', savedSidebarType);
+    // Restore saved sidebar preference
+    try {
+        const savedType = localStorage.getItem('sidebarType');
+        if (savedType === 'mini-sidebar' || savedType === 'full') {
+            applySidebarType(savedType);
+        } else {
+            applySidebarType('full');
+        }
+    } catch (e) {
+        applySidebarType('full');
     }
 });

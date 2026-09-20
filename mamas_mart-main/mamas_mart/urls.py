@@ -26,6 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('products/', include(('products.urls', 'products'), namespace='products')),
+    path('product/', RedirectView.as_view(url='/products/', permanent=False)),
+    path('product', RedirectView.as_view(url='/products/', permanent=False)),
     path('inventory/', include(('inventory.urls', 'inventory'), namespace='inventory')),
     path('sales/', include(('sales.urls', 'sales'), namespace='sales')),
     path('help/', include(('help.urls', 'help'), namespace='help')),

@@ -19,6 +19,13 @@ urlpatterns = [
     # User Management Main Page
     path('user_management/', views.user_management, name='user_management'),
 
+    # Profile Page
+    path('profile/', views.profile_view, name='profile'),
+
+    # Notifications & Messaging Centers
+    path('notifications/', views.notifications_view, name='notifications'),
+    path('messages/', views.messages_view, name='messages'),
+
     # Settings Page
     path('settings/', views.settings_view, name='settings'),
 

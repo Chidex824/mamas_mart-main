@@ -1,0 +1,83 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Notifications - Mama's Mart{% endblock %}
+
+{% block body %}
+<div class="container-fluid p-4">
+    {% if messages %}
+    <div class="mb-3">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-body p-4">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4 pb-3 border-bottom">
+                <div>
+                    <h4 class="fw-bold text-dark mb-1"><i class="ti ti-bell me-2 text-primary"></i>Notification Center</h4>
+                    <p class="text-muted small mb-0">System alerts, inventory notifications, and operational updates</p>
+                </div>
+                <div class="d-flex gap-2 mt-3 mt-sm-0">
+                    <form method="post" action="{% url 'accounts:notifications' %}" class="d-inline">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="mark_all_read">
+                        <button type="submit" class="btn btn-outline-primary btn-sm rounded-3">
+                            <i class="ti ti-check-all me-1"></i> Mark All as Read
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                {% for n in notifications %}
+                <div class="p-3 mb-3 rounded-3 border d-flex align-items-start gap-3 {% if not n.is_read %}bg-light-primary border-primary-subtle{% else %}bg-white{% endif %}">
+                    <div class="mt-1">
+                        {% if n.notification_type == 'danger' %}
+                        <div class="bg-danger text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                            <i class="ti ti-alert-triangle fs-5"></i>
+                        </div>
+                        {% elif n.notification_type == 'warning' %}
+                        <div class="bg-warning text-dark rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                            <i class="ti ti-alert-circle fs-5"></i>
+                        </div>
+                        {% elif n.notification_type == 'success' %}
+                        <div class="bg-success text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                            <i class="ti ti-check fs-5"></i>
+                        </div>
+                        {% else %}
+                        <div class="bg-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                            <i class="ti ti-info-circle fs-5"></i>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="fw-bold text-dark mb-1">{{ n.title }}</h6>
+                            <span class="text-muted small" style="font-size: 0.78rem;">{{ n.created_at|date:"M d, Y H:i" }} ({{ n.created_at|timesince }} ago)</span>
+                        </div>
+                        <p class="text-secondary small mb-2">{{ n.message }}</p>
+                        {% if n.link %}
+                        <a href="{{ n.link }}" class="btn btn-sm btn-outline-secondary py-1 px-3 rounded-2 text-decoration-none" style="font-size: 0.8rem;">
+                            View Details <i class="ti ti-arrow-right"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% empty %}
+                <div class="text-center py-5 text-muted">
+                    <i class="ti ti-bell-off fs-1 text-light-gray mb-3 d-block"></i>
+                    <p class="mb-0">No notifications found.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -19,6 +19,7 @@ def inventory_list(request):
 def add_inventory(request):
     categories = ProductCategory.objects.all()
     if request.method == 'POST':
+        is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
         item_name = request.POST.get('item_name')
         category_id = request.POST.get('category')
         supplier_name = request.POST.get('supplier')
@@ -29,7 +30,10 @@ def add_inventory(request):
         image = request.FILES.get('image')
 
         if not all([item_name, category_id, supplier_name, quantity, location, price]):
-            messages.error(request, 'Complete all required inventory fields before saving.')
+            err = 'Complete all required inventory fields before saving.'
+            if is_ajax:
+                return JsonResponse({'success': False, 'error': err}, status=400)
+            messages.error(request, err)
             return render(request, 'inventory/add_inventory.html', {
                 'categories': categories,
                 'form_data': request.POST,
@@ -42,7 +46,10 @@ def add_inventory(request):
             if quantity_value < 0 or price_value < 0:
                 raise ValueError
         except (ProductCategory.DoesNotExist, ValueError, TypeError, InvalidOperation):
-            messages.error(request, 'Choose a valid category and enter valid non-negative quantity and price values.')
+            err = 'Choose a valid category and enter valid non-negative quantity and price values.'
+            if is_ajax:
+                return JsonResponse({'success': False, 'error': err}, status=400)
+            messages.error(request, err)
             return render(request, 'inventory/add_inventory.html', {
                 'categories': categories,
                 'form_data': request.POST,
@@ -58,6 +65,8 @@ def add_inventory(request):
             description=description,
             image=image
         )
+        if is_ajax:
+            return JsonResponse({'success': True, 'message': 'Inventory item added successfully.'})
         messages.success(request, 'Inventory item added successfully.')
         return redirect(reverse('inventory:inventory_list'))
 

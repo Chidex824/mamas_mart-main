@@ -12,12 +12,71 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <link rel="stylesheet" href="{% static 'css/sidebar-toggle.css' %}" />
     <link rel="stylesheet" href="{% static 'css/sidebar-submenu.css' %}">
+    <style>
+        .auth-layout {
+            display: block !important;
+            width: 100vw !important;
+            min-height: 100vh !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden;
+        }
+        .auth-layout .body-wrapper {
+            margin-left: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-height: 100vh !important;
+        }
+        .header-dropdown-menu {
+            min-width: 320px;
+            max-width: 380px;
+            border-radius: 12px;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.15);
+            border: 1px solid rgba(0,0,0,0.08);
+            padding: 0;
+            overflow: hidden;
+        }
+        .header-dropdown-header {
+            padding: 12px 16px;
+            background: #f8fafc;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .header-dropdown-body {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .header-dropdown-footer {
+            padding: 10px 16px;
+            background: #f8fafc;
+            border-top: 1px solid #edf2f7;
+            text-align: center;
+        }
+        .header-item-row {
+            padding: 10px 16px;
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.15s;
+            text-decoration: none;
+            display: block;
+            color: #334155;
+        }
+        .header-item-row:hover {
+            background: #f8fafc;
+            color: #1e293b;
+        }
+        .header-item-row.unread {
+            background: #f0f7ff;
+        }
+        .badge-count {
+            font-size: 0.65rem;
+            padding: 0.25em 0.5em;
+        }
+    </style>
     {% block extra_css %}{% endblock %}
 </head>
 
 <body>
-    <div class="page-wrapper d-flex{% if not request.user.is_authenticated %} auth-layout{% endif %}" id="main-wrapper"
-        data-sidebartype="full">
+    <div class="page-wrapper {% if not request.user.is_authenticated %}auth-layout w-100 min-vh-100 p-0 m-0{% else %}d-flex{% endif %}" id="main-wrapper"{% if request.user.is_authenticated %} data-sidebartype="full"{% endif %}>
         {% if request.user.is_authenticated %}
         {% block navigation %}
         {% include 'main/includes/navigation.html' %}
@@ -27,28 +86,124 @@
             {% if request.user.is_authenticated %}
             <header
                 class="shared-header d-flex justify-content-between align-items-center gap-3 p-3 bg-white shadow-sm">
-                <form class="d-flex gap-2" method="get" action="{% url 'products:product_list' %}" role="search">
-                    <input class="form-control" name="search" type="search" placeholder="Search products..."
-                        aria-label="Search products">
-                    <button class="btn btn-outline-primary" type="submit" aria-label="Search">
-                        <i class="ti ti-search"></i>
-                    </button>
-                </form>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="{% url 'accounts:settings' %}#notifications" class="btn btn-link"
-                        aria-label="Notifications"><i class="ti ti-bell"></i></a>
-                    <a href="{% url 'accounts:settings' %}#messages" class="btn btn-link" aria-label="Messages"><i
-                            class="ti ti-mail"></i></a>
-                    <a href="{% url 'accounts:settings' %}"
-                        class="d-flex align-items-center text-decoration-none text-dark">
+                    <button type="button" class="btn btn-light sidebar-toggle border-0 rounded-3 d-flex align-items-center justify-content-center p-2" aria-label="Toggle sidebar" title="Toggle sidebar">
+                        <i class="ti ti-menu-2 fs-5"></i>
+                    </button>
+                    <form class="d-flex gap-2" method="get" action="{% url 'products:product_list' %}" role="search">
+                        <input class="form-control" name="search" type="search" placeholder="Search products..."
+                            aria-label="Search products">
+                        <button class="btn btn-outline-primary" type="submit" aria-label="Search">
+                            <i class="ti ti-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Notifications Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-link position-relative p-2" type="button" id="notificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+                            <i class="ti ti-bell fs-5 text-dark"></i>
+                            {% if unread_notifications_count > 0 %}
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-count">
+                                {{ unread_notifications_count }}
+                                <span class="visually-hidden">unread notifications</span>
+                            </span>
+                            {% endif %}
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end header-dropdown-menu" aria-labelledby="notificationsDropdown">
+                            <div class="header-dropdown-header d-flex justify-content-between align-items-center">
+                                <h6 class="mb-0 fw-bold">Notifications</h6>
+                                <a href="{% url 'accounts:notifications' %}" class="small text-primary text-decoration-none">View all</a>
+                            </div>
+                            <div class="header-dropdown-body">
+                                {% for n in header_notifications %}
+                                <a href="{% url 'accounts:notifications' %}" class="header-item-row {% if not n.is_read %}unread{% endif %}">
+                                    <div class="d-flex align-items-start gap-2">
+                                        <div class="mt-1">
+                                            {% if n.notification_type == 'danger' %}
+                                            <span class="badge bg-danger p-1"><i class="ti ti-alert-triangle"></i></span>
+                                            {% elif n.notification_type == 'warning' %}
+                                            <span class="badge bg-warning p-1 text-dark"><i class="ti ti-alert-circle"></i></span>
+                                            {% elif n.notification_type == 'success' %}
+                                            <span class="badge bg-success p-1"><i class="ti ti-check"></i></span>
+                                            {% else %}
+                                            <span class="badge bg-primary p-1"><i class="ti ti-info-circle"></i></span>
+                                            {% endif %}
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="fw-semibold small text-dark">{{ n.title }}</div>
+                                            <div class="text-muted small text-truncate" style="max-width: 250px;">{{ n.message }}</div>
+                                            <div class="text-muted" style="font-size: 0.72rem;">{{ n.created_at|timesince }} ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                {% empty %}
+                                <div class="text-center py-4 text-muted small">No notifications yet</div>
+                                {% endfor %}
+                            </div>
+                            <div class="header-dropdown-footer">
+                                <a href="{% url 'accounts:notifications' %}" class="fw-semibold text-primary small text-decoration-none">Open Notification Center <i class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Messages Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-link position-relative p-2" type="button" id="messagesDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Messages">
+                            <i class="ti ti-mail fs-5 text-dark"></i>
+                            {% if unread_messages_count > 0 %}
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary badge-count">
+                                {{ unread_messages_count }}
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                            {% endif %}
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end header-dropdown-menu" aria-labelledby="messagesDropdown">
+                            <div class="header-dropdown-header d-flex justify-content-between align-items-center">
+                                <h6 class="mb-0 fw-bold">Staff Messages</h6>
+                                <a href="{% url 'accounts:messages' %}" class="small text-primary text-decoration-none">View all</a>
+                            </div>
+                            <div class="header-dropdown-body">
+                                {% for m in header_messages %}
+                                <a href="{% url 'accounts:messages' %}" class="header-item-row {% if not m.is_read %}unread{% endif %}">
+                                    <div class="d-flex align-items-start gap-2">
+                                        <div class="mt-1">
+                                            <span class="badge bg-info p-1"><i class="ti ti-mail"></i></span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="fw-semibold small text-dark">{{ m.sender.get_short_name|default:m.sender.username }}</span>
+                                                <span class="text-muted" style="font-size: 0.7rem;">{{ m.created_at|timesince }} ago</span>
+                                            </div>
+                                            <div class="small text-dark fw-medium text-truncate" style="max-width: 250px;">{{ m.subject }}</div>
+                                            <div class="text-muted small text-truncate" style="max-width: 250px;">{{ m.body }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                {% empty %}
+                                <div class="text-center py-4 text-muted small">No messages yet</div>
+                                {% endfor %}
+                            </div>
+                            <div class="header-dropdown-footer">
+                                <a href="{% url 'accounts:messages' %}" class="fw-semibold text-primary small text-decoration-none">Open Message Center <i class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Profile Link -->
+                    <a href="{% url 'accounts:profile' %}"
+                        class="d-flex align-items-center text-decoration-none text-dark p-1 rounded" title="View Profile">
                         {% if request.user.profile_picture %}
                         <img src="{{ request.user.profile_picture.url }}" alt="Profile" class="rounded-circle me-2"
-                            width="40" height="40">
+                            width="40" height="40" style="object-fit: cover;">
                         {% else %}
                         <img src="{% static 'images/profile/user-1.jpg' %}" alt="Profile" class="rounded-circle me-2"
-                            width="40" height="40">
+                            width="40" height="40" style="object-fit: cover;">
                         {% endif %}
-                        <span>Welcome Back, {{ request.user.get_short_name|default:request.user.username }}!</span>
+                        <div class="d-none d-sm-block text-start">
+                            <span class="fw-semibold d-block text-dark" style="font-size: 0.9rem; line-height: 1.2;">{{ request.user.get_short_name|default:request.user.username }}</span>
+                            <small class="text-muted text-capitalize" style="font-size: 0.75rem;">{{ request.user.role.get_name_display|default:'Staff' }}</small>
+                        </div>
                     </a>
                 </div>
             </header>
@@ -60,11 +215,35 @@
     <!-- Core JS -->
     <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
     <script src="{% static 'libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'libs/simplebar/dist/simplebar.js' %}"></script>
     {% block extra_js %}{% endblock %}
     <script src="{% static 'js/sidebarmenu.js' %}"></script>
     <script src="{% static 'js/sidebar-toggle.js' %}"></script>
     <script src="{% static 'js/app.min.js' %}"></script>
+    <div id="globalToastContainer" class="position-fixed top-0 end-0 p-3" style="z-index: 1090;"></div>
+    <script>
+        window.showAlert = function(type, message) {
+            const container = document.getElementById('globalToastContainer') || document.body;
+            const alertDiv = document.createElement('div');
+            const alertType = (type === 'danger' || type === 'error') ? 'danger' : (type === 'success' ? 'success' : 'info');
+            const iconName = alertType === 'success' ? 'check' : (alertType === 'danger' ? 'alert-triangle' : 'info-circle');
+            
+            alertDiv.className = `alert alert-${alertType} alert-dismissible fade show shadow-lg rounded-3 mb-2`;
+            alertDiv.role = 'alert';
+            alertDiv.style.minWidth = '300px';
+            alertDiv.innerHTML = `
+                <div class="d-flex align-items-center gap-2">
+                    <i class="ti ti-${iconName} fs-5"></i>
+                    <div>${message}</div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            container.appendChild(alertDiv);
+            setTimeout(() => {
+                alertDiv.classList.remove('show');
+                setTimeout(() => alertDiv.remove(), 300);
+            }, 4000);
+        };
+    </script>
 </body>
 
 </html>

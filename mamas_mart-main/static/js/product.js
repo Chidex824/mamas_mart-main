@@ -53,17 +53,22 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 if (data.success) {
                     // Close modal and reset form
-                    const modal = bootstrap.Modal.getInstance(addProductModal);
-                    modal.hide();
+                    const modalEl = document.getElementById('addProductModal');
+                    const modalInstance = bootstrap.Modal.getInstance(modalEl) || bootstrap.Modal.getOrCreateInstance(modalEl);
+                    if (modalInstance) modalInstance.hide();
                     this.reset();
                     
-                    // Update product table
-                    updateProductTable();
+                    // Reload page or update table
+                    if (typeof updateProductTable === 'function') {
+                        updateProductTable();
+                    } else {
+                        location.reload();
+                    }
                     
                     // Show success message
-                    showAlert('success', 'Product added successfully!');
+                    if (window.showAlert) showAlert('success', 'Product added successfully!');
                 } else {
-                    showAlert('danger', data.error || 'Error adding product');
+                    if (window.showAlert) showAlert('danger', data.error || 'Error adding product');
                 }
             })
             .catch(error => {

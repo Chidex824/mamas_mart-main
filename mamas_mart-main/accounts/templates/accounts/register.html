@@ -1,191 +1,224 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
 
-{% block title %}Register - Mama's Mart{% endblock %}
+{% block title %}Register Staff - Mama's Mart{% endblock %}
+
+{% block extra_css %}
+<style>
+  .auth-viewport {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
+    padding: 2.5rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .auth-ambient-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.4) 0%, rgba(79, 70, 229, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .auth-square-card {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    padding: 2.5rem 2.25rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .brand-badge {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #fff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin: 0 auto 1.25rem;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+  }
+
+  .form-control, .form-select {
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.92rem;
+  }
+
+  .form-control:focus, .form-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+  }
+
+  .btn-auth-submit {
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .btn-auth-submit:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 24px rgba(79, 70, 229, 0.4);
+  }
+</style>
+{% endblock %}
 
 {% block body %}
-<div class="page-wrapper auth-page" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-  data-sidebar-position="fixed" data-header-position="fixed">
-  <div class="position-relative overflow-hidden min-vh-100 d-flex align-items-center justify-content-center auth-background">
-    <div class="d-flex align-items-center justify-content-center w-100">
-      <div class="row justify-content-center w-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
-          <div class="card mb-0 register-card">
-            <div class="card-body px-4 py-4">
-              <h4 class="mb-4 text-center registration-title">Registration</h4>
+<div class="auth-viewport">
+  <div class="auth-ambient-glow"></div>
 
-              <form method="post" id="registerForm" novalidate>
-                {% csrf_token %}
+  <div class="auth-square-card">
+    {% if not is_allowed %}
+      <!-- Restricted Access Notice -->
+      <div class="text-center py-3">
+        <div class="brand-badge bg-danger text-white shadow-none" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+          <i class="ti ti-shield-lock"></i>
+        </div>
+        <h3 class="fw-bold text-dark mb-2">Admin Only Access</h3>
+        <p class="text-muted small mb-4">
+          Registration is restricted to store administrators. Only admins can register new staff accounts and assign unique login credentials.
+        </p>
 
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="id_first_name" class="form-label text-dark small-label">Full Name</label>
-                    <input type="text" name="first_name" class="form-control custom-input" id="id_first_name" placeholder="Enter your name" required>
-                    <input type="hidden" name="last_name" id="id_last_name" value="">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="id_username" class="form-label text-dark small-label">Username</label>
-                    <input type="text" name="username" class="form-control custom-input" id="id_username" placeholder="Enter your username" required>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="id_email" class="form-label text-dark small-label">Email</label>
-                    <input type="email" name="email" class="form-control custom-input" id="id_email" placeholder="Enter your email" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="id_phone_number" class="form-label text-dark small-label">Phone Number</label>
-                    <input type="tel" name="phone_number" class="form-control custom-input" id="id_phone_number" placeholder="Enter your number">
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="id_password1" class="form-label text-dark small-label">Password</label>
-                    <input type="password" name="password1" class="form-control custom-input" id="id_password1" placeholder="Enter your password" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="id_password2" class="form-label text-dark small-label">Confirm Password</label>
-                    <input type="password" name="password2" class="form-control custom-input" id="id_password2" placeholder="Confirm your password" required>
-                  </div>
-                </div>
-
-                <div class="mt-4 mb-3">
-                  <label class="form-label d-block text-dark small-label mb-2">Gender</label>
-                  <div class="d-flex align-items-center gap-4 flex-wrap">
-                    <div class="form-check d-flex align-items-center gap-2">
-                      <input class="form-check-input custom-radio" type="radio" name="gender" id="gender_male" value="male">
-                      <label class="form-check-label text-dark" for="gender_male">Male</label>
-                    </div>
-                    <div class="form-check d-flex align-items-center gap-2">
-                      <input class="form-check-input custom-radio" type="radio" name="gender" id="gender_female" value="female">
-                      <label class="form-check-label text-dark" for="gender_female">Female</label>
-                    </div>
-                    <div class="form-check d-flex align-items-center gap-2">
-                      <input class="form-check-input custom-radio" type="radio" name="gender" id="gender_other" value="prefer_not_to_say">
-                      <label class="form-check-label text-dark" for="gender_other">Prefer not to say</label>
-                    </div>
-                  </div>
-                </div>
-
-                <button type="submit" class="btn w-100 mt-3 register-submit-btn" id="submitBtn">
-                  Register
-                </button>
-              </form>
-
-              {% if messages %}
-              <div class="messages mt-3">
-                {% for message in messages %}
-                  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                    {{ message }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                {% endfor %}
-              </div>
-              {% endif %}
-
-              <div class="text-center mt-4 small-login-row">
-                <span class="text-dark">Already have account?</span>
-                <a class="text-primary fw-semibold ms-2" href="{% url 'accounts:login' %}">Login</a>
-              </div>
+        <div class="alert alert-warning text-start small mb-4">
+          <div class="d-flex gap-2">
+            <i class="ti ti-info-circle fs-5 flex-shrink-0"></i>
+            <div>
+              <strong>Staff Member?</strong> Please contact your store administrator or manager to receive your assigned username and password.
             </div>
           </div>
         </div>
+
+        <a href="{% url 'accounts:login' %}" class="btn btn-auth-submit w-100 d-inline-flex align-items-center justify-content-center gap-2 text-decoration-none">
+          <i class="ti ti-arrow-left"></i>
+          <span>Return to Login</span>
+        </a>
       </div>
-    </div>
+    {% else %}
+      <!-- Registration Form for Admin -->
+      <div class="text-center">
+        <div class="brand-badge">
+          <i class="ti ti-user-plus"></i>
+        </div>
+        <h3 class="fw-bold text-dark mb-1">
+          {% if is_first_user %}Initial Admin Setup{% else %}Register New Staff{% endif %}
+        </h3>
+        <p class="text-muted small mb-4">
+          {% if is_first_user %}Create the primary administrator account for Mama's Mart{% else %}Issue unique login credentials for a staff member{% endif %}
+        </p>
+      </div>
+
+      {% if messages %}
+      <div class="mb-3">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags|default:'danger' }} alert-dismissible fade show small py-2" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close py-2" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <form method="post" id="registerForm">
+        {% csrf_token %}
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label for="id_username" class="form-label text-dark fw-semibold small mb-1">Username <span class="text-danger">*</span></label>
+            <input type="text" name="username" class="form-control" id="id_username" 
+                   value="{{ form_data.username|default:'' }}" placeholder="e.g. john_doe" required autofocus>
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_role" class="form-label text-dark fw-semibold small mb-1">Assigned Role <span class="text-danger">*</span></label>
+            <select name="role" class="form-select" id="id_role" required>
+              {% for role in roles %}
+              <option value="{{ role.id }}" {% if form_data.role == role.id|stringformat:'s' %}selected{% endif %}>
+                {{ role.get_name_display }}
+              </option>
+              {% empty %}
+              <option value="">Staff / Admin</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_first_name" class="form-label text-dark fw-semibold small mb-1">First Name</label>
+            <input type="text" name="first_name" class="form-control" id="id_first_name" 
+                   value="{{ form_data.first_name|default:'' }}" placeholder="First name">
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_last_name" class="form-label text-dark fw-semibold small mb-1">Last Name</label>
+            <input type="text" name="last_name" class="form-control" id="id_last_name" 
+                   value="{{ form_data.last_name|default:'' }}" placeholder="Last name">
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_email" class="form-label text-dark fw-semibold small mb-1">Email Address</label>
+            <input type="email" name="email" class="form-control" id="id_email" 
+                   value="{{ form_data.email|default:'' }}" placeholder="name@domain.com">
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_phone_number" class="form-label text-dark fw-semibold small mb-1">Phone Number</label>
+            <input type="text" name="phone_number" class="form-control" id="id_phone_number" 
+                   value="{{ form_data.phone_number|default:'' }}" placeholder="08012345678">
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_password1" class="form-label text-dark fw-semibold small mb-1">Set Password <span class="text-danger">*</span></label>
+            <input type="password" name="password1" class="form-control" id="id_password1" 
+                   placeholder="Create password" required autocomplete="new-password">
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_password2" class="form-label text-dark fw-semibold small mb-1">Confirm Password <span class="text-danger">*</span></label>
+            <input type="password" name="password2" class="form-control" id="id_password2" 
+                   placeholder="Repeat password" required autocomplete="new-password">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-auth-submit w-100 d-flex align-items-center justify-content-center gap-2 mt-2">
+          <i class="ti ti-user-check fs-5"></i>
+          <span>{% if is_first_user %}Create Admin Account{% else %}Register User Credentials{% endif %}</span>
+        </button>
+
+        <div class="text-center mt-3">
+          {% if request.user.is_authenticated %}
+          <a class="text-muted small me-3 text-decoration-none" href="{% url 'accounts:user_list' %}">
+            <i class="ti ti-users"></i> Back to User Management
+          </a>
+          {% endif %}
+          <a class="text-primary fw-semibold small text-decoration-none" href="{% url 'accounts:login' %}">
+            Back to Login <i class="ti ti-arrow-right"></i>
+          </a>
+        </div>
+      </form>
+    {% endif %}
   </div>
 </div>
 {% endblock %}
-
-{% block extra_js %}
-<script src="{% static 'js/auth.js' %}"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const fullNameInput = document.getElementById('id_first_name');
-    const lastNameInput = document.getElementById('id_last_name');
-    const form = document.getElementById('registerForm');
-
-    if (fullNameInput && lastNameInput) {
-      const syncLastName = function () {
-        const value = fullNameInput.value.trim();
-        lastNameInput.value = value || '';
-      };
-      fullNameInput.addEventListener('input', syncLastName);
-      form.addEventListener('submit', syncLastName);
-    }
-  });
-</script>
-{% endblock %}
-
-<style>
-  .auth-background {
-    background: linear-gradient(135deg, #4cb4d6 0%, #7f9ae8 38%, #c17ae6 100%);
-  }
-
-  .register-card {
-    width: 100%;
-    max-width: 560px;
-    border: 1px solid rgba(255,255,255,0.35);
-    border-radius: 12px;
-    box-shadow: 0 20px 45px rgba(27, 31, 66, 0.15);
-    background: rgba(255,255,255,0.96);
-  }
-
-  .registration-title {
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1.5rem;
-  }
-
-  .small-label {
-    font-size: 0.83rem;
-    margin-bottom: 0.4rem;
-    font-weight: 600;
-  }
-
-  .custom-input {
-    height: 42px;
-    border: 1px solid #d6d9e0;
-    border-radius: 6px;
-    background: #fff;
-    box-shadow: none;
-    font-size: 0.94rem;
-    color: #333;
-  }
-
-  .custom-input:focus {
-    border-color: #8ab7ff;
-    box-shadow: 0 0 0 0.15rem rgba(109, 146, 255, 0.15);
-  }
-
-  .custom-radio {
-    width: 0.95rem;
-    height: 0.95rem;
-    margin-top: 0;
-    border-color: #9aa6bb;
-  }
-
-  .register-submit-btn {
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #5abef4 0%, #7d7fe6 52%, #be67d7 100%);
-    color: white;
-    font-weight: 600;
-    height: 46px;
-    box-shadow: 0 8px 18px rgba(118, 93, 240, 0.25);
-  }
-
-  .register-submit-btn:hover {
-    color: white;
-    filter: brightness(1.02);
-  }
-
-  .small-login-row {
-    font-size: 0.94rem;
-  }
-
-  @media (max-width: 576px) {
-    .register-card {
-      max-width: 92vw;
-    }
-  }
-</style>

@@ -90,22 +90,20 @@ def product_list(request):
     # Get all categories for the filter dropdown
     categories = Category.objects.all()
     
-    # For AJAX requests, return only the table content
-    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-        template = 'products/includes/product_table.html'
-    else:
-        # For regular requests, also fetch inventory items for the modal
-        used_names = Product.objects.values_list('name', flat=True)
-        inventory_items = InventoryItem.objects.exclude(item_name__in=used_names)
-        context = {
-            'products': products,
-            'categories': categories,
-            'search_query': search_query,
-            'inventory_items': inventory_items,
-        }
-        return render(request, 'products/product_list.html', context)
+    # Fetch inventory items not already used as products
+    used_names = Product.objects.values_list('name', flat=True)
+    inventory_items = InventoryItem.objects.exclude(item_name__in=used_names)
     
-    return render(request, template, context)
+    context = {
+        'products': products,
+        'categories': categories,
+        'search_query': search_query,
+        'inventory_items': inventory_items,
+    }
+    
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        return render(request, 'products/includes/product_table.html', context)
+    return render(request, 'products/product_list.html', context)
 
 @login_required
 def add_product(request):
