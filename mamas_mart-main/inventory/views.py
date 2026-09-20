@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.http import JsonResponse
 from .models import Inventory
 from django.urls import reverse
 from django.contrib import messages
@@ -8,7 +9,15 @@ from collections import defaultdict
 from sales.models import Sale
 from decimal import Decimal, InvalidOperation
 
+DEFAULT_CATEGORIES = ['Groceries', 'Beverages', 'Fresh Produce', 'Household Items', 'Personal Care', 'General']
+
+def ensure_default_categories():
+    if not ProductCategory.objects.exists():
+        for cat_name in DEFAULT_CATEGORIES:
+            ProductCategory.objects.get_or_create(name=cat_name)
+
 def inventory_list(request):
+    ensure_default_categories()
     inventories = Inventory.objects.select_related('category').all()
     categories = ProductCategory.objects.all()
     return render(request, 'inventory/inventory_list.html', {
@@ -17,30 +26,32 @@ def inventory_list(request):
     })
 
 def add_inventory(request):
+    ensure_default_categories()
     categories = ProductCategory.objects.all()
     if request.method == 'POST':
-        is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
-        item_name = request.POST.get('item_name')
-        category_id = request.POST.get('category')
-        supplier_name = request.POST.get('supplier')
-        quantity = request.POST.get('quantity')
-        location = request.POST.get('location')
-        price = request.POST.get('price')
-        description = request.POST.get('description')
+        is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest' or request.headers.get('Accept') == 'application/json'
+        item_name = request.POST.get('item_name', '').strip()
+        category_input = request.POST.get('category', '').strip()
+        supplier_name = request.POST.get('supplier', '').strip()
+        quantity = request.POST.get('quantity', '').strip()
+        location = request.POST.get('location', '').strip()
+        price = request.POST.get('price', '').strip()
+        description = request.POST.get('description', '').strip()
         image = request.FILES.get('image')
 
-        if not all([item_name, category_id, supplier_name, quantity, location, price]):
-            err = 'Complete all required inventory fields before saving.'
+        if not all([item_name, category_input, supplier_name, quantity, location, price]):
+            err = 'Complete all required inventory fields (Item Name, Category, Supplier, Price, Quantity, Location) before saving.'
             if is_ajax:
                 return JsonResponse({'success': False, 'error': err}, status=400)
             messages.error(request, err)
-            return render(request, 'inventory/add_inventory.html', {
-                'categories': categories,
-                'form_data': request.POST,
-            }, status=400)
+            return redirect(reverse('inventory:inventory_list'))
 
         try:
-            category = ProductCategory.objects.get(id=category_id)
+            if category_input.isdigit():
+                category = ProductCategory.objects.get(id=int(category_input))
+            else:
+                category, _ = ProductCategory.objects.get_or_create(name=category_input)
+            
             quantity_value = int(quantity)
             price_value = Decimal(price)
             if quantity_value < 0 or price_value < 0:
@@ -50,10 +61,7 @@ def add_inventory(request):
             if is_ajax:
                 return JsonResponse({'success': False, 'error': err}, status=400)
             messages.error(request, err)
-            return render(request, 'inventory/add_inventory.html', {
-                'categories': categories,
-                'form_data': request.POST,
-            }, status=400)
+            return redirect(reverse('inventory:inventory_list'))
 
         inventory = Inventory.objects.create(
             item_name=item_name,

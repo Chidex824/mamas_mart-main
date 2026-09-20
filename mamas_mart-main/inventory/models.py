@@ -1,3 +1,4 @@
+
 from django.db import models
 from products.models import Category
 
@@ -14,3 +15,10 @@ class Inventory(models.Model):
 
     def __str__(self):
         return self.item_name
+
+    @property
+    def product_image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url
+        return '/static/images/default-product.png'
+
