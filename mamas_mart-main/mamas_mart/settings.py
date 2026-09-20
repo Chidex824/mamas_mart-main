@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-import os 
+from dotenv import load_dotenv
+load_dotenv()
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,15 +28,17 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'True').lower() in {'1', 'true', 'yes', 'on'}
+DEBUG = os.environ.get('DEBUG', 'False').lower() in {'1', 'true', 'yes', 'on'}
 
 ALLOWED_HOSTS = os.environ.get(
     'ALLOWED_HOSTS',
-    'localhost,127.0.0.1,[::1]'
+    ''
 ).split(',')
 
 USE_HTTPS = os.environ.get('USE_HTTPS', 'False').lower() in {'1', 'true', 'yes', 'on'}
 
+# These security settings are ONLY active when USE_HTTPS=true in your .env
+# Leave USE_HTTPS=False for local development (Django dev server is HTTP only)
 SECURE_HSTS_SECONDS = 31536000 if USE_HTTPS else 0
 SECURE_HSTS_INCLUDE_SUBDOMAINS = USE_HTTPS
 SECURE_HSTS_PRELOAD = USE_HTTPS
@@ -56,7 +60,7 @@ INSTALLED_APPS = [
     'graphene_django',
     'crispy_forms',
     'crispy_bootstrap5',
-    'accounts.apps.AccountsConfig',  # Make sure accounts is listed first
+    'accounts.apps.AccountsConfig',
     'main.apps.MainConfig',
     'products.apps.ProductsConfig',
     'inventory.apps.InventoryConfig',
@@ -94,14 +98,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mamas_mart.wsgi.application'
 
+ASGI_APPLICATION = "mamas_mart.asgi.application"
+
+# SameSite settings (needed for cross-origin HTTPS deployments only)
+CSRF_COOKIE_SAMESITE = 'None' if USE_HTTPS else 'Lax'
+SESSION_COOKIE_SAMESITE = 'None' if USE_HTTPS else 'Lax'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("DB_NAME", "Mamas_mart-main"),
+        "USER": os.getenv("DB_USER", "postgres"),
+        "PASSWORD": os.getenv("DB_PASSWORD", "Ocean$6000"),
+        "HOST": os.getenv("DB_HOST", "localhost"),
+        "PORT": os.getenv("DB_PORT", "5432"),
     }
 }
 
@@ -135,6 +148,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
