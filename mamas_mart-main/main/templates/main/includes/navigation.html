@@ -1,30 +1,47 @@
 {% load static %}
 <aside class="left-sidebar flex-shrink-0">
-        <div class="brand-logo d-flex align-items-center justify-content-between p-3">
-            <a href="{% url 'main:index' %}" class="text-nowrap logo-img text-decoration-none">
-                <span class="fw-bold fs-5" style="color: #4f46e5; letter-spacing: 0.5px;">Mamas Mart</span>
-            </a>
-            <button type="button" class="btn btn-link sidebar-toggle" aria-label="Toggle sidebar">
-                <i class="ti ti-menu-2"></i>
-            </button>
-        </div>
-        <nav class="sidebar-nav px-2" id="sidebarnav">
-            <a href="{% url 'main:index' %}" class="nav-link sidebar-link"><i class="ti ti-layout-dashboard me-2"></i><span>Dashboard</span></a>
-            <a href="{% url 'products:product_list' %}" class="nav-link sidebar-link"><i class="ti ti-box me-2"></i><span>Products</span></a>
-            <a href="{% url 'products:category_list' %}" class="nav-link sidebar-link"><i class="ti ti-category me-2"></i><span>Categories</span></a>
-            <a href="{% url 'inventory:inventory_list' %}" class="nav-link sidebar-link"><i class="ti ti-stack me-2"></i><span>Inventory</span></a>
-            <a href="{% url 'sales:index' %}" class="nav-link sidebar-link"><i class="ti ti-chart-bar me-2"></i><span>Sales</span></a>
-            <a href="{% url 'inventory:warehouse' %}" class="nav-link sidebar-link"><i class="ti ti-building me-2"></i><span>Warehouse</span></a>
-            <a href="{% url 'inventory:supplier' %}" class="nav-link sidebar-link"><i class="ti ti-truck me-2"></i><span>Suppliers</span></a>
-            <a href="{% url 'inventory:transfer_product' %}" class="nav-link sidebar-link"><i class="ti ti-arrows-right-left me-2"></i><span>Transfer Product</span></a>
-            <a href="{% url 'inventory:stock' %}" class="nav-link sidebar-link"><i class="ti ti-stack-2 me-2"></i><span>Stock</span></a>
-            <a href="{% url 'inventory:invoice' %}" class="nav-link sidebar-link"><i class="ti ti-file-invoice me-2"></i><span>Invoice</span></a>
-            <a href="{% url 'accounts:user_management' %}" class="nav-link sidebar-link"><i class="ti ti-users me-2"></i><span>User Management</span></a>
-            <a href="{% url 'accounts:profile' %}" class="nav-link sidebar-link"><i class="ti ti-user me-2"></i><span>My Profile</span></a>
-            <a href="{% url 'accounts:notifications' %}" class="nav-link sidebar-link"><i class="ti ti-bell me-2"></i><span>Notifications</span></a>
-            <a href="{% url 'accounts:messages' %}" class="nav-link sidebar-link"><i class="ti ti-mail me-2"></i><span>Messages</span></a>
-            <a href="{% url 'help:index' %}" class="nav-link sidebar-link"><i class="ti ti-help-circle me-2"></i><span>Help</span></a>
-            <a href="{% url 'accounts:settings' %}" class="nav-link sidebar-link"><i class="ti ti-settings me-2"></i><span>Settings</span></a>
-            <a href="{% url 'accounts:logout' %}" class="nav-link sidebar-link"><i class="ti ti-logout me-2"></i><span>Logout</span></a>
-        </nav>
-    </aside>
+    <div class="brand-logo d-flex align-items-center justify-content-between p-3">
+        <a href="{% url 'main:index' %}" class="text-nowrap logo-img text-decoration-none">
+            <span class="fw-bold fs-5" style="color: #4f46e5; letter-spacing: 0.5px;">Mamas Mart</span>
+        </a>
+        <button type="button" class="btn btn-link sidebar-toggle" aria-label="Toggle sidebar">
+            <i class="ti ti-menu-2"></i>
+        </button>
+    </div>
+    <nav class="sidebar-nav px-2" id="sidebarnav">
+        <a href="{% url 'main:index' %}" class="nav-link sidebar-link"><i
+                class="ti ti-layout-dashboard me-2"></i><span>Dashboard</span></a>
+        <a href="{% url 'products:product_list' %}" class="nav-link sidebar-link"><i
+                class="ti ti-box me-2"></i><span>Products</span></a>
+        <a href="{% url 'products:category_list' %}" class="nav-link sidebar-link"><i
+                class="ti ti-category me-2"></i><span>Categories</span></a>
+        <a href="{% url 'inventory:inventory_list' %}" class="nav-link sidebar-link"><i
+                class="ti ti-stack me-2"></i><span>Inventory</span></a>
+        <a href="{% url 'sales:index' %}" class="nav-link sidebar-link"><i
+                class="ti ti-chart-bar me-2"></i><span>Sales</span></a>
+        <a href="{% url 'inventory:warehouse' %}" class="nav-link sidebar-link"><i
+                class="ti ti-building me-2"></i><span>Warehouse</span></a>
+        <a href="{% url 'inventory:supplier' %}" class="nav-link sidebar-link"><i
+                class="ti ti-truck me-2"></i><span>Suppliers</span></a>
+        <a href="{% url 'inventory:transfer_product' %}" class="nav-link sidebar-link"><i
+                class="ti ti-arrows-right-left me-2"></i><span>Transfer Product</span></a>
+        <a href="{% url 'inventory:stock' %}" class="nav-link sidebar-link"><i
+                class="ti ti-stack-2 me-2"></i><span>Stock</span></a>
+        <a href="{% url 'inventory:invoice' %}" class="nav-link sidebar-link"><i
+                class="ti ti-file-invoice me-2"></i><span>Invoice</span></a>
+        <a href="{% url 'accounts:user_management' %}" class="nav-link sidebar-link"><i
+                class="ti ti-users me-2"></i><span>User Management</span></a>
+        <a href="{% url 'accounts:profile' %}" class="nav-link sidebar-link"><i class="ti ti-user me-2"></i><span>My
+                Profile</span></a>
+        <a href="{% url 'accounts:notifications' %}" class="nav-link sidebar-link"><i
+                class="ti ti-bell me-2"></i><span>Notifications</span></a>
+        <a href="{% url 'accounts:messages' %}" class="nav-link sidebar-link"><i
+                class="ti ti-mail me-2"></i><span>Messages</span></a>
+        <a href="{% url 'help:index' %}" class="nav-link sidebar-link"><i
+                class="ti ti-help-circle me-2"></i><span>Help</span></a>
+        <a href="{% url 'accounts:settings' %}" class="nav-link sidebar-link"><i
+                class="ti ti-settings me-2"></i><span>Settings</span></a>
+        <a href="{% url 'accounts:logout' %}" class="nav-link sidebar-link"><i
+                class="ti ti-logout me-2"></i><span>Logout</span></a>
+    </nav>
+</aside>

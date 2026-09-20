@@ -1,5 +1,5 @@
 {% extends 'main/base.html' %}
-{% load crispy_forms_tags static %}
+{% load static %}
 {% block title %}Sales List{% endblock %}
 
 {% block extra_css %}
@@ -64,8 +64,34 @@
                     <div class="modal-body">
                         <form method="post" action="{% url 'sales:add' %}">
                             {% csrf_token %}
-                            {{ form|crispy }}
-                            <button type="submit" class="btn btn-primary">Add Sale</button>
+                            <div class="mb-3">
+                                <label for="id_product" class="form-label fw-semibold">Product</label>
+                                <select name="product" id="id_product" class="form-select" required>
+                                    <option value="">-- Select a product --</option>
+                                    {% for choice in form.product.field.queryset %}
+                                    <option value="{{ choice.pk }}"
+                                        {% if form.product.value == choice.pk|stringformat:"s" %}selected{% endif %}>
+                                        {{ choice }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_quantity" class="form-label fw-semibold">Quantity</label>
+                                <input type="number" name="quantity" id="id_quantity"
+                                    class="form-control" value="{{ form.quantity.value|default:'' }}"
+                                    min="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_price" class="form-label fw-semibold">Price</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">&#8358;</span>
+                                    <input type="number" name="price" id="id_price"
+                                        class="form-control" value="{{ form.price.value|default:'' }}"
+                                        step="0.01" min="0" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Add Sale</button>
                         </form>
                     </div>
                 </div>

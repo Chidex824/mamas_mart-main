@@ -6,11 +6,24 @@ from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 from products.models import Product
 from main.models import DailySalesReport
+from django import forms as django_forms
+
+
+class SaleForm(django_forms.ModelForm):
+    class Meta:
+        model = Sale
+        fields = ['product', 'quantity', 'price']
+
 
 class SaleListView(ListView):
     model = Sale
     template_name = 'sales/sale_list.html'
     context_object_name = 'sales'
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx['form'] = SaleForm()
+        return ctx
 
 class SaleCreateView(CreateView):
     model = Sale
