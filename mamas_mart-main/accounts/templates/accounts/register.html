@@ -171,7 +171,7 @@
               class="text-danger">*</span></label>
           <select name="role" class="form-select" id="id_role" required>
             {% for role in roles %}
-            <option value="{{ role.id }}" {% if form_data.role==role.id|stringformat:'s' %}selected{% endif %}>
+            <option value="{{ role.id }}" {% if form_data.role|stringformat:"s" == role.id|stringformat:"s" %}selected{% endif %}>
               {{ role.get_name_display }}
             </option>
             {% empty %}
