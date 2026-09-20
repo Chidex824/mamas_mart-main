@@ -2,18 +2,17 @@
 <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <form class="modal-content shadow-lg border-0 rounded-4" method="post" enctype="multipart/form-data"
-              id="addProductForm" action="{% url 'products:add_product' %}" novalidate>
+            id="addProductForm" action="{% url 'products:add_product' %}" novalidate>
             {% csrf_token %}
             <input type="hidden" name="action" value="add_product">
-            <div class="modal-header bg-light border-bottom px-4 py-3 d-flex align-items-center justify-content-between">
+            <div
+                class="modal-header bg-light border-bottom px-4 py-3 d-flex align-items-center justify-content-between">
                 <h5 class="modal-title fw-bold text-dark" id="addProductModalLabel">Add New Product</h5>
                 <div class="d-flex align-items-center gap-2">
                     <!-- QR/Barcode scanner trigger -->
-                    <button type="button"
-                            class="btn btn-sm d-flex align-items-center gap-1 text-white"
-                            id="addProductScanBtn"
-                            style="background:linear-gradient(135deg,#6366f1,#8b5cf6);border:none;"
-                            title="Scan to fill barcode field">
+                    <button type="button" class="btn btn-sm d-flex align-items-center gap-1 text-white"
+                        id="addProductScanBtn" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);border:none;"
+                        title="Scan to fill barcode field">
                         <i class="ti ti-scan fs-5"></i> Scan Barcode
                     </button>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -25,19 +24,19 @@
 
                 <!-- Scan result chip -->
                 <div id="addProductScanChip"
-                     class="d-none mb-3 d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3"
-                     style="background:#f0f0ff;border:1.5px dashed #8b5cf6;font-size:.82rem;color:#5b21b6;">
+                    class="d-none mb-3 d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3"
+                    style="background:#f0f0ff;border:1.5px dashed #8b5cf6;font-size:.82rem;color:#5b21b6;">
                     <i class="ti ti-check-circle text-success"></i>
                     <span id="addProductScanChipText">Barcode filled from scan</span>
                     <button type="button" class="btn-close ms-1" id="clearAddProductScan"
-                            style="font-size:.6rem"></button>
+                        style="font-size:.6rem"></button>
                 </div>
 
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label fw-semibold">Product Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="name" id="addProductName"
-                               required placeholder="Enter product name">
+                        <input type="text" class="form-control" name="name" id="addProductName" required
+                            placeholder="Enter product name">
                         <div class="invalid-feedback">Please enter a product name.</div>
                     </div>
                     <div class="col-md-6">
@@ -54,13 +53,12 @@
                         <div class="input-group">
                             <span class="input-group-text">₦</span>
                             <input type="number" class="form-control" name="price" id="addProductPrice"
-                                   placeholder="0.00" step="0.01" min="0" required>
+                                placeholder="0.00" step="0.01" min="0" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label fw-semibold">Stock Quantity <span class="text-danger">*</span></label>
-                        <input type="number" class="form-control" name="stock"
-                               placeholder="0" min="0" required>
+                        <input type="number" class="form-control" name="stock" placeholder="0" min="0" required>
                     </div>
                     <!-- Barcode field -->
                     <div class="col-md-12">
@@ -71,9 +69,9 @@
                         </label>
                         <div class="input-group">
                             <input type="text" class="form-control" name="barcode" id="addProductBarcode"
-                                   placeholder="Scan or type EAN-13, UPC, QR code…" autocomplete="off">
+                                placeholder="Scan or type EAN-13, UPC, QR code…" autocomplete="off">
                             <button type="button" class="btn btn-outline-secondary" id="addProductScanBtnInline"
-                                    title="Scan barcode">
+                                title="Scan barcode">
                                 <i class="ti ti-scan"></i>
                             </button>
                         </div>
@@ -82,7 +80,7 @@
                     <div class="col-12">
                         <label class="form-label fw-semibold">Description</label>
                         <textarea class="form-control" name="description" rows="3"
-                                  placeholder="Optional product description"></textarea>
+                            placeholder="Optional product description"></textarea>
                     </div>
                     <div class="col-12">
                         <label class="form-label fw-semibold">Product Image</label>
@@ -106,40 +104,40 @@
 
 <!-- Load scanner library + module only once (guarded) -->
 <script>
-  if (typeof Html5Qrcode === 'undefined') {
-    const s1 = document.createElement('script');
-    s1.src = 'https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js';
-    s1.onload = loadScannerModule;
-    document.head.appendChild(s1);
-  } else {
-    loadScannerModule();
-  }
+    if (typeof Html5Qrcode === 'undefined') {
+        const s1 = document.createElement('script');
+        s1.src = 'https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js';
+        s1.onload = loadScannerModule;
+        document.head.appendChild(s1);
+    } else {
+        loadScannerModule();
+    }
 
-  function loadScannerModule() {
-    if (typeof MamasScanner !== 'undefined') return initProductScanner();
-    const s2 = document.createElement('script');
-    s2.src = '{% static "js/scanner.js" %}';
-    s2.onload = initProductScanner;
-    document.head.appendChild(s2);
-  }
+    function loadScannerModule() {
+        if (typeof MamasScanner !== 'undefined') return initProductScanner();
+        const s2 = document.createElement('script');
+        s2.src = '{%  "js/scanner.js" %}';
+        s2.onload = initProductScanner;
+        document.head.appendChild(s2);
+    }
 
-  function initProductScanner() {
-    const openScan = () => MamasScanner.open({
-      title: 'Scan Product Barcode',
-      onSuccess: (code) => {
-        document.getElementById('addProductBarcode').value = code;
-        const chip = document.getElementById('addProductScanChip');
-        const txt  = document.getElementById('addProductScanChipText');
-        txt.textContent = `Barcode set: ${code}`;
-        chip.classList.remove('d-none');
-      }
-    });
+    function initProductScanner() {
+        const openScan = () => MamasScanner.open({
+            title: 'Scan Product Barcode',
+            onSuccess: (code) => {
+                document.getElementById('addProductBarcode').value = code;
+                const chip = document.getElementById('addProductScanChip');
+                const txt = document.getElementById('addProductScanChipText');
+                txt.textContent = `Barcode set: ${code}`;
+                chip.classList.remove('d-none');
+            }
+        });
 
-    document.getElementById('addProductScanBtn').addEventListener('click', openScan);
-    document.getElementById('addProductScanBtnInline').addEventListener('click', openScan);
-    document.getElementById('clearAddProductScan').addEventListener('click', () => {
-      document.getElementById('addProductScanChip').classList.add('d-none');
-      document.getElementById('addProductBarcode').value = '';
-    });
-  }
+        document.getElementById('addProductScanBtn').addEventListener('click', openScan);
+        document.getElementById('addProductScanBtnInline').addEventListener('click', openScan);
+        document.getElementById('clearAddProductScan').addEventListener('click', () => {
+            document.getElementById('addProductScanChip').classList.add('d-none');
+            document.getElementById('addProductBarcode').value = '';
+        });
+    }
 </script>
