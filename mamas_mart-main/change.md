@@ -29,7 +29,7 @@ This document records all architectural updates, model additions, view refactori
 
 ### Registration Page (`accounts/templates/accounts/register.html`)
 - **Restricted Registration Access**: Non-admin users visiting `/register/` see an "Admin Only Access" notice explaining that credentials must be issued by an administrator.
-- **Admin Registration Portal**: Logged-in administrators (and initial superuser setup) can register users, assign custom roles (**Administrator**, **Manager**, **Staff**, **Cashier**), and set initial passwords.
+- **Admin Registration Portal**: The page is prominently titled and styled as **Admin Registration**, allowing logged-in administrators (and initial superuser setup) to register users, assign custom roles (**Administrator**, **Manager**, **Staff**, **Cashier**), and set initial passwords.
 
 ### Authentication Views (`accounts/views.py`)
 - Refactored `login_view` to validate role selections and provide clear feedback.
