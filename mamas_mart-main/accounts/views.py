@@ -3,9 +3,9 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django import forms
-from .models import User, Role
+from .models import User, Role, Notification, InternalMessage
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.utils.http import url_has_allowed_host_and_scheme
 
