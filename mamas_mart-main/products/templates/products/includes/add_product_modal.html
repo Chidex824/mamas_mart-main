@@ -70,7 +70,7 @@
                         </label>
                         <div class="input-group">
                             <input type="text" class="form-control" name="barcode" id="addProductBarcode"
-                                placeholder="Scan or type EAN-13, UPC, QR code…" autocomplete="off">
+                                placeholder="Scan or type EAN-13, UPC, QR code…" autocomplete="on">
                             <button type="button" class="btn btn-outline-secondary" id="addProductScanBtnInline"
                                 title="Scan barcode">
                                 <i class="ti ti-scan"></i>
@@ -117,7 +117,7 @@
     function loadScannerModule() {
         if (typeof MamasScanner !== 'undefined') return initProductScanner();
         const s2 = document.createElement('script');
-        s2.src = '{%  "js/scanner.js" %}';
+        s2.src = "{% static 'js/scanner.js' %}";
         s2.onload = initProductScanner;
         document.head.appendChild(s2);
     }
