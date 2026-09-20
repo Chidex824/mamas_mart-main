@@ -44,7 +44,8 @@ def product_list(request):
                 price=price,
                 stock=stock,
                 description=description,
-                is_available=is_available
+                is_available=is_available,
+                barcode=request.POST.get('barcode', '').strip() or None
             )
             
             # Handle image upload
@@ -135,7 +136,8 @@ def add_product(request):
                 price=price_value,
                 stock=stock_value,
                 description=description,
-                is_available=is_available
+                is_available=is_available,
+                barcode=request.POST.get('barcode', '').strip() or None
             )
             if request.FILES.get('image'):
                 product.image = request.FILES['image']
@@ -164,6 +166,8 @@ def edit_product(request, product_id):
             product.stock = request.POST.get('stock')
             product.description = request.POST.get('description')
             product.is_available = request.POST.get('is_available') == 'on'
+            barcode_val = request.POST.get('barcode', '').strip()
+            product.barcode = barcode_val or None
             
             # Handle image upload
             if request.FILES.get('image'):
@@ -264,4 +268,25 @@ def category_list(request):
             Category.objects.get_or_create(name=name)
     categories = Category.objects.all()
     return render(request, 'products/category_list.html', {'categories': categories})
+
+
+def barcode_lookup(request):
+    """JSON API: look up a product by its barcode value.
+    Returns product id, name, price and stock so the scanner can auto-fill forms."""
+    code = request.GET.get('code', '').strip()
+    if not code:
+        return JsonResponse({'found': False, 'error': 'No code provided'})
+    try:
+        product = Product.objects.get(barcode=code)
+        return JsonResponse({
+            'found': True,
+            'id': product.id,
+            'name': product.name,
+            'price': str(product.price),
+            'stock': product.stock,
+            'category_id': product.category_id,
+            'barcode': product.barcode,
+        })
+    except Product.DoesNotExist:
+        return JsonResponse({'found': False, 'error': f'No product with barcode "{code}"'})
 

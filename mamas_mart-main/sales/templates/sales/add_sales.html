@@ -2,6 +2,30 @@
 {% load static %}
 {% block title %}Add Sale{% endblock %}
 
+{% block extra_css %}
+<style>
+  .scan-btn {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
+    color: #fff;
+    transition: opacity .2s;
+  }
+  .scan-btn:hover { opacity: .88; color: #fff; }
+  .scanner-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f0ff;
+    border: 1.5px dashed #8b5cf6;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: .82rem;
+    color: #5b21b6;
+    cursor: pointer;
+  }
+</style>
+{% endblock %}
+
 {% block body %}
 <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -9,10 +33,24 @@
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
                 <div class="card shadow-sm rounded-4">
-                    <div class="card-header bg-primary text-white rounded-top-4">
+                    <div class="card-header bg-primary text-white rounded-top-4 d-flex align-items-center justify-content-between">
                         <h4 class="mb-0"><i class="ti ti-shopping-cart me-2"></i>Add Sale</h4>
+                        <!-- Scanner trigger -->
+                        <button type="button" class="btn scan-btn btn-sm d-flex align-items-center gap-1"
+                                id="openScannerBtn" title="Scan product barcode / QR">
+                            <i class="ti ti-scan fs-5"></i> Scan
+                        </button>
                     </div>
                     <div class="card-body p-4">
+
+                        <!-- Scan result chip (hidden by default) -->
+                        <div id="scanResultChip" class="scanner-chip mb-3 d-none">
+                            <i class="ti ti-check-circle text-success"></i>
+                            <span id="scanResultText">Product found by scan</span>
+                            <button type="button" class="btn-close btn-sm ms-1" id="clearScanResult"
+                                    style="font-size:.6rem"></button>
+                        </div>
+
                         <form method="post">
                             {% csrf_token %}
 
@@ -94,4 +132,60 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- html5-qrcode library -->
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<!-- Shared scanner module -->
+<script src="{% static 'js/scanner.js' %}"></script>
+<script>
+  const BARCODE_LOOKUP_URL = "{% url 'products:barcode_lookup' %}";
+
+  document.getElementById('openScannerBtn').addEventListener('click', () => {
+    MamasScanner.open({
+      title: 'Scan Product Barcode',
+      onSuccess: (code) => lookupAndFill(code)
+    });
+  });
+
+  function lookupAndFill(code) {
+    fetch(`${BARCODE_LOOKUP_URL}?code=${encodeURIComponent(code)}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.found) {
+          // Auto-select the product in the dropdown
+          const select = document.getElementById('{{ form.product.id_for_label }}');
+          if (select) {
+            const opt = [...select.options].find(o => o.value == data.id);
+            if (opt) {
+              select.value = data.id;
+              // Auto-fill price
+              const priceInput = document.getElementById('{{ form.price.id_for_label }}');
+              if (priceInput && !priceInput.value) priceInput.value = data.price;
+            }
+          }
+          showChip(`Scanned: ${data.name}`);
+        } else {
+          showChip(`Code "${code}" — not found. Fill in manually.`, true);
+        }
+      })
+      .catch(() => showChip('Lookup failed. Fill in manually.', true));
+  }
+
+  function showChip(text, warn = false) {
+    const chip = document.getElementById('scanResultChip');
+    const txt  = document.getElementById('scanResultText');
+    txt.textContent = text;
+    chip.classList.remove('d-none');
+    chip.style.borderColor = warn ? '#f59e0b' : '#8b5cf6';
+    chip.querySelector('i').className = warn
+      ? 'ti ti-alert-triangle text-warning'
+      : 'ti ti-check-circle text-success';
+  }
+
+  document.getElementById('clearScanResult').addEventListener('click', () => {
+    document.getElementById('scanResultChip').classList.add('d-none');
+  });
+</script>
 {% endblock %}

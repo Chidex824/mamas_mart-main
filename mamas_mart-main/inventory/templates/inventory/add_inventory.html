@@ -2,67 +2,192 @@
 {% load static %}
 {% block title %}Add Inventory Item{% endblock %}
 
+{% block extra_css %}
+<style>
+  .scan-btn {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
+    color: #fff;
+    transition: opacity .2s;
+  }
+  .scan-btn:hover { opacity: .88; color: #fff; }
+  .scanner-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f0ff;
+    border: 1.5px dashed #8b5cf6;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: .82rem;
+    color: #5b21b6;
+    cursor: pointer;
+  }
+</style>
+{% endblock %}
+
 {% block body %}
-<div class="container mt-4">
-    <h2>Add Inventory Item</h2>
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags|default:'info' }}" role="alert">{{ message }}</div>
-    {% endfor %}
-    <form method="post" enctype="multipart/form-data" action="{% url 'inventory:add_inventory' %}" id="addInventoryForm" novalidate>
-        {% csrf_token %}
-        <div class="row g-3">
-            <div class="col-md-6">
-                <label class="form-label">Product Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="item_name" value="{{ form_data.item_name|default:'' }}" required>
-                <div class="invalid-feedback">Please enter a product name.</div>
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">Category <span class="text-danger">*</span></label>
-                <select class="form-select" name="category" required>
-                    <option value="">Select Category</option>
-                    {% for category in categories %}
-                    <option value="{{ category.id }}" {% if form_data.category == category.id|stringformat:'s' %}selected{% endif %}>{{ category.name }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">Supplier <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="supplier" value="{{ form_data.supplier|default:'' }}" required>
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">Price <span class="text-danger">*</span></label>
-                <div class="input-group">
-                    <span class="input-group-text">₦</span>
-                    <input type="number" class="form-control" name="price" value="{{ form_data.price|default:'' }}" step="0.01" min="0" required>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">Stock <span class="text-danger">*</span></label>
-                <input type="number" class="form-control" name="quantity" value="{{ form_data.quantity|default:'' }}" min="0" required>
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">Location <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="location" value="{{ form_data.location|default:'' }}" required>
-            </div>
-            <div class="col-12">
-                <label class="form-label">Description</label>
-                <textarea class="form-control" name="description" rows="3">{{ form_data.description|default:'' }}</textarea>
-            </div>
-            <div class="col-12">
-                <label class="form-label">Product Image</label>
-                <input type="file" class="form-control" name="image" accept="image/*">
-                <div class="image-preview mt-2" style="display: none;">
-                    <img src="#" alt="Preview" style="max-width: 200px; max-height: 200px;">
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <div class="body-wrapper p-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-xl-8">
+                <div class="card shadow-sm rounded-4">
+                    <div class="card-header bg-success text-white rounded-top-4 d-flex align-items-center justify-content-between">
+                        <h4 class="mb-0"><i class="ti ti-package me-2"></i>Add Inventory Item</h4>
+                        <button type="button" class="btn scan-btn btn-sm d-flex align-items-center gap-1"
+                                id="openScannerBtn" title="Scan barcode / QR to auto-fill">
+                            <i class="ti ti-scan fs-5"></i> Scan
+                        </button>
+                    </div>
+                    <div class="card-body p-4">
+
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags|default:'info' }}" role="alert">{{ message }}</div>
+                        {% endfor %}
+
+                        <!-- Scan result chip -->
+                        <div id="scanResultChip" class="scanner-chip mb-3 d-none">
+                            <i class="ti ti-check-circle text-success"></i>
+                            <span id="scanResultText">Fields auto-filled from scan</span>
+                            <button type="button" class="btn-close btn-sm ms-1" id="clearScanResult"
+                                    style="font-size:.6rem"></button>
+                        </div>
+
+                        <form method="post" enctype="multipart/form-data" action="{% url 'inventory:add_inventory' %}"
+                              id="addInventoryForm" novalidate>
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Product Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="item_name" id="id_item_name"
+                                           value="{{ form_data.item_name|default:'' }}" required
+                                           placeholder="Enter or scan to fill">
+                                    <div class="invalid-feedback">Please enter a product name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Category <span class="text-danger">*</span></label>
+                                    <select class="form-select" name="category" id="id_category" required>
+                                        <option value="">Select Category</option>
+                                        {% for category in categories %}
+                                        <option value="{{ category.id }}"
+                                            {% if form_data.category == category.id|stringformat:'s' %}selected{% endif %}>
+                                            {{ category.name }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Supplier <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="supplier"
+                                           value="{{ form_data.supplier|default:'' }}" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Price <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">₦</span>
+                                        <input type="number" class="form-control" name="price" id="id_price"
+                                               value="{{ form_data.price|default:'' }}" step="0.01" min="0" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Stock <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" name="quantity"
+                                           value="{{ form_data.quantity|default:'' }}" min="0" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Location <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="location"
+                                           value="{{ form_data.location|default:'' }}" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Description</label>
+                                    <textarea class="form-control" name="description" rows="3">{{ form_data.description|default:'' }}</textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Product Image</label>
+                                    <input type="file" class="form-control" name="image" accept="image/*">
+                                    <div class="image-preview mt-2" style="display:none;">
+                                        <img src="#" alt="Preview" style="max-width:200px;max-height:200px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 mt-4">
+                                <a href="{% url 'inventory:inventory_list' %}" class="btn btn-outline-secondary">Cancel</a>
+                                <button type="submit" class="btn btn-success flex-grow-1">
+                                    <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                    <i class="ti ti-check me-1"></i> Add Item
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="modal-footer mt-3">
-            <a href="{% url 'inventory:inventory_list' %}" class="btn btn-secondary">Cancel</a>
-            <button type="submit" class="btn btn-primary">
-                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                Add Item
-            </button>
-        </div>
-    </form>
+    </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- html5-qrcode library -->
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<!-- Shared scanner module -->
+<script src="{% static 'js/scanner.js' %}"></script>
+<script>
+  const BARCODE_LOOKUP_URL = "{% url 'products:barcode_lookup' %}";
+
+  document.getElementById('openScannerBtn').addEventListener('click', () => {
+    MamasScanner.open({
+      title: 'Scan Item Barcode',
+      onSuccess: (code) => lookupAndFill(code)
+    });
+  });
+
+  function lookupAndFill(code) {
+    fetch(`${BARCODE_LOOKUP_URL}?code=${encodeURIComponent(code)}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.found) {
+          const nameInput = document.getElementById('id_item_name');
+          const priceInput = document.getElementById('id_price');
+          const catSelect = document.getElementById('id_category');
+
+          if (nameInput && !nameInput.value) nameInput.value = data.name;
+          if (priceInput && !priceInput.value) priceInput.value = data.price;
+          if (catSelect && data.category_id) {
+            const opt = [...catSelect.options].find(o => o.value == data.category_id);
+            if (opt) catSelect.value = data.category_id;
+          }
+          showChip(`Auto-filled from: ${data.name}`);
+        } else {
+          showChip(`Code "${code}" not found — fill manually.`, true);
+        }
+      })
+      .catch(() => showChip('Lookup failed — fill manually.', true));
+  }
+
+  function showChip(text, warn = false) {
+    const chip = document.getElementById('scanResultChip');
+    chip.querySelector('span').textContent = text;
+    chip.classList.remove('d-none');
+    chip.style.borderColor = warn ? '#f59e0b' : '#8b5cf6';
+    chip.querySelector('i').className = warn
+      ? 'ti ti-alert-triangle text-warning'
+      : 'ti ti-check-circle text-success';
+  }
+
+  document.getElementById('clearScanResult').addEventListener('click', () => {
+    document.getElementById('scanResultChip').classList.add('d-none');
+  });
+
+  // Image preview
+  document.querySelector('input[name="image"]').addEventListener('change', function() {
+    const preview = this.closest('.col-12').querySelector('.image-preview');
+    const img = preview.querySelector('img');
+    if (this.files && this.files[0]) {
+      img.src = URL.createObjectURL(this.files[0]);
+      preview.style.display = 'block';
+    }
+  });
+</script>
 {% endblock %}
