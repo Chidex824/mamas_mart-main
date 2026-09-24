@@ -11,7 +11,18 @@ class Inventory(models.Model):
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='inventory/', blank=True, null=True)
     supplier = models.CharField(max_length=200)
+    barcode = models.CharField(max_length=100, unique=True, blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        if not self.barcode:
+            import random
+            while True:
+                candidate = f"INV{random.randint(100000, 999999)}"
+                if not Inventory.objects.filter(barcode=candidate).exists():
+                    self.barcode = candidate
+                    break
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.item_name

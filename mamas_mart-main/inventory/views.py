@@ -63,6 +63,12 @@ def add_inventory(request):
             messages.error(request, err)
             return redirect(reverse('inventory:inventory_list'))
 
+        if supplier_name:
+            Supplier.objects.get_or_create(
+                name=supplier_name,
+                defaults={'active': True}
+            )
+
         inventory = Inventory.objects.create(
             item_name=item_name,
             category=category,
@@ -89,6 +95,11 @@ def edit_inventory(request, inventory_id):
         category_id = request.POST.get('category')
         inventory.category = get_object_or_404(ProductCategory, id=category_id)
         inventory.supplier = request.POST.get('supplier')
+        if inventory.supplier:
+            Supplier.objects.get_or_create(
+                name=inventory.supplier,
+                defaults={'active': True}
+            )
         inventory.quantity = request.POST.get('quantity')
         inventory.location = request.POST.get('location')
         inventory.price = request.POST.get('price')
@@ -120,7 +131,13 @@ def warehouse(request):
     return render(request, 'inventory/warehouse.html', {'grouped_inventories': grouped_inventories})
 
 def supplier(request):
-    suppliers = Supplier.objects.all()
+    # Ensure any suppliers mentioned in inventory exist in Supplier table
+    existing_supplier_names = Inventory.objects.exclude(supplier__isnull=True).exclude(supplier='').values_list('supplier', flat=True).distinct()
+    for s_name in existing_supplier_names:
+        if s_name and s_name.strip():
+            Supplier.objects.get_or_create(name=s_name.strip(), defaults={'active': True})
+    
+    suppliers = Supplier.objects.all().order_by('name')
     return render(request, 'inventory/supplier.html', {'suppliers': suppliers})
 
 def invoice(request, sale_id=None):

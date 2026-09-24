@@ -26,62 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize product page elements
     initializeProductPage();
 
-    // Initialize forms
-    const addProductForm = document.getElementById('addProductForm');
-    
-    // Initialize add product form handler
-    if (addProductForm) {
-        addProductForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const spinner = submitBtn.querySelector('.spinner-border');
-            
-            // Show loading state
-            submitBtn.disabled = true;
-            if (spinner) spinner.classList.remove('d-none');
-            
-            const formData = new FormData(this);
-            fetch(addProductForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Close modal and reset form
-                    const modalEl = document.getElementById('addProductModal');
-                    const modalInstance = bootstrap.Modal.getInstance(modalEl) || bootstrap.Modal.getOrCreateInstance(modalEl);
-                    if (modalInstance) modalInstance.hide();
-                    this.reset();
-                    
-                    // Reload page or update table
-                    if (typeof updateProductTable === 'function') {
-                        updateProductTable();
-                    } else {
-                        location.reload();
-                    }
-                    
-                    // Show success message
-                    if (window.showAlert) showAlert('success', 'Product added successfully!');
-                } else {
-                    if (window.showAlert) showAlert('danger', data.error || 'Error adding product');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showAlert('danger', 'Error adding product');
-            })
-            .finally(() => {
-                // Reset button state
-                submitBtn.disabled = false;
-                if (spinner) spinner.classList.add('d-none');
-            });
-        });
-    }
+    // Form handlers are initialized via initializeProductForms() called inside initializeProductPage().
+    // Do NOT add a second submit listener here to avoid duplicate submissions.
+
 
     // Filter click handlers
     document.querySelectorAll('.product-nav-item').forEach(item => {
@@ -317,7 +264,7 @@ function initializeProductPage() {
     initializeProductForms();
 }
 
-// Initialize product forms
+// Initialize product forms — uses a data attribute to prevent duplicate listener registration
 function initializeProductForms() {
     const addProductForm = document.getElementById('addProductForm');
     const editProductForm = document.getElementById('editProductForm');
@@ -396,7 +343,8 @@ function initializeProductForms() {
         });
     }
 
-    if (addProductForm) {
+    if (addProductForm && !addProductForm.dataset.listenerAttached) {
+        addProductForm.dataset.listenerAttached = 'true';
         addProductForm.addEventListener('submit', function(e) {
             e.preventDefault();
             if (!validateForm(this)) return;
@@ -415,7 +363,7 @@ function initializeProductForms() {
             
             const formData = new FormData(this);
             
-            fetch(addProductForm.action, {
+            fetch(addProductForm.getAttribute('action'), {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -455,7 +403,8 @@ function initializeProductForms() {
         });
     }
 
-    if (editProductForm) {
+    if (editProductForm && !editProductForm.dataset.listenerAttached) {
+        editProductForm.dataset.listenerAttached = 'true';
         editProductForm.addEventListener('submit', function(e) {
             e.preventDefault();
             if (!validateForm(this)) return;
@@ -533,7 +482,10 @@ function initializeProductForms() {
 // Handle form submission
 function submitProductForm(form, action) {
     const formData = new FormData(form);
-    const url = action === 'add' ? '' : formData.get('product_id') + '/edit/';
+    // Always read product_id as a plain string to avoid [object HTMLInputElement] in the URL
+    const productIdRaw = form.querySelector('#editProductId');
+    const productIdStr = productIdRaw ? productIdRaw.value : (formData.get('product_id') || '');
+    const url = action === 'add' ? '' : productIdStr + '/edit/';
 
     fetch(url, {
         method: 'POST',

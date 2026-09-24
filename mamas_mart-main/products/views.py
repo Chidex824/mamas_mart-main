@@ -271,22 +271,45 @@ def category_list(request):
 
 
 def barcode_lookup(request):
-    """JSON API: look up a product by its barcode value.
-    Returns product id, name, price and stock so the scanner can auto-fill forms."""
+    """JSON API: look up a product or inventory item by barcode.
+    Returns item name, price, stock, category and description to auto-fill forms."""
     code = request.GET.get('code', '').strip()
     if not code:
         return JsonResponse({'found': False, 'error': 'No code provided'})
-    try:
-        product = Product.objects.get(barcode=code)
+    
+    # Check Product
+    product = Product.objects.filter(barcode=code).first()
+    if product:
         return JsonResponse({
             'found': True,
+            'source': 'product',
             'id': product.id,
             'name': product.name,
             'price': str(product.price),
             'stock': product.stock,
             'category_id': product.category_id,
+            'category_name': product.category.name if product.category else '',
             'barcode': product.barcode,
+            'description': product.description,
+            'image_url': product.image.url if product.image else None,
         })
-    except Product.DoesNotExist:
-        return JsonResponse({'found': False, 'error': f'No product with barcode "{code}"'})
+    
+    # Check Inventory
+    inventory = InventoryItem.objects.filter(barcode=code).first()
+    if inventory:
+        return JsonResponse({
+            'found': True,
+            'source': 'inventory',
+            'id': inventory.id,
+            'name': inventory.item_name,
+            'price': str(inventory.price or '0.00'),
+            'stock': inventory.quantity,
+            'category_id': inventory.category_id,
+            'category_name': inventory.category.name if inventory.category else '',
+            'barcode': inventory.barcode,
+            'description': inventory.description,
+            'image_url': inventory.product_image_url,
+        })
+
+    return JsonResponse({'found': False, 'error': f'No product or inventory found with barcode "{code}"'})
 
