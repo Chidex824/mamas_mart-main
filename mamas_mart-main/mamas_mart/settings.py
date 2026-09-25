@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-from dotenv import load_dotenv
-load_dotenv()
+
+
 from pathlib import Path
 import os
 
@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get(
     'SECRET_KEY',
-    '8x!3r$@#m7v^l&b2c8d4q0p9z!k6t$y1g5u8h2m4n6p7r9w0q3s5d7f1v9k2a6'
+    '6|bdv_VON}9b)be5A8*[5gFunH-urYN8i-2@y5[P/E!'
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -35,7 +35,7 @@ ALLOWED_HOSTS = os.environ.get(
     ''
 ).split(',')
 
-USE_HTTPS = os.environ.get('USE_HTTPS', 'False').lower() in {'1', 'true', 'yes', 'on'}
+USE_HTTPS = os.environ.get('USE_HTTPS', 'True').lower() in {'1', 'true', 'yes', 'on'}
 
 # These security settings are ONLY active when USE_HTTPS=true in your .env
 # Leave USE_HTTPS=False for local development (Django dev server is HTTP only)
@@ -102,8 +102,8 @@ WSGI_APPLICATION = 'mamas_mart.wsgi.application'
 ASGI_APPLICATION = "mamas_mart.asgi.application"
 
 # SameSite settings (needed for cross-origin HTTPS deployments only)
-CSRF_COOKIE_SAMESITE = 'None' if USE_HTTPS else 'Lax'
-SESSION_COOKIE_SAMESITE = 'None' if USE_HTTPS else 'Lax'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = USE_HTTPS
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
