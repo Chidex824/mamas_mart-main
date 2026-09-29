@@ -1,0 +1,1285 @@
+[1] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\dynamic-content.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\dynamic-content.css
+  OK
+[2] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\icons\tabler-icons\fonts\tabler-icons.eot -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\icons\tabler-icons\fonts\tabler-icons.eot
+  OK
+[3] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\icons\tabler-icons\fonts\tabler-icons.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\icons\tabler-icons\fonts\tabler-icons.svg
+  OK
+[4] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\icons\tabler-icons\fonts\tabler-icons.ttf -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\icons\tabler-icons\fonts\tabler-icons.ttf
+  OK
+[5] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\icons\tabler-icons\fonts\tabler-icons.woff -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\icons\tabler-icons\fonts\tabler-icons.woff
+  OK
+[6] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\icons\tabler-icons\fonts\tabler-icons.woff2 -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\icons\tabler-icons\fonts\tabler-icons.woff2
+  OK
+[7] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\icons\tabler-icons\tabler-icons.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\icons\tabler-icons\tabler-icons.css
+  OK
+[8] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\index_custom.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\index_custom.css
+  OK
+[9] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\product-animations.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\product-animations.css
+  OK
+[10] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\product-content.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\product-content.css
+  OK
+[11] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\sidebar-submenu.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\sidebar-submenu.css
+  OK
+[12] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\sidebar-toggle.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\sidebar-toggle.css
+  OK
+[13] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\styles.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\styles.css
+  OK
+[14] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\css\styles.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\css\styles.min.css
+  OK
+[15] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\images\logos\google.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\images\logos\google.svg
+  OK
+[16] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\js\app.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\js\app.min.js
+  OK
+[17] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\js\auth.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\js\auth.js
+  OK
+[18] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\js\dashboard.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\js\dashboard.js
+  OK
+[19] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\js\dynamic-content.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\js\dynamic-content.js
+  OK
+[20] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\js\product.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\js\product.js
+  OK
+[21] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\js\scanner.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\js\scanner.js
+  OK
+[22] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\js\sidebar-toggle.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\js\sidebar-toggle.js
+  OK
+[23] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\js\sidebarmenu.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\js\sidebarmenu.js
+  OK
+[24] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\apexcharts.amd.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\apexcharts.amd.js
+  OK
+[25] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\apexcharts.common.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\apexcharts.common.js
+  OK
+[26] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\apexcharts.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\apexcharts.css
+  OK
+[27] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\apexcharts.esm.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\apexcharts.esm.js
+  OK
+[28] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\apexcharts.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\apexcharts.js
+  OK
+[29] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\apexcharts.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\apexcharts.min.js
+  OK
+[30] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\ar.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\ar.json
+  OK
+[31] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\ca.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\ca.json
+  OK
+[32] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\cs.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\cs.json
+  OK
+[33] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\de.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\de.json
+  OK
+[34] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\el.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\el.json
+  OK
+[35] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\en.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\en.json
+  OK
+[36] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\es.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\es.json
+  OK
+[37] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\et.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\et.json
+  OK
+[38] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\fa.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\fa.json
+  OK
+[39] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\fi.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\fi.json
+  OK
+[40] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\fr.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\fr.json
+  OK
+[41] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\he.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\he.json
+  OK
+[42] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\hi.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\hi.json
+  OK
+[43] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\hr.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\hr.json
+  OK
+[44] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\hu.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\hu.json
+  OK
+[45] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\hy.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\hy.json
+  OK
+[46] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\id.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\id.json
+  OK
+[47] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\it.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\it.json
+  OK
+[48] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\ja.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\ja.json
+  OK
+[49] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\ka.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\ka.json
+  OK
+[50] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\ko.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\ko.json
+  OK
+[51] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\lt.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\lt.json
+  OK
+[52] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\lv.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\lv.json
+  OK
+[53] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\nb.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\nb.json
+  OK
+[54] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\nl.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\nl.json
+  OK
+[55] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\pl.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\pl.json
+  OK
+[56] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\pt-br.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\pt-br.json
+  OK
+[57] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\pt.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\pt.json
+  OK
+[58] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\rs.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\rs.json
+  OK
+[59] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\ru.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\ru.json
+  OK
+[60] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\se.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\se.json
+  OK
+[61] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\sk.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\sk.json
+  OK
+[62] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\sl.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\sl.json
+  OK
+[63] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\sq.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\sq.json
+  OK
+[64] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\th.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\th.json
+  OK
+[65] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\tr.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\tr.json
+  OK
+[66] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\ua.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\ua.json
+  OK
+[67] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\zh-cn.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\zh-cn.json
+  OK
+[68] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\dist\locales\zh-tw.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\dist\locales\zh-tw.json
+  OK
+[69] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\LICENSE -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\LICENSE
+  OK
+[70] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\package.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\package.json
+  OK
+[71] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\README.md -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\README.md
+  OK
+[72] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\apexcharts.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\apexcharts.js
+  OK
+[73] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\apexcharts.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\apexcharts.css
+  OK
+[74] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-camera.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-camera.svg
+  OK
+[75] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-home.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-home.svg
+  OK
+[76] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-menu.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-menu.svg
+  OK
+[77] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-minus-square.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-minus-square.svg
+  OK
+[78] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-minus.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-minus.svg
+  OK
+[79] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-pan-hand.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-pan-hand.svg
+  OK
+[80] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-pan.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-pan.svg
+  OK
+[81] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-plus-square.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-plus-square.svg
+  OK
+[82] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-plus.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-plus.svg
+  OK
+[83] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-refresh.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-refresh.svg
+  OK
+[84] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-reset.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-reset.svg
+  OK
+[85] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-select.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-select.svg
+  OK
+[86] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-select1.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-select1.svg
+  OK
+[87] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-zoom-in.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-zoom-in.svg
+  OK
+[88] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-zoom-out.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-zoom-out.svg
+  OK
+[89] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\assets\ico-zoom.svg -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\assets\ico-zoom.svg
+  OK
+[90] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\Bar.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\Bar.js
+  OK
+[91] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\BarStacked.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\BarStacked.js
+  OK
+[92] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\BoxCandleStick.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\BoxCandleStick.js
+  OK
+[93] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\common\bar\DataLabels.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\common\bar\DataLabels.js
+  OK
+[94] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\common\bar\Helpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\common\bar\Helpers.js
+  OK
+[95] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\common\circle\Helpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\common\circle\Helpers.js
+  OK
+[96] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\common\line\Helpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\common\line\Helpers.js
+  OK
+[97] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\common\treemap\Helpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\common\treemap\Helpers.js
+  OK
+[98] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\HeatMap.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\HeatMap.js
+  OK
+[99] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\Line.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\Line.js
+  OK
+[100] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\Pie.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\Pie.js
+  OK
+[101] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\Radar.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\Radar.js
+  OK
+[102] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\Radial.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\Radial.js
+  OK
+[103] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\RangeBar.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\RangeBar.js
+  OK
+[104] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\Scatter.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\Scatter.js
+  OK
+[105] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\charts\Treemap.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\charts\Treemap.js
+  OK
+[106] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\libs\Treemap-squared.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\libs\Treemap-squared.js
+  OK
+[107] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\ar.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\ar.json
+  OK
+[108] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\ca.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\ca.json
+  OK
+[109] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\cs.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\cs.json
+  OK
+[110] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\de.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\de.json
+  OK
+[111] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\el.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\el.json
+  OK
+[112] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\en.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\en.json
+  OK
+[113] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\es.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\es.json
+  OK
+[114] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\et.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\et.json
+  OK
+[115] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\fa.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\fa.json
+  OK
+[116] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\fi.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\fi.json
+  OK
+[117] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\fr.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\fr.json
+  OK
+[118] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\he.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\he.json
+  OK
+[119] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\hi.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\hi.json
+  OK
+[120] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\hr.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\hr.json
+  OK
+[121] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\hu.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\hu.json
+  OK
+[122] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\hy.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\hy.json
+  OK
+[123] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\id.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\id.json
+  OK
+[124] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\it.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\it.json
+  OK
+[125] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\ja.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\ja.json
+  OK
+[126] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\ka.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\ka.json
+  OK
+[127] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\ko.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\ko.json
+  OK
+[128] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\lt.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\lt.json
+  OK
+[129] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\lv.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\lv.json
+  OK
+[130] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\nb.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\nb.json
+  OK
+[131] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\nl.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\nl.json
+  OK
+[132] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\pl.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\pl.json
+  OK
+[133] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\pt-br.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\pt-br.json
+  OK
+[134] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\pt.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\pt.json
+  OK
+[135] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\rs.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\rs.json
+  OK
+[136] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\ru.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\ru.json
+  OK
+[137] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\se.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\se.json
+  OK
+[138] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\sk.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\sk.json
+  OK
+[139] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\sl.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\sl.json
+  OK
+[140] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\sq.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\sq.json
+  OK
+[141] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\th.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\th.json
+  OK
+[142] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\tr.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\tr.json
+  OK
+[143] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\ua.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\ua.json
+  OK
+[144] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\zh-cn.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\zh-cn.json
+  OK
+[145] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\locales\zh-tw.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\locales\zh-tw.json
+  OK
+[146] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Animations.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Animations.js
+  OK
+[147] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\annotations\Annotations.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\annotations\Annotations.js
+  OK
+[148] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\annotations\Helpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\annotations\Helpers.js
+  OK
+[149] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\annotations\PointsAnnotations.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\annotations\PointsAnnotations.js
+  OK
+[150] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\annotations\XAxisAnnotations.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\annotations\XAxisAnnotations.js
+  OK
+[151] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\annotations\YAxisAnnotations.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\annotations\YAxisAnnotations.js
+  OK
+[152] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\axes\Axes.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\axes\Axes.js
+  OK
+[153] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\axes\AxesUtils.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\axes\AxesUtils.js
+  OK
+[154] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\axes\Grid.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\axes\Grid.js
+  OK
+[155] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\axes\XAxis.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\axes\XAxis.js
+  OK
+[156] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\axes\YAxis.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\axes\YAxis.js
+  OK
+[157] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Base.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Base.js
+  OK
+[158] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Core.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Core.js
+  OK
+[159] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\CoreUtils.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\CoreUtils.js
+  OK
+[160] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Crosshairs.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Crosshairs.js
+  OK
+[161] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Data.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Data.js
+  OK
+[162] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\DataLabels.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\DataLabels.js
+  OK
+[163] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\dimensions\Dimensions.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\dimensions\Dimensions.js
+  OK
+[164] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\dimensions\Grid.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\dimensions\Grid.js
+  OK
+[165] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\dimensions\Helpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\dimensions\Helpers.js
+  OK
+[166] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\dimensions\XAxis.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\dimensions\XAxis.js
+  OK
+[167] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\dimensions\YAxis.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\dimensions\YAxis.js
+  OK
+[168] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Events.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Events.js
+  OK
+[169] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Exports.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Exports.js
+  OK
+[170] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Fill.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Fill.js
+  OK
+[171] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Filters.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Filters.js
+  OK
+[172] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Formatters.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Formatters.js
+  OK
+[173] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Graphics.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Graphics.js
+  OK
+[174] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\helpers\Destroy.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\helpers\Destroy.js
+  OK
+[175] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\helpers\InitCtxVariables.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\helpers\InitCtxVariables.js
+  OK
+[176] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\helpers\Localization.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\helpers\Localization.js
+  OK
+[177] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\helpers\UpdateHelpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\helpers\UpdateHelpers.js
+  OK
+[178] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\legend\Helpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\legend\Helpers.js
+  OK
+[179] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\legend\Legend.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\legend\Legend.js
+  OK
+[180] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Markers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Markers.js
+  OK
+[181] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Range.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Range.js
+  OK
+[182] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Responsive.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Responsive.js
+  OK
+[183] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Scales.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Scales.js
+  OK
+[184] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Series.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Series.js
+  OK
+[185] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\settings\Config.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\settings\Config.js
+  OK
+[186] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\settings\Defaults.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\settings\Defaults.js
+  OK
+[187] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\settings\Globals.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\settings\Globals.js
+  OK
+[188] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\settings\Options.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\settings\Options.js
+  OK
+[189] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Theme.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Theme.js
+  OK
+[190] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\TimeScale.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\TimeScale.js
+  OK
+[191] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\TitleSubtitle.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\TitleSubtitle.js
+  OK
+[192] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\Toolbar.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\Toolbar.js
+  OK
+[193] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\tooltip\AxesTooltip.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\tooltip\AxesTooltip.js
+  OK
+[194] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\tooltip\Intersect.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\tooltip\Intersect.js
+  OK
+[195] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\tooltip\Labels.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\tooltip\Labels.js
+  OK
+[196] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\tooltip\Marker.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\tooltip\Marker.js
+  OK
+[197] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\tooltip\Position.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\tooltip\Position.js
+  OK
+[198] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\tooltip\README.md -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\tooltip\README.md
+  OK
+[199] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\tooltip\Tooltip.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\tooltip\Tooltip.js
+  OK
+[200] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\tooltip\Utils.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\tooltip\Utils.js
+  OK
+[201] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\modules\ZoomPanSelection.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\modules\ZoomPanSelection.js
+  OK
+[202] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\svgjs\svg.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\svgjs\svg.js
+  OK
+[203] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\utils\DateTime.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\utils\DateTime.js
+  OK
+[204] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\utils\Resize.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\utils\Resize.js
+  OK
+[205] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\src\utils\Utils.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\src\utils\Utils.js
+  OK
+[206] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\apexcharts\types\apexcharts.d.ts -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\apexcharts\types\apexcharts.d.ts
+  OK
+[207] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-grid.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-grid.css
+  OK
+[208] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-grid.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-grid.css.map
+  OK
+[209] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-grid.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-grid.min.css
+  OK
+[210] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-grid.min.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-grid.min.css.map
+  OK
+[211] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-grid.rtl.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-grid.rtl.css
+  OK
+[212] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-grid.rtl.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+  OK
+[213] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+  OK
+[214] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+  OK
+[215] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-reboot.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-reboot.css
+  OK
+[216] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-reboot.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-reboot.css.map
+  OK
+[217] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-reboot.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-reboot.min.css
+  OK
+[218] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-reboot.min.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-reboot.min.css.map
+  OK
+[219] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css
+  OK
+[220] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+  OK
+[221] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+  OK
+[222] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+  OK
+[223] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-utilities.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-utilities.css
+  OK
+[224] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-utilities.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-utilities.css.map
+  OK
+[225] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-utilities.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-utilities.min.css
+  OK
+[226] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-utilities.min.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-utilities.min.css.map
+  OK
+[227] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css
+  OK
+[228] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+  OK
+[229] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+  OK
+[230] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+  OK
+[231] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap.css
+  OK
+[232] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap.css.map
+  OK
+[233] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap.min.css
+  OK
+[234] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap.min.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap.min.css.map
+  OK
+[235] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap.rtl.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap.rtl.css
+  OK
+[236] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap.rtl.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap.rtl.css.map
+  OK
+[237] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap.rtl.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap.rtl.min.css
+  OK
+[238] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\css\bootstrap.rtl.min.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\css\bootstrap.rtl.min.css.map
+  OK
+[239] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.bundle.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.bundle.js
+  OK
+[240] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.bundle.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.bundle.js.map
+  OK
+[241] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.bundle.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.bundle.min.js
+  OK
+[242] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.bundle.min.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.bundle.min.js.map
+  OK
+[243] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.esm.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.esm.js
+  OK
+[244] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.esm.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.esm.js.map
+  OK
+[245] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.esm.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.esm.min.js
+  OK
+[246] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.esm.min.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.esm.min.js.map
+  OK
+[247] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.js
+  OK
+[248] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.js.map
+  OK
+[249] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.min.js
+  OK
+[250] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\dist\js\bootstrap.min.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\dist\js\bootstrap.min.js.map
+  OK
+[251] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\alert.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\alert.js
+  OK
+[252] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\alert.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\alert.js.map
+  OK
+[253] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\base-component.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\base-component.js
+  OK
+[254] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\base-component.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\base-component.js.map
+  OK
+[255] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\button.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\button.js
+  OK
+[256] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\button.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\button.js.map
+  OK
+[257] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\carousel.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\carousel.js
+  OK
+[258] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\carousel.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\carousel.js.map
+  OK
+[259] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\collapse.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\collapse.js
+  OK
+[260] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\collapse.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\collapse.js.map
+  OK
+[261] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dom\data.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dom\data.js
+  OK
+[262] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dom\data.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dom\data.js.map
+  OK
+[263] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dom\event-handler.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dom\event-handler.js
+  OK
+[264] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dom\event-handler.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dom\event-handler.js.map
+  OK
+[265] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dom\manipulator.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dom\manipulator.js
+  OK
+[266] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dom\manipulator.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dom\manipulator.js.map
+  OK
+[267] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dom\selector-engine.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dom\selector-engine.js
+  OK
+[268] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dom\selector-engine.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dom\selector-engine.js.map
+  OK
+[269] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dropdown.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dropdown.js
+  OK
+[270] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\dropdown.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\dropdown.js.map
+  OK
+[271] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\modal.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\modal.js
+  OK
+[272] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\modal.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\modal.js.map
+  OK
+[273] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\offcanvas.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\offcanvas.js
+  OK
+[274] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\offcanvas.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\offcanvas.js.map
+  OK
+[275] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\popover.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\popover.js
+  OK
+[276] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\popover.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\popover.js.map
+  OK
+[277] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\scrollspy.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\scrollspy.js
+  OK
+[278] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\scrollspy.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\scrollspy.js.map
+  OK
+[279] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\tab.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\tab.js
+  OK
+[280] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\tab.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\tab.js.map
+  OK
+[281] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\toast.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\toast.js
+  OK
+[282] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\toast.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\toast.js.map
+  OK
+[283] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\tooltip.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\tooltip.js
+  OK
+[284] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\tooltip.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\tooltip.js.map
+  OK
+[285] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\backdrop.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\backdrop.js
+  OK
+[286] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\backdrop.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\backdrop.js.map
+  OK
+[287] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\component-functions.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\component-functions.js
+  OK
+[288] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\component-functions.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\component-functions.js.map
+  OK
+[289] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\config.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\config.js
+  OK
+[290] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\config.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\config.js.map
+  OK
+[291] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\focustrap.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\focustrap.js
+  OK
+[292] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\focustrap.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\focustrap.js.map
+  OK
+[293] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\index.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\index.js
+  OK
+[294] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\index.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\index.js.map
+  OK
+[295] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\sanitizer.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\sanitizer.js
+  OK
+[296] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\sanitizer.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\sanitizer.js.map
+  OK
+[297] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\scrollbar.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\scrollbar.js
+  OK
+[298] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\scrollbar.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\scrollbar.js.map
+  OK
+[299] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\swipe.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\swipe.js
+  OK
+[300] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\swipe.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\swipe.js.map
+  OK
+[301] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\template-factory.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\template-factory.js
+  OK
+[302] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\dist\util\template-factory.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\dist\util\template-factory.js.map
+  OK
+[303] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\index.esm.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\index.esm.js
+  OK
+[304] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\index.umd.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\index.umd.js
+  OK
+[305] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\alert.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\alert.js
+  OK
+[306] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\base-component.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\base-component.js
+  OK
+[307] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\button.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\button.js
+  OK
+[308] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\carousel.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\carousel.js
+  OK
+[309] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\collapse.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\collapse.js
+  OK
+[310] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\dom\data.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\dom\data.js
+  OK
+[311] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\dom\event-handler.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\dom\event-handler.js
+  OK
+[312] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\dom\manipulator.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\dom\manipulator.js
+  OK
+[313] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\dom\selector-engine.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\dom\selector-engine.js
+  OK
+[314] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\dropdown.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\dropdown.js
+  OK
+[315] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\modal.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\modal.js
+  OK
+[316] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\offcanvas.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\offcanvas.js
+  OK
+[317] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\popover.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\popover.js
+  OK
+[318] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\scrollspy.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\scrollspy.js
+  OK
+[319] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\tab.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\tab.js
+  OK
+[320] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\toast.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\toast.js
+  OK
+[321] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\tooltip.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\tooltip.js
+  OK
+[322] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\backdrop.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\backdrop.js
+  OK
+[323] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\component-functions.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\component-functions.js
+  OK
+[324] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\config.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\config.js
+  OK
+[325] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\focustrap.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\focustrap.js
+  OK
+[326] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\index.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\index.js
+  OK
+[327] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\sanitizer.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\sanitizer.js
+  OK
+[328] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\scrollbar.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\scrollbar.js
+  OK
+[329] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\swipe.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\swipe.js
+  OK
+[330] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\src\util\template-factory.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\src\util\template-factory.js
+  OK
+[331] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\browsers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\browsers.js
+  OK
+[332] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\helpers\fixture.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\helpers\fixture.js
+  OK
+[333] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\integration\bundle-modularity.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\integration\bundle-modularity.js
+  OK
+[334] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\integration\bundle.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\integration\bundle.js
+  OK
+[335] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\integration\index.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\integration\index.html
+  OK
+[336] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\integration\rollup.bundle-modularity.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\integration\rollup.bundle-modularity.js
+  OK
+[337] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\integration\rollup.bundle.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\integration\rollup.bundle.js
+  OK
+[338] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\karma.conf.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\karma.conf.js
+  OK
+[339] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\README.md -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\README.md
+  OK
+[340] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\.eslintrc.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\.eslintrc.json
+  OK
+[341] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\alert.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\alert.spec.js
+  OK
+[342] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\base-component.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\base-component.spec.js
+  OK
+[343] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\button.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\button.spec.js
+  OK
+[344] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\carousel.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\carousel.spec.js
+  OK
+[345] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\collapse.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\collapse.spec.js
+  OK
+[346] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\dom\data.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\dom\data.spec.js
+  OK
+[347] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\dom\event-handler.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\dom\event-handler.spec.js
+  OK
+[348] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\dom\manipulator.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\dom\manipulator.spec.js
+  OK
+[349] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\dom\selector-engine.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\dom\selector-engine.spec.js
+  OK
+[350] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\dropdown.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\dropdown.spec.js
+  OK
+[351] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\jquery.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\jquery.spec.js
+  OK
+[352] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\modal.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\modal.spec.js
+  OK
+[353] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\offcanvas.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\offcanvas.spec.js
+  OK
+[354] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\popover.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\popover.spec.js
+  OK
+[355] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\scrollspy.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\scrollspy.spec.js
+  OK
+[356] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\tab.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\tab.spec.js
+  OK
+[357] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\toast.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\toast.spec.js
+  OK
+[358] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\tooltip.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\tooltip.spec.js
+  OK
+[359] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\backdrop.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\backdrop.spec.js
+  OK
+[360] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\component-functions.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\component-functions.spec.js
+  OK
+[361] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\config.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\config.spec.js
+  OK
+[362] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\focustrap.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\focustrap.spec.js
+  OK
+[363] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\index.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\index.spec.js
+  OK
+[364] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\sanitizer.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\sanitizer.spec.js
+  OK
+[365] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\scrollbar.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\scrollbar.spec.js
+  OK
+[366] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\swipe.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\swipe.spec.js
+  OK
+[367] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\unit\util\template-factory.spec.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\unit\util\template-factory.spec.js
+  OK
+[368] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\.eslintrc.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\.eslintrc.json
+  OK
+[369] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\alert.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\alert.html
+  OK
+[370] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\button.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\button.html
+  OK
+[371] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\carousel.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\carousel.html
+  OK
+[372] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\collapse.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\collapse.html
+  OK
+[373] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\dropdown.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\dropdown.html
+  OK
+[374] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\modal.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\modal.html
+  OK
+[375] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\popover.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\popover.html
+  OK
+[376] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\scrollspy.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\scrollspy.html
+  OK
+[377] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\tab.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\tab.html
+  OK
+[378] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\toast.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\toast.html
+  OK
+[379] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\js\tests\visual\tooltip.html -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\js\tests\visual\tooltip.html
+  OK
+[380] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\LICENSE -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\LICENSE
+  OK
+[381] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\package.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\package.json
+  OK
+[382] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\README.md -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\README.md
+  OK
+[383] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_accordion.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_accordion.scss
+  OK
+[384] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_alert.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_alert.scss
+  OK
+[385] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_badge.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_badge.scss
+  OK
+[386] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_breadcrumb.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_breadcrumb.scss
+  OK
+[387] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_button-group.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_button-group.scss
+  OK
+[388] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_buttons.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_buttons.scss
+  OK
+[389] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_card.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_card.scss
+  OK
+[390] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_carousel.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_carousel.scss
+  OK
+[391] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_close.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_close.scss
+  OK
+[392] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_containers.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_containers.scss
+  OK
+[393] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_dropdown.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_dropdown.scss
+  OK
+[394] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_forms.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_forms.scss
+  OK
+[395] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_functions.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_functions.scss
+  OK
+[396] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_grid.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_grid.scss
+  OK
+[397] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_helpers.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_helpers.scss
+  OK
+[398] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_images.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_images.scss
+  OK
+[399] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_list-group.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_list-group.scss
+  OK
+[400] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_maps.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_maps.scss
+  OK
+[401] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_mixins.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_mixins.scss
+  OK
+[402] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_modal.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_modal.scss
+  OK
+[403] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_nav.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_nav.scss
+  OK
+[404] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_navbar.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_navbar.scss
+  OK
+[405] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_offcanvas.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_offcanvas.scss
+  OK
+[406] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_pagination.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_pagination.scss
+  OK
+[407] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_placeholders.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_placeholders.scss
+  OK
+[408] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_popover.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_popover.scss
+  OK
+[409] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_progress.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_progress.scss
+  OK
+[410] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_reboot.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_reboot.scss
+  OK
+[411] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_root.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_root.scss
+  OK
+[412] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_spinners.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_spinners.scss
+  OK
+[413] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_tables.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_tables.scss
+  OK
+[414] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_toasts.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_toasts.scss
+  OK
+[415] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_tooltip.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_tooltip.scss
+  OK
+[416] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_transitions.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_transitions.scss
+  OK
+[417] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_type.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_type.scss
+  OK
+[418] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_utilities.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_utilities.scss
+  OK
+[419] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_variables-dark.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_variables-dark.scss
+  OK
+[420] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\_variables.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\_variables.scss
+  OK
+[421] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-grid.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-grid.css
+  OK
+[422] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-grid.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-grid.css.map
+  OK
+[423] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-grid.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-grid.scss
+  OK
+[424] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-reboot.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-reboot.css
+  OK
+[425] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-reboot.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-reboot.css.map
+  OK
+[426] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-reboot.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-reboot.scss
+  OK
+[427] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-utilities.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-utilities.css
+  OK
+[428] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-utilities.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-utilities.css.map
+  OK
+[429] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap-utilities.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap-utilities.scss
+  OK
+[430] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap.css
+  OK
+[431] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap.css.map
+  OK
+[432] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\bootstrap.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\bootstrap.scss
+  OK
+[433] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\css\bootstrap-grid.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\css\bootstrap-grid.css
+  OK
+[434] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\css\bootstrap-grid.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\css\bootstrap-grid.css.map
+  OK
+[435] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\css\bootstrap-reboot.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\css\bootstrap-reboot.css
+  OK
+[436] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\css\bootstrap-reboot.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\css\bootstrap-reboot.css.map
+  OK
+[437] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\css\bootstrap-utilities.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\css\bootstrap-utilities.css
+  OK
+[438] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\css\bootstrap-utilities.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\css\bootstrap-utilities.css.map
+  OK
+[439] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\css\bootstrap.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\css\bootstrap.css
+  OK
+[440] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\css\bootstrap.css.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\css\bootstrap.css.map
+  OK
+[441] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_floating-labels.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_floating-labels.scss
+  OK
+[442] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_form-check.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_form-check.scss
+  OK
+[443] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_form-control.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_form-control.scss
+  OK
+[444] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_form-range.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_form-range.scss
+  OK
+[445] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_form-select.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_form-select.scss
+  OK
+[446] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_form-text.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_form-text.scss
+  OK
+[447] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_input-group.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_input-group.scss
+  OK
+[448] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_labels.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_labels.scss
+  OK
+[449] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\forms\_validation.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\forms\_validation.scss
+  OK
+[450] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_clearfix.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_clearfix.scss
+  OK
+[451] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_color-bg.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_color-bg.scss
+  OK
+[452] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_colored-links.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_colored-links.scss
+  OK
+[453] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_position.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_position.scss
+  OK
+[454] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_ratio.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_ratio.scss
+  OK
+[455] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_stacks.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_stacks.scss
+  OK
+[456] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_stretched-link.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_stretched-link.scss
+  OK
+[457] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_text-truncation.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_text-truncation.scss
+  OK
+[458] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_visually-hidden.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_visually-hidden.scss
+  OK
+[459] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\helpers\_vr.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\helpers\_vr.scss
+  OK
+[460] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_alert.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_alert.scss
+  OK
+[461] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_backdrop.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_backdrop.scss
+  OK
+[462] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_banner.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_banner.scss
+  OK
+[463] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_border-radius.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_border-radius.scss
+  OK
+[464] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_box-shadow.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_box-shadow.scss
+  OK
+[465] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_breakpoints.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_breakpoints.scss
+  OK
+[466] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_buttons.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_buttons.scss
+  OK
+[467] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_caret.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_caret.scss
+  OK
+[468] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_clearfix.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_clearfix.scss
+  OK
+[469] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_color-mode.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_color-mode.scss
+  OK
+[470] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_color-scheme.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_color-scheme.scss
+  OK
+[471] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_container.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_container.scss
+  OK
+[472] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_deprecate.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_deprecate.scss
+  OK
+[473] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_forms.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_forms.scss
+  OK
+[474] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_gradients.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_gradients.scss
+  OK
+[475] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_grid.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_grid.scss
+  OK
+[476] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_image.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_image.scss
+  OK
+[477] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_list-group.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_list-group.scss
+  OK
+[478] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_lists.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_lists.scss
+  OK
+[479] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_pagination.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_pagination.scss
+  OK
+[480] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_reset-text.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_reset-text.scss
+  OK
+[481] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_resize.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_resize.scss
+  OK
+[482] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_table-variants.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_table-variants.scss
+  OK
+[483] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_text-truncate.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_text-truncate.scss
+  OK
+[484] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_transition.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_transition.scss
+  OK
+[485] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_utilities.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_utilities.scss
+  OK
+[486] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\mixins\_visually-hidden.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\mixins\_visually-hidden.scss
+  OK
+[487] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\utilities\_api.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\utilities\_api.scss
+  OK
+[488] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\bootstrap\scss\vendor\_rfs.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\bootstrap\scss\vendor\_rfs.scss
+  OK
+[489] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\bower.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\bower.json
+  OK
+[490] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\dist\core.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\dist\core.js
+  OK
+[491] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\dist\jquery.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\dist\jquery.js
+  OK
+[492] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\dist\jquery.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\dist\jquery.min.js
+  OK
+[493] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\dist\jquery.min.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\dist\jquery.min.map
+  OK
+[494] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\dist\jquery.slim.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\dist\jquery.slim.js
+  OK
+[495] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\dist\jquery.slim.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\dist\jquery.slim.min.js
+  OK
+[496] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\dist\jquery.slim.min.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\dist\jquery.slim.min.map
+  OK
+[497] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\external\sizzle\dist\sizzle.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\external\sizzle\dist\sizzle.js
+  OK
+[498] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\external\sizzle\dist\sizzle.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\external\sizzle\dist\sizzle.min.js
+  OK
+[499] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\external\sizzle\dist\sizzle.min.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\external\sizzle\dist\sizzle.min.map
+  OK
+[500] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\external\sizzle\LICENSE.txt -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\external\sizzle\LICENSE.txt
+  OK
+[501] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\LICENSE.txt -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\LICENSE.txt
+  OK
+[502] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\package.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\package.json
+  OK
+[503] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\README.md -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\README.md
+  OK
+[504] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\.eslintrc.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\.eslintrc.json
+  OK
+[505] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax\jsonp.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax\jsonp.js
+  OK
+[506] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax\load.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax\load.js
+  OK
+[507] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax\parseXML.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax\parseXML.js
+  OK
+[508] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax\script.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax\script.js
+  OK
+[509] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax\var\location.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax\var\location.js
+  OK
+[510] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax\var\nonce.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax\var\nonce.js
+  OK
+[511] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax\var\rquery.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax\var\rquery.js
+  OK
+[512] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax\xhr.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax\xhr.js
+  OK
+[513] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\ajax.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\ajax.js
+  OK
+[514] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\attributes\attr.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\attributes\attr.js
+  OK
+[515] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\attributes\classes.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\attributes\classes.js
+  OK
+[516] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\attributes\prop.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\attributes\prop.js
+  OK
+[517] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\attributes\support.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\attributes\support.js
+  OK
+[518] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\attributes\val.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\attributes\val.js
+  OK
+[519] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\attributes.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\attributes.js
+  OK
+[520] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\callbacks.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\callbacks.js
+  OK
+[521] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\access.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\access.js
+  OK
+[522] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\camelCase.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\camelCase.js
+  OK
+[523] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\DOMEval.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\DOMEval.js
+  OK
+[524] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\init.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\init.js
+  OK
+[525] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\isAttached.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\isAttached.js
+  OK
+[526] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\nodeName.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\nodeName.js
+  OK
+[527] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\parseHTML.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\parseHTML.js
+  OK
+[528] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\ready-no-deferred.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\ready-no-deferred.js
+  OK
+[529] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\ready.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\ready.js
+  OK
+[530] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\readyException.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\readyException.js
+  OK
+[531] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\stripAndCollapse.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\stripAndCollapse.js
+  OK
+[532] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\support.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\support.js
+  OK
+[533] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\toType.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\toType.js
+  OK
+[534] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core\var\rsingleTag.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core\var\rsingleTag.js
+  OK
+[535] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\core.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\core.js
+  OK
+[536] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\addGetHookIf.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\addGetHookIf.js
+  OK
+[537] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\adjustCSS.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\adjustCSS.js
+  OK
+[538] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\curCSS.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\curCSS.js
+  OK
+[539] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\finalPropName.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\finalPropName.js
+  OK
+[540] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\hiddenVisibleSelectors.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\hiddenVisibleSelectors.js
+  OK
+[541] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\showHide.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\showHide.js
+  OK
+[542] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\support.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\support.js
+  OK
+[543] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\var\cssExpand.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\var\cssExpand.js
+  OK
+[544] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\var\getStyles.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\var\getStyles.js
+  OK
+[545] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\var\isHiddenWithinTree.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\var\isHiddenWithinTree.js
+  OK
+[546] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\var\rboxStyle.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\var\rboxStyle.js
+  OK
+[547] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\var\rnumnonpx.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\var\rnumnonpx.js
+  OK
+[548] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css\var\swap.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css\var\swap.js
+  OK
+[549] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\css.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\css.js
+  OK
+[550] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\data\Data.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\data\Data.js
+  OK
+[551] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\data\var\acceptData.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\data\var\acceptData.js
+  OK
+[552] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\data\var\dataPriv.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\data\var\dataPriv.js
+  OK
+[553] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\data\var\dataUser.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\data\var\dataUser.js
+  OK
+[554] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\data.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\data.js
+  OK
+[555] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\deferred\exceptionHook.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\deferred\exceptionHook.js
+  OK
+[556] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\deferred.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\deferred.js
+  OK
+[557] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\deprecated.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\deprecated.js
+  OK
+[558] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\dimensions.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\dimensions.js
+  OK
+[559] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\effects\animatedSelector.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\effects\animatedSelector.js
+  OK
+[560] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\effects\Tween.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\effects\Tween.js
+  OK
+[561] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\effects.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\effects.js
+  OK
+[562] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\event\ajax.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\event\ajax.js
+  OK
+[563] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\event\alias.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\event\alias.js
+  OK
+[564] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\event\focusin.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\event\focusin.js
+  OK
+[565] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\event\support.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\event\support.js
+  OK
+[566] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\event\trigger.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\event\trigger.js
+  OK
+[567] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\event.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\event.js
+  OK
+[568] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\exports\amd.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\exports\amd.js
+  OK
+[569] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\exports\global.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\exports\global.js
+  OK
+[570] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\jquery.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\jquery.js
+  OK
+[571] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation\_evalUrl.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation\_evalUrl.js
+  OK
+[572] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation\buildFragment.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation\buildFragment.js
+  OK
+[573] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation\getAll.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation\getAll.js
+  OK
+[574] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation\setGlobalEval.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation\setGlobalEval.js
+  OK
+[575] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation\support.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation\support.js
+  OK
+[576] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation\var\rscriptType.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation\var\rscriptType.js
+  OK
+[577] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation\var\rtagName.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation\var\rtagName.js
+  OK
+[578] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation\wrapMap.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation\wrapMap.js
+  OK
+[579] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\manipulation.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\manipulation.js
+  OK
+[580] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\offset.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\offset.js
+  OK
+[581] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\queue\delay.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\queue\delay.js
+  OK
+[582] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\queue.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\queue.js
+  OK
+[583] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\selector-native.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\selector-native.js
+  OK
+[584] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\selector-sizzle.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\selector-sizzle.js
+  OK
+[585] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\selector.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\selector.js
+  OK
+[586] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\serialize.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\serialize.js
+  OK
+[587] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\traversing\findFilter.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\traversing\findFilter.js
+  OK
+[588] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\traversing\var\dir.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\traversing\var\dir.js
+  OK
+[589] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\traversing\var\rneedsContext.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\traversing\var\rneedsContext.js
+  OK
+[590] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\traversing\var\siblings.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\traversing\var\siblings.js
+  OK
+[591] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\traversing.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\traversing.js
+  OK
+[592] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\arr.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\arr.js
+  OK
+[593] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\class2type.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\class2type.js
+  OK
+[594] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\concat.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\concat.js
+  OK
+[595] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\document.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\document.js
+  OK
+[596] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\documentElement.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\documentElement.js
+  OK
+[597] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\fnToString.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\fnToString.js
+  OK
+[598] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\getProto.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\getProto.js
+  OK
+[599] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\hasOwn.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\hasOwn.js
+  OK
+[600] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\indexOf.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\indexOf.js
+  OK
+[601] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\isFunction.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\isFunction.js
+  OK
+[602] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\isWindow.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\isWindow.js
+  OK
+[603] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\ObjectFunctionString.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\ObjectFunctionString.js
+  OK
+[604] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\pnum.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\pnum.js
+  OK
+[605] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\push.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\push.js
+  OK
+[606] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\rcheckableType.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\rcheckableType.js
+  OK
+[607] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\rcssNum.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\rcssNum.js
+  OK
+[608] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\rnothtmlwhite.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\rnothtmlwhite.js
+  OK
+[609] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\slice.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\slice.js
+  OK
+[610] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\support.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\support.js
+  OK
+[611] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\var\toString.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\var\toString.js
+  OK
+[612] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\jquery\src\wrap.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\jquery\src\wrap.js
+  OK
+[613] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar-core.esm.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar-core.esm.js
+  OK
+[614] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar-core.esm.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar-core.esm.js.map
+  OK
+[615] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar.css
+  OK
+[616] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar.d.ts -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar.d.ts
+  OK
+[617] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar.esm.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar.esm.js
+  OK
+[618] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar.esm.js.map -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar.esm.js.map
+  OK
+[619] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar.js
+  OK
+[620] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar.min.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar.min.css
+  OK
+[621] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar.min.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar.min.js
+  OK
+[622] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\dist\simplebar.umd.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\dist\simplebar.umd.js
+  OK
+[623] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\LICENSE -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\LICENSE
+  OK
+[624] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\package.json -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\package.json
+  OK
+[625] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\README.md -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\README.md
+  OK
+[626] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\src\helpers.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\src\helpers.js
+  OK
+[627] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\src\index.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\src\index.js
+  OK
+[628] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\src\scrollbar-width.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\src\scrollbar-width.js
+  OK
+[629] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\src\simplebar.css -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\src\simplebar.css
+  OK
+[630] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\libs\simplebar\src\simplebar.js -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\libs\simplebar\src\simplebar.js
+  OK
+[631] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\component\_card.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\component\_card.scss
+  OK
+[632] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\component\_reboot.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\component\_reboot.scss
+  OK
+[633] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\layouts\_header.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\layouts\_header.scss
+  OK
+[634] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\layouts\_layouts.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\layouts\_layouts.scss
+  OK
+[635] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\layouts\_sidebar.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\layouts\_sidebar.scss
+  OK
+[636] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\pages\_dashboard1.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\pages\_dashboard1.scss
+  OK
+[637] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\prepros.config -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\prepros.config
+  OK
+[638] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\styles.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\styles.scss
+  OK
+[639] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\utilities\_background.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\utilities\_background.scss
+  OK
+[640] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\utilities\_icon-size.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\utilities\_icon-size.scss
+  OK
+[641] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\variables\_theme-variables.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\variables\_theme-variables.scss
+  OK
+[642] C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\static\scss\variables\_variables.scss -> C:\Users\chide\OneDrive\Desktop\mamas_mart-main\mamas_mart-main\staticfiles\scss\variables\_variables.scss
+  OK
+DONE 642
