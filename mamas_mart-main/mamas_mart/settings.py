@@ -38,13 +38,13 @@ DEBUG = os.environ.get('DEBUG', 'True').lower() in {'1', 'true', 'yes', 'on'}
 
 ALLOWED_HOSTS = os.environ.get(
     'ALLOWED_HOSTS',
-    'localhost,127.0.0.1'
+    'mamasmart-seven.vercel.app'
 ).split(',')
 ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS if host.strip()]
 
 CSRF_TRUSTED_ORIGINS = [
     origin.strip()
-    for origin in os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',')
+    for origin in os.environ.get('CSRF_TRUSTED_ORIGINS', 'https://mamasmart-seven.vercel.app').split(',')
     if origin.strip()
 ]
 
