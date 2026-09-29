@@ -44,7 +44,7 @@ vercel_hosts = [
     if os.environ.get(name, '').strip()
 ]
 ALLOWED_HOSTS = [
-    host.strip()
+    host.strip()                                                                                                                                                                                                                                            
     for host in os.environ.get(
         'ALLOWED_HOSTS',
         'mamasmart-seven.vercel.app'
