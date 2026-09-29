@@ -170,7 +170,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Use a shorter output path than the project directory to avoid Windows path issues
+# during collectstatic on deeply nested OneDrive paths.
+STATIC_ROOT = BASE_DIR.parent / 'mamas_mart_static'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]

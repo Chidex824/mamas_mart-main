@@ -1,0 +1,207 @@
+/* Mini Sidebar styles */
+[data-sidebartype="mini-sidebar"] .left-sidebar {
+    width: 5rem;
+    flex: 0 0 5rem;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+[data-sidebartype="full"] .left-sidebar {
+    width: 260px;
+    flex: 0 0 260px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-top: 0.75rem;
+}
+
+.sidebar-nav > .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+}
+
+.brand-logo {
+    padding: 15px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo .sidebar-toggle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--bs-secondary);
+    transition: all 0.2s ease;
+}
+
+.brand-logo .sidebar-toggle:hover {
+    background-color: var(--bs-light);
+    color: var(--bs-primary);
+}
+
+[data-sidebartype="mini-sidebar"] .brand-logo .sidebar-toggle i {
+    transform: rotate(180deg);
+}
+
+.brand-logo .sidebar-toggle i {
+    transition: transform 0.3s ease;
+    font-size: 1.25rem;
+}
+
+.sidebar-toggle .ti-menu-2 {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-toggle .ti-menu-2 {
+    transform: rotate(180deg);
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav .hide-menu,
+[data-sidebartype="mini-sidebar"] .sidebar-nav .nav-small-cap,
+[data-sidebartype="mini-sidebar"] .logo-img img,
+[data-sidebartype="mini-sidebar"] .logo-img span {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav > .sidebar-link span {
+    display: none;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav > .sidebar-link {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+[data-sidebartype="full"] .sidebar-nav .hide-menu,
+[data-sidebartype="full"] .sidebar-nav .nav-small-cap,
+[data-sidebartype="full"] .logo-img img,
+[data-sidebartype="full"] .logo-img span {
+    display: block;
+    opacity: 1;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav .sidebar-item {
+    text-align: center;
+}
+
+[data-sidebartype="mini-sidebar"] .left-sidebar:hover .sidebar-nav .sidebar-item {
+    text-align: left;
+}
+
+/* Transition effects */
+.left-sidebar,
+.logo-img img,
+.logo-img span,
+.sidebar-nav .hide-menu,
+.sidebar-nav .nav-small-cap,
+.body-wrapper {
+    transition: all 0.3s ease;
+}
+
+[data-sidebartype="mini-sidebar"] .brand-logo {
+    justify-content: center !important;
+    padding: 1rem 0 !important;
+}
+
+[data-sidebartype="mini-sidebar"] .brand-logo .logo-img {
+    display: none !important;
+}
+
+[data-sidebartype="mini-sidebar"] .brand-logo .sidebar-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto !important;
+    width: 42px;
+    height: 42px;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav > .sidebar-link {
+    justify-content: center !important;
+    padding: 0.75rem 0 !important;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav > .sidebar-link i {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    font-size: 1.35rem;
+}
+
+[data-sidebartype="mini-sidebar"] .sidebar-nav > .sidebar-link span {
+    display: none !important;
+}
+
+/* Transition effects */
+.left-sidebar,
+.logo-img img,
+.logo-img span,
+.sidebar-nav .hide-menu,
+.sidebar-nav .nav-small-cap,
+.body-wrapper {
+    transition: all 0.25s ease;
+}
+
+.body-wrapper {
+    min-width: 0;
+    transition: margin-left 0.3s ease;
+}
+
+#main-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch;
+    width: 100%;
+    gap: 1.25rem;
+    overflow: visible;
+}
+
+#main-wrapper > .left-sidebar {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    left: auto !important;
+    flex: 0 0 260px;
+    width: 260px;
+    height: 100vh;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#main-wrapper > .body-wrapper {
+    position: relative !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    margin: 0 !important;
+    z-index: 0;
+}
+
+#main-wrapper[data-sidebartype="mini-sidebar"] > .left-sidebar {
+    flex-basis: 5rem;
+    width: 5rem;
+}
+
+#main-wrapper[data-sidebartype="mini-sidebar"] > .body-wrapper {
+    flex-basis: 0;
+}
+
+#main-wrapper {
+    gap: 1.25rem;
+}
