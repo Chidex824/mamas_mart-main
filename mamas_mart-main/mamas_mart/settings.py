@@ -33,7 +33,7 @@ if not SECRET_KEY:
     raise ImproperlyConfigured('SECRET_KEY must be set')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False').lower() in {'1', 'true', 'yes', 'on'}
+DEBUG = os.environ.get('DEBUG', 'True').lower() in {'1', 'true', 'yes', 'on'}
 
 ALLOWED_HOSTS = os.environ.get(
     'ALLOWED_HOSTS',
@@ -174,12 +174,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+if DEBUG:
+    staticfiles_backend = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+else:
+    staticfiles_backend = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STORAGES = {
     'default': {
         'BACKEND': 'django.core.files.storage.FileSystemStorage',
     },
     'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        'BACKEND': staticfiles_backend,
     },
 }
 

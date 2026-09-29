@@ -33,29 +33,33 @@ Mamas Mart is a Django application for managing products, inventory, sales, acco
 
 ## Production deployment
 
-This is a server-rendered Django application. Deploy the Django backend to a Python host such as Render, Railway, or Fly.io. Netlify cannot run this Django application directly as a normal static site; it can host a separate frontend or proxy to the deployed backend.
+This project is compatible with Vercel for a Django backend. Vercel detects the Django app from `manage.py` and serves it through the WSGI entrypoint in `mamas_mart/wsgi.py`.
 
 Use these backend commands:
 
 ```
-pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
-gunicorn mamas_mart.wsgi:application
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py collectstatic --noinput
 ```
 
-Set these environment variables in the hosting provider:
+Set these environment variables in your Vercel project settings:
 
 ```
 SECRET_KEY=<a-new-long-random-secret>
 DEBUG=False
 ALLOWED_HOSTS=your-domain.com
 CSRF_TRUSTED_ORIGINS=https://your-domain.com
-DB_NAME=<managed-postgres-database>
-DB_USER=<managed-postgres-user>
-DB_PASSWORD=<managed-postgres-password>
-DB_HOST=<managed-postgres-host>
+DATABASE_URL=postgresql://<user>:<password>@<host>:5432/<database>
+DB_NAME=<database-name>
+DB_USER=<database-user>
+DB_PASSWORD=<database-password>
+DB_HOST=<database-host>
 DB_PORT=5432
 USE_HTTPS=True
 ```
+
+This app is configured to use PostgreSQL by default. `pgAdmin 4` is only the database management UI; the actual database still needs a running PostgreSQL server or managed Postgres service.
 
 Uploaded files in `media/` require persistent object storage such as Amazon S3 or Cloudinary. Do not commit `.env`, database credentials, generated static files, or uploaded media.
 
@@ -71,7 +75,7 @@ Uploaded files in `media/` require persistent object storage such as Amazon S3 o
 - Django
 - Bootstrap 5
 - ApexCharts
-- SQLite (default database)
+- PostgreSQL (production-ready database)
 
 ## License
 
