@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from urllib.parse import urlparse
 
 from dotenv import load_dotenv # pyright: ignore[reportMissingImports]
 from django.core.exceptions import ImproperlyConfigured
@@ -122,16 +123,30 @@ SESSION_COOKIE_SECURE = USE_HTTPS
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-        'default': {
+def _database_config_from_env():
+    database_url = os.getenv('DATABASE_URL')
+    if database_url:
+        parsed = urlparse(database_url)
+        return {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.getenv('DB_NAME', 'Mamas_mart'),
-            'USER': os.getenv('DB_USER', 'postgres'),
-            'PASSWORD': os.getenv('DB_PASSWORD', 'Ocean$6000'),
-            'HOST': os.getenv('DB_HOST', 'localhost'),
-            'PORT': os.getenv('DB_PORT', '5432'),
+            'NAME': parsed.path.lstrip('/'),
+            'USER': parsed.username or os.getenv('DB_USER', 'postgres'),
+            'PASSWORD': parsed.password or os.getenv('DB_PASSWORD', ''),
+            'HOST': parsed.hostname or os.getenv('DB_HOST', 'localhost'),
+            'PORT': str(parsed.port or os.getenv('DB_PORT', '5432')),
         }
+
+    return {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME', 'mamas_mart'),
+        'USER': os.getenv('DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'Ocean$6000'),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
+
+
+DATABASES = {'default': _database_config_from_env()}
 
 
 # Password validation
