@@ -19,4 +19,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mamas_mart.settings')
 
 application = get_wsgi_application()
 
+# Vercel's @vercel/python runtime expects `app` as the WSGI callable
+app = application
 gunicorn_app = application

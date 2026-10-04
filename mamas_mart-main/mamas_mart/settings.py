@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
+import dj_database_url # type: ignore
 from urllib.parse import urlparse
 
 from dotenv import load_dotenv # pyright: ignore[reportMissingImports]
@@ -30,9 +30,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
-if not SECRET_KEY:
-    raise ImproperlyConfigured('SECRET_KEY must be set')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'insecure-build-phase-key-do-not-use-in-production')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True').lower() in {'1', 'true', 'yes', 'on'}
@@ -201,7 +200,7 @@ STATICFILES_DIRS = [
 if DEBUG:
     staticfiles_backend = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 else:
-    staticfiles_backend = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    staticfiles_backend = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 STORAGES = {
     'default': {
