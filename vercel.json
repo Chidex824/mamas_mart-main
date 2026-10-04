@@ -1,18 +1,22 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": {
-    "mamas_mart-main/mamas_mart/wsgi.py": {
-      "maxDuration": 15
-    }
-  },
-  "rewrites": [
+  "builds": [
     {
-      "source": "/static/(.*)",
-      "destination": "/mamas_mart_static/$1"
+      "src": "mamas_mart-main/mamas_mart/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/mamas_mart_static/$1"
     },
     {
-      "source": "/(.*)",
-      "destination": "/mamas_mart-main/mamas_mart/wsgi.py"
+      "src": "/(.*)",
+      "dest": "mamas_mart-main/mamas_mart/wsgi.py"
     }
   ]
 }
