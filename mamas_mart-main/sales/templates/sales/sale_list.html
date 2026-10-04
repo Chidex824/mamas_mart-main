@@ -2,14 +2,11 @@
 {% load static %}
 {% block title %}Sales List{% endblock %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-{% endblock %}
+{% block extra_css %}{% endblock %}
 
 {% block body %}
-<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-    data-sidebar-position="fixed" data-header-position="fixed">
-    <div class="body-wrapper p-4">
+<div class="container-fluid p-4">
+
         <div class="card shadow-sm rounded-4">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-3">
@@ -150,7 +147,6 @@
             </div>
         </div>
 
-    </div>
 </div>
 {% endblock %}
 

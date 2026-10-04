@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Invoices - Mama's Mart{% endblock %}
+
+{% block body %}
+<div class="container-fluid p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <h3 class="mb-0"><i class="ti ti-file-invoice me-2"></i>Invoices</h3>
+        <a href="{% url 'sales:index' %}" class="btn btn-outline-secondary btn-sm">
+            <i class="ti ti-arrow-left me-1"></i> Back to Sales
+        </a>
+    </div>
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            {% if sales %}
+            <div class="table-responsive">
+                <table class="table align-middle table-hover">
+                    <thead>
+                        <tr>
+                            <th>Invoice #</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for sale in sales %}
+                        <tr>
+                            <td><strong>#{{ sale.id|stringformat:"04d" }}</strong></td>
+                            <td>{{ sale.product.name }}</td>
+                            <td>{{ sale.quantity }}</td>
+                            <td>&#8358;{{ sale.price|floatformat:2 }}</td>
+                            <td>&#8358;{% widthratio sale.price 1 sale.quantity %}</td>
+                            <td>{{ sale.date|date:"d M Y" }}</td>
+                            <td>
+                                <a href="{% url 'inventory:invoice_with_id' sale.id %}" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="ti ti-printer me-1"></i>Print
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="text-center py-5 text-muted">
+                <i class="ti ti-file-invoice fs-1 mb-3 d-block"></i>
+                <p>No invoices found. Add a sale to generate invoices.</p>
+                <a href="{% url 'sales:add' %}" class="btn btn-primary">Add Sale</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

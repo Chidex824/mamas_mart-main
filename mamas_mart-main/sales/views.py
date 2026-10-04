@@ -3,8 +3,9 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Sale
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import get_object_or_404
-from products.models import Product
+from django.shortcuts import get_object_or_404, render
+from products.models import Product, Category
+from inventory.models import Inventory
 from main.models import DailySalesReport
 from django import forms as django_forms
 
@@ -31,14 +32,26 @@ class SaleCreateView(CreateView):
     fields = ['product', 'quantity', 'price']
     success_url = reverse_lazy('sales:index')
 
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx['categories'] = Category.objects.all().order_by('name')
+        return ctx
+
     def form_valid(self, form):
         response = super().form_valid(form)
         sale = self.object
-        # Deduct stock from product
+        # Deduct stock from Product model
         product = sale.product
         if product.stock >= sale.quantity:
             product.stock -= sale.quantity
             product.save()
+        # Also deduct from Inventory (match by item_name)
+        inventory_item = Inventory.objects.filter(
+            item_name__iexact=product.name
+        ).first()
+        if inventory_item and inventory_item.quantity >= sale.quantity:
+            inventory_item.quantity -= sale.quantity
+            inventory_item.save()
         # Update dashboard stats
         today = sale.date
         report, created = DailySalesReport.objects.get_or_create(date=today)

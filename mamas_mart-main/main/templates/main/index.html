@@ -1,102 +1,108 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %}Mama's Mart - Inventory Management{% endblock %}
+{% block title %}Mama's Mart - Dashboard{% endblock %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/product-content.css' %}">
-<link rel="stylesheet" href="{% static 'css/index_custom.css' %}">
-<style>
-</style>
-{% endblock %}
 {% block body %}
-        <!-- Dashboard main content -->
-        <div class="container-fluid p-4" id="dynamic-content">
-            <div class="row g-6 mb-4">
-                <!-- Summary cards -->
-                <div class="col-md-3 col-6">
-                    <div class="card p-3 shadow-sm rounded-4">
-                        <div class="d-flex align-items-center">
-                            <div class="icon bg-primary text-white rounded-circle p-3 me-3">
-                                <i class="ti ti-user"></i>
-                            </div>
-                            <div>
-                                <h6>New Customers</h6>
-                                <h4 id="newCustomersCount">{{ dashboard_data.current_stats.new_customers }}</h4>
-                                <small class="text-success">{{ dashboard_data.current_stats.new_customers_change }}% from last month</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="card p-3 shadow-sm rounded-4">
-                        <div class="d-flex align-items-center">
-                            <div class="icon bg-success text-white rounded-circle p-3 me-3">
-                                <i class="ti ti-box"></i>
-                            </div>
-                            <div>
-                                <h6>Products Sold</h6>
-                                <h4 id="productsSoldCount">{{ dashboard_data.current_stats.products_sold }}</h4>
-                                <small class="text-success">{{ dashboard_data.current_stats.products_sold_change }}% from last month</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="card p-3 shadow-sm rounded-4">
-                        <div class="d-flex align-items-center">
-                            <div class="icon bg-danger text-white rounded-circle p-3 me-3">
-                                <i class="ti ti-chart-line"></i>
-                            </div>
-                            <div>
-                                <h6>Sales Revenue</h6>
-                                <h4 id="salesRevenueCount">₦{{ dashboard_data.current_stats.sales_revenue|floatformat:2 }}</h4>
-                                <small class="text-success">{{ dashboard_data.current_stats.sales_revenue_change }}% from last month</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="card p-3 shadow-sm rounded-4">
-                        <div class="d-flex align-items-center">
-                            <div class="icon bg-warning text-white rounded-circle p-3 me-3">
-                                <i class="ti ti-stack"></i>
-                            </div>
-                            <div>
-                                <h6>Inventory Value</h6>
-                                <h4 id="inventoryValueCount">₦{{ dashboard_data.current_stats.inventory_value|floatformat:2 }}</h4>
-                                <small class="text-success">{{ dashboard_data.current_stats.inventory_value_change }}% from last month</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card shadow-sm border-0 mt-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="mb-0">Recently added inventory</h5>
-                        <a href="{% url 'inventory:inventory_list' %}" class="btn btn-sm btn-outline-primary">View inventory</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table align-middle mb-0">
-                            <thead><tr><th>Product</th><th>Category</th><th>Quantity</th><th>Location</th><th>Price</th></tr></thead>
-                            <tbody>
-                            {% for inventory in inventories %}
-                                <tr>
-                                    <td>{{ inventory.item_name }}</td>
-                                    <td>{{ inventory.category.name }}</td>
-                                    <td>{{ inventory.quantity }}</td>
-                                    <td>{{ inventory.location }}</td>
-                                    <td>₦{{ inventory.price|floatformat:2 }}</td>
-                                </tr>
-                            {% empty %}
-                                <tr><td colspan="5" class="text-muted text-center py-4">No inventory has been added yet.</td></tr>
-                            {% endfor %}
-                            </tbody>
-                        </table>
+<div class="container-fluid p-4" id="dynamic-content">
+    <div class="row g-4 mb-4">
+        <!-- Summary cards -->
+        <div class="col-md-3 col-6">
+            <div class="card p-3 shadow-sm rounded-4 h-100">
+                <div class="d-flex align-items-center">
+                    <div class="icon bg-primary text-white rounded-circle p-3 me-3"><i class="ti ti-user"></i></div>
+                    <div>
+                        <h6 class="mb-1">New Customers</h6>
+                        <h4 class="mb-0" id="newCustomersCount">{{ dashboard_data.current_stats.new_customers }}</h4>
+                        <small class="text-success">{{ dashboard_data.current_stats.new_customers_change }}% from last month</small>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-md-3 col-6">
+            <div class="card p-3 shadow-sm rounded-4 h-100">
+                <div class="d-flex align-items-center">
+                    <div class="icon bg-success text-white rounded-circle p-3 me-3"><i class="ti ti-box"></i></div>
+                    <div>
+                        <h6 class="mb-1">Products Sold</h6>
+                        <h4 class="mb-0" id="productsSoldCount">{{ dashboard_data.current_stats.products_sold }}</h4>
+                        <small class="text-success">{{ dashboard_data.current_stats.products_sold_change }}% from last month</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="card p-3 shadow-sm rounded-4 h-100">
+                <div class="d-flex align-items-center">
+                    <div class="icon bg-danger text-white rounded-circle p-3 me-3"><i class="ti ti-chart-line"></i></div>
+                    <div>
+                        <h6 class="mb-1">Sales Revenue</h6>
+                        <h4 class="mb-0" id="salesRevenueCount">&#8358;{{ dashboard_data.current_stats.sales_revenue|floatformat:2 }}</h4>
+                        <small class="text-success">{{ dashboard_data.current_stats.sales_revenue_change }}% from last month</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="card p-3 shadow-sm rounded-4 h-100">
+                <div class="d-flex align-items-center">
+                    <div class="icon bg-warning text-white rounded-circle p-3 me-3"><i class="ti ti-stack"></i></div>
+                    <div>
+                        <h6 class="mb-1">Inventory Value</h6>
+                        <h4 class="mb-0" id="inventoryValueCount">&#8358;{{ dashboard_data.current_stats.inventory_value|floatformat:2 }}</h4>
+                        <small class="text-success">{{ dashboard_data.current_stats.inventory_value_change }}% from last month</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Table -->
+    <div class="card shadow-sm border-0 mt-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                <h5 class="mb-0">Products</h5>
+                <a href="{% url 'products:product_list' %}" class="btn btn-sm btn-outline-primary">View all products</a>
+            </div>
+            <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for product in products %}
+                        <tr>
+                            <td>
+                                {% if product.image %}
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image me-2">
+                                {% endif %}
+                                {{ product.name }}
+                            </td>
+                            <td>{{ product.category.name|default:"-" }}</td>
+                            <td>&#8358;{{ product.price|floatformat:2 }}</td>
+                            <td>{{ product.quantity|default:product.stock_quantity|default:0 }}</td>
+                            <td>
+                                {% if product.quantity > 0 or product.stock_quantity > 0 %}
+                                <span class="status-badge in-stock">In Stock</span>
+                                {% else %}
+                                <span class="status-badge out-of-stock">Out of Stock</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="5" class="text-muted text-center py-4">No products have been added yet.</td></tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block extra_js %}

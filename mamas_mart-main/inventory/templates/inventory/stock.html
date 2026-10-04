@@ -1,30 +1,45 @@
 {% extends 'main/base.html' %}
-{% block title %}Stock{% endblock %}
+{% block title %}Stock Overview - Mama's Mart{% endblock %}
 
 {% block body %}
-<h2>Stock Overview</h2>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>Category</th>
-            <th>Quantity</th>
-            <th>Location</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in stock_items %}
-        <tr>
-            <td>{{ item.item_name }}</td>
-            <td>{{ item.category.name }}</td>
-            <td>{{ item.quantity }}</td>
-            <td>{{ item.location }}</td>
-        </tr>
-        {% empty %}
-        <tr>
-            <td colspan="4">No stock items available.</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="container-fluid p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <h3 class="mb-0"><i class="ti ti-package me-2"></i>Stock Overview</h3>
+        <a href="{% url 'inventory:inventory_list' %}" class="btn btn-outline-secondary btn-sm">
+            <i class="ti ti-arrow-left me-1"></i> Back to Inventory
+        </a>
+    </div>
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in stock_items %}
+                        <tr>
+                            <td>{{ item.item_name }}</td>
+                            <td>{{ item.category.name }}</td>
+                            <td>
+                                <span class="badge {% if item.quantity > 10 %}bg-success{% elif item.quantity > 0 %}bg-warning text-dark{% else %}bg-danger{% endif %}">
+                                    {{ item.quantity }}
+                                </span>
+                            </td>
+                            <td>{{ item.location }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr><td colspan="4" class="text-center text-muted py-4">No stock items available.</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -10,30 +10,76 @@
     <link rel="stylesheet" href="{% static 'libs/simplebar/dist/simplebar.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/sidebar-toggle.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/sidebar-submenu.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
 
 <body>
     <div class="page-wrapper {% if not request.user.is_authenticated %}auth-layout w-100 min-vh-100 p-0 m-0{% else %}d-flex{% endif %}" id="main-wrapper"{% if request.user.is_authenticated %} data-sidebartype="full"{% endif %}>
         {% if request.user.is_authenticated %}
-        {% block navigation %}
-        {% include 'main/includes/navigation.html' %}
-        {% endblock %}
+        <!-- ===== SIDEBAR / NAVIGATION (merged from navigation.html) ===== -->
+        <aside class="left-sidebar flex-shrink-0">
+            <div class="brand-logo d-flex align-items-center justify-content-between p-3">
+                <a href="{% url 'main:index' %}" class="text-nowrap logo-img text-decoration-none">
+                    <span class="fw-bold fs-5 brand-logo-text">Mamas Mart</span>
+                </a>
+                <button type="button" class="btn btn-link sidebar-toggle" aria-label="Toggle sidebar">
+                    <i class="ti ti-menu-2"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav px-2" id="sidebarnav">
+                <a href="{% url 'main:index' %}" class="nav-link sidebar-link"><i class="ti ti-layout-dashboard me-2"></i><span>Dashboard</span></a>
+                <a href="{% url 'products:product_list' %}" class="nav-link sidebar-link"><i class="ti ti-box me-2"></i><span>Products</span></a>
+                <a href="{% url 'products:category_list' %}" class="nav-link sidebar-link"><i class="ti ti-category me-2"></i><span>Categories</span></a>
+                <!-- Inventory dropdown -->
+                <div>
+                    <a href="#inventorySubmenu" class="nav-link sidebar-link sidebar-submenu-toggle has-arrow" data-bs-toggle="collapse" aria-expanded="false" aria-controls="inventorySubmenu">
+                        <i class="ti ti-stack me-2"></i><span>Inventory</span>
+                        <i class="ti ti-chevron-right submenu-arrow ms-auto"></i>
+                    </a>
+                    <div class="collapse" id="inventorySubmenu">
+                        <div class="sidebar-sub-items ps-3">
+                            <a href="{% url 'inventory:inventory_list' %}" class="nav-link sidebar-link"><i class="ti ti-list me-2"></i><span>All Inventory</span></a>
+                            <a href="{% url 'inventory:supplier' %}" class="nav-link sidebar-link"><i class="ti ti-truck me-2"></i><span>Suppliers</span></a>
+                            <a href="{% url 'inventory:warehouse' %}" class="nav-link sidebar-link"><i class="ti ti-building-warehouse me-2"></i><span>Warehouse</span></a>
+                            <a href="{% url 'inventory:transfer_product' %}" class="nav-link sidebar-link"><i class="ti ti-arrows-transfer-down me-2"></i><span>Transfer Product</span></a>
+                            <a href="{% url 'inventory:stock' %}" class="nav-link sidebar-link"><i class="ti ti-package me-2"></i><span>Stock</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sales dropdown -->
+                <div>
+                    <a href="#salesSubmenu" class="nav-link sidebar-link sidebar-submenu-toggle has-arrow" data-bs-toggle="collapse" aria-expanded="false" aria-controls="salesSubmenu">
+                        <i class="ti ti-chart-bar me-2"></i><span>Sales</span>
+                        <i class="ti ti-chevron-right submenu-arrow ms-auto"></i>
+                    </a>
+                    <div class="collapse" id="salesSubmenu">
+                        <div class="sidebar-sub-items ps-3">
+                            <a href="{% url 'sales:index' %}" class="nav-link sidebar-link"><i class="ti ti-list me-2"></i><span>Sales List</span></a>
+                            <a href="{% url 'sales:add' %}" class="nav-link sidebar-link"><i class="ti ti-plus me-2"></i><span>Add Sale</span></a>
+                            <a href="{% url 'sales:invoice' %}" class="nav-link sidebar-link"><i class="ti ti-file-invoice me-2"></i><span>Invoices</span></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="{% url 'accounts:user_management' %}" class="nav-link sidebar-link"><i class="ti ti-users me-2"></i><span>User Management</span></a>
+                <a href="{% url 'accounts:profile' %}" class="nav-link sidebar-link"><i class="ti ti-user me-2"></i><span>My Profile</span></a>
+                <a href="{% url 'accounts:notifications' %}" class="nav-link sidebar-link"><i class="ti ti-bell me-2"></i><span>Notifications</span></a>
+                <a href="{% url 'accounts:messages' %}" class="nav-link sidebar-link"><i class="ti ti-mail me-2"></i><span>Messages</span></a>
+                <a href="{% url 'help:index' %}" class="nav-link sidebar-link"><i class="ti ti-help-circle me-2"></i><span>Help</span></a>
+                <a href="{% url 'accounts:settings' %}" class="nav-link sidebar-link"><i class="ti ti-settings me-2"></i><span>Settings</span></a>
+                <a href="{% url 'accounts:logout' %}" class="nav-link sidebar-link"><i class="ti ti-logout me-2"></i><span>Logout</span></a>
+            </nav>
+        </aside>
         <div class="sidebar-backdrop"></div>
         {% endif %}
         <div class="body-wrapper flex-grow-1" id="shared-content-wrapper">
             {% if request.user.is_authenticated %}
-            <header
-                class="shared-header d-flex justify-content-between align-items-center gap-3 p-3 bg-white shadow-sm">
+            <header class="shared-header d-flex justify-content-between align-items-center gap-3 p-3 bg-white shadow-sm">
                 <div class="d-flex align-items-center gap-2 gap-sm-3">
                     <button type="button" class="btn btn-light sidebar-toggle border-0 rounded-3 d-flex align-items-center justify-content-center p-2" aria-label="Toggle sidebar" title="Toggle sidebar">
                         <i class="ti ti-menu-2 fs-5"></i>
                     </button>
-                    <form class="d-flex gap-2"  method="get" action="{% url 'products:product_list' %}" role="search">
-                        <input class="form-control" name="search" type="search" placeholder="Search products..."
-                            aria-label="Search products">
+                    <form class="d-flex gap-2" method="get" action="{% url 'products:product_list' %}" role="search">
+                        <input class="form-control" name="search" type="search" placeholder="Search products..." aria-label="Search products">
                         <button class="btn btn-outline-primary" type="submit" aria-label="Search">
                             <i class="ti ti-search"></i>
                         </button>
@@ -61,15 +107,10 @@
                                 <a href="{% url 'accounts:notifications' %}" class="header-item-row {% if not n.is_read %}unread{% endif %}">
                                     <div class="d-flex align-items-start gap-2">
                                         <div class="mt-1">
-                                            {% if n.notification_type == 'danger' %}
-                                            <span class="badge bg-danger p-1"><i class="ti ti-alert-triangle"></i></span>
-                                            {% elif n.notification_type == 'warning' %}
-                                            <span class="badge bg-warning p-1 text-dark"><i class="ti ti-alert-circle"></i></span>
-                                            {% elif n.notification_type == 'success' %}
-                                            <span class="badge bg-success p-1"><i class="ti ti-check"></i></span>
-                                            {% else %}
-                                            <span class="badge bg-primary p-1"><i class="ti ti-info-circle"></i></span>
-                                            {% endif %}
+                                            {% if n.notification_type == 'danger' %}<span class="badge bg-danger p-1"><i class="ti ti-alert-triangle"></i></span>
+                                            {% elif n.notification_type == 'warning' %}<span class="badge bg-warning p-1 text-dark"><i class="ti ti-alert-circle"></i></span>
+                                            {% elif n.notification_type == 'success' %}<span class="badge bg-success p-1"><i class="ti ti-check"></i></span>
+                                            {% else %}<span class="badge bg-primary p-1"><i class="ti ti-info-circle"></i></span>{% endif %}
                                         </div>
                                         <div class="flex-grow-1">
                                             <div class="fw-semibold small text-dark">{{ n.title }}</div>
@@ -87,7 +128,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Messages Dropdown -->
                     <div class="dropdown">
                         <button class="btn btn-link position-relative p-2" type="button" id="messagesDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Messages">
@@ -108,9 +148,7 @@
                                 {% for m in header_messages %}
                                 <a href="{% url 'accounts:messages' %}" class="header-item-row {% if not m.is_read %}unread{% endif %}">
                                     <div class="d-flex align-items-start gap-2">
-                                        <div class="mt-1">
-                                            <span class="badge bg-info p-1"><i class="ti ti-mail"></i></span>
-                                        </div>
+                                        <div class="mt-1"><span class="badge bg-info p-1"><i class="ti ti-mail"></i></span></div>
                                         <div class="flex-grow-1">
                                             <div class="d-flex justify-content-between">
                                                 <span class="fw-semibold small text-dark">{{ m.sender.get_short_name|default:m.sender.username }}</span>
@@ -130,10 +168,8 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- User Profile Link -->
-                    <a href="{% url 'accounts:profile' %}"
-                        class="d-flex align-items-center text-decoration-none text-dark p-1 rounded" title="View Profile">
+                    <a href="{% url 'accounts:profile' %}" class="d-flex align-items-center text-decoration-none text-dark p-1 rounded" title="View Profile">
                         {% if request.user.profile_picture %}
                         <img src="{{ request.user.profile_picture.url }}" alt="Profile" class="rounded-circle me-2 user-profile-img" width="40" height="40">
                         {% else %}
@@ -162,32 +198,52 @@
     <script src="{% static 'js/app.min.js' %}"></script>
     <div id="globalToastContainer" class="position-fixed top-0 end-0 p-3 toast-container-top-end"></div>
     <script>
+        // ── Mobile sidebar toggle ──────────────────────────
+        (function () {
+            var wrapper = document.getElementById('main-wrapper');
+            var backdrop = wrapper ? wrapper.querySelector('.sidebar-backdrop') : null;
+            function toggleSidebar() {
+                if (wrapper) wrapper.classList.toggle('sidebar-open');
+            }
+            function closeSidebar() {
+                if (wrapper) wrapper.classList.remove('sidebar-open');
+            }
+            document.querySelectorAll('.sidebar-toggle').forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    // On desktop use original mini-sidebar behaviour
+                    if (window.innerWidth >= 992) {
+                        var st = wrapper ? wrapper.getAttribute('data-sidebartype') : null;
+                        if (wrapper) wrapper.setAttribute('data-sidebartype', st === 'mini-sidebar' ? 'full' : 'mini-sidebar');
+                    } else {
+                        toggleSidebar();
+                    }
+                });
+            });
+            if (backdrop) backdrop.addEventListener('click', closeSidebar);
+        })();
+
+        // ── Modals moved to body on show ──────────────────
         document.addEventListener('show.bs.modal', function (event) {
-            const modal = event.target;
+            var modal = event.target;
             if (modal && modal.parentNode !== document.body) {
                 document.body.appendChild(modal);
             }
         });
 
-        window.showAlert = function(type, message) {
-            const container = document.getElementById('globalToastContainer') || document.body;
-            const alertDiv = document.createElement('div');
-            const alertType = (type === 'danger' || type === 'error') ? 'danger' : (type === 'success' ? 'success' : 'info');
-            const iconName = alertType === 'success' ? 'check' : (alertType === 'danger' ? 'alert-triangle' : 'info-circle');
-            
-            alertDiv.className = `alert alert-${alertType} alert-dismissible fade show shadow-lg rounded-3 mb-2 toast-alert`;
+        // ── Global toast alert helper ──────────────────────
+        window.showAlert = function (type, message) {
+            var container = document.getElementById('globalToastContainer') || document.body;
+            var alertDiv = document.createElement('div');
+            var alertType = (type === 'danger' || type === 'error') ? 'danger' : (type === 'success' ? 'success' : 'info');
+            var iconName = alertType === 'success' ? 'check' : (alertType === 'danger' ? 'alert-triangle' : 'info-circle');
+            alertDiv.className = 'alert alert-' + alertType + ' alert-dismissible fade show shadow-lg rounded-3 mb-2 toast-alert';
             alertDiv.role = 'alert';
-            alertDiv.innerHTML = `
-                <div class="d-flex align-items-center gap-2">
-                    <i class="ti ti-${iconName} fs-5"></i>
-                    <div>${message}</div>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            `;
+            alertDiv.innerHTML = '<div class="d-flex align-items-center gap-2"><i class="ti ti-' + iconName + ' fs-5"></i><div>' + message + '</div></div><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
             container.appendChild(alertDiv);
-            setTimeout(() => {
+            setTimeout(function () {
                 alertDiv.classList.remove('show');
-                setTimeout(() => alertDiv.remove(), 300);
+                setTimeout(function () { alertDiv.remove(); }, 300);
             }, 4000);
         };
     </script>

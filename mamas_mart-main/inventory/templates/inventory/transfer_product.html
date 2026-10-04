@@ -1,41 +1,58 @@
 {% extends 'main/base.html' %}
-{% block title %}Transfer Product{% endblock %}
+{% block title %}Transfer Product - Mama's Mart{% endblock %}
 
 {% block body %}
-<h2>Transfer Product</h2>
-<form method="post" action="">
-    {% csrf_token %}
-    <div class="mb-3">
-        <label for="product" class="form-label">Product</label>
-        <select id="product" name="product" class="form-select" required>
-            <option value="" selected disabled>Select a product</option>
-            {% for product in products %}
-            <option value="{{ product.id }}">{{ product.name }}</option>
-            {% endfor %}
-        </select>
+<div class="container-fluid p-4">
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-7 col-md-9">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="ti ti-arrows-transfer-down me-2"></i>Transfer Product</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="product" class="form-label fw-semibold">Product</label>
+                            <select id="product" name="product" class="form-select" required>
+                                <option value="" selected disabled>Select a product</option>
+                                {% for product in products %}
+                                <option value="{{ product.id }}">{{ product.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="from_location" class="form-label fw-semibold">From Location</label>
+                            <select id="from_location" name="from_location" class="form-select" required>
+                                <option value="" selected disabled>Select source location</option>
+                                {% for location in locations %}
+                                <option value="{{ location }}">{{ location }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="to_location" class="form-label fw-semibold">To Location</label>
+                            <select id="to_location" name="to_location" class="form-select" required>
+                                <option value="" selected disabled>Select destination location</option>
+                                {% for location in locations %}
+                                <option value="{{ location }}">{{ location }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label fw-semibold">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" class="form-control" min="1" required>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary flex-grow-1">
+                                <i class="ti ti-arrows-transfer-down me-1"></i> Transfer
+                            </button>
+                            <a href="{% url 'inventory:inventory_list' %}" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="from_location" class="form-label">From Location</label>
-        <select id="from_location" name="from_location" class="form-select" required>
-            <option value="" selected disabled>Select source location</option>
-            {% for location in locations %}
-            <option value="{{ location }}">{{ location }}</option>
-            {% endfor %}
-        </select>
-    </div>
-    <div class="mb-3">
-        <label for="to_location" class="form-label">To Location</label>
-        <select id="to_location" name="to_location" class="form-select" required>
-            <option value="" selected disabled>Select destination location</option>
-            {% for location in locations %}
-            <option value="{{ location }}">{{ location }}</option>
-            {% endfor %}
-        </select>
-    </div>
-    <div class="mb-3">
-        <label for="quantity" class="form-label">Quantity</label>
-        <input type="number" id="quantity" name="quantity" class="form-control" min="1" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Transfer</button>
-</form>
+</div>
 {% endblock %}

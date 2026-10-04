@@ -2,131 +2,103 @@
 {% load static %}
 {% block title %}Add Sale{% endblock %}
 
-{% block extra_css %}
-<style>
-  .scan-btn {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    border: none;
-    color: #fff;
-    transition: opacity .2s;
-  }
-  .scan-btn:hover { opacity: .88; color: #fff; }
-  .scanner-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: #f0f0ff;
-    border: 1.5px dashed #8b5cf6;
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-size: .82rem;
-    color: #5b21b6;
-    cursor: pointer;
-  }
-</style>
-{% endblock %}
-
 {% block body %}
-<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-    data-sidebar-position="fixed" data-header-position="fixed">
-    <div class="body-wrapper p-4">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="card shadow-sm rounded-4">
-                    <div class="card-header bg-primary text-white rounded-top-4 d-flex align-items-center justify-content-between">
-                        <h4 class="mb-0"><i class="ti ti-shopping-cart me-2"></i>Add Sale</h4>
-                        <!-- Scanner trigger -->
-                        <button type="button" class="btn scan-btn btn-sm d-flex align-items-center gap-1"
-                                id="openScannerBtn" title="Scan product barcode / QR">
-                            <i class="ti ti-scan fs-5"></i> Scan
-                        </button>
+<div class="container-fluid p-4">
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-7 col-md-9">
+            <div class="card shadow-sm rounded-4">
+                <div class="card-header bg-primary text-white rounded-top-4 d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0"><i class="ti ti-shopping-cart me-2"></i>Add Sale</h4>
+                    <button type="button" class="btn scan-btn btn-sm d-flex align-items-center gap-1"
+                            id="openScannerBtn" title="Scan product barcode / QR">
+                        <i class="ti ti-scan fs-5"></i> Scan
+                    </button>
+                </div>
+                <div class="card-body p-4">
+                    <!-- Scan result chip (hidden by default) -->
+                    <div id="scanResultChip" class="scanner-chip mb-3 d-none">
+                        <i class="ti ti-check-circle text-success"></i>
+                        <span id="scanResultText">Product found by scan</span>
+                        <button type="button" class="btn-close btn-sm ms-1" id="clearScanResult" style="font-size:.6rem"></button>
                     </div>
-                    <div class="card-body p-4">
 
-                        <!-- Scan result chip (hidden by default) -->
-                        <div id="scanResultChip" class="scanner-chip mb-3 d-none">
-                            <i class="ti ti-check-circle text-success"></i>
-                            <span id="scanResultText">Product found by scan</span>
-                            <button type="button" class="btn-close btn-sm ms-1" id="clearScanResult"
-                                    style="font-size:.6rem"></button>
+                    <form method="post">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {% for error in form.non_field_errors %}<p class="mb-0">{{ error }}</p>{% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <!-- Category filter -->
+                        <div class="mb-3" id="category-filter-group">
+                            <label for="category_filter" class="form-label fw-semibold">Filter by Category</label>
+                            <select id="category_filter" class="form-select">
+                                <option value="">-- All Categories --</option>
+                                {% for category in categories %}
+                                <option value="{{ category.id }}">{{ category.name }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
 
-                        <form method="post">
-                            {% csrf_token %}
-
-                            {% if form.non_field_errors %}
-                            <div class="alert alert-danger">
-                                {% for error in form.non_field_errors %}
-                                    <p class="mb-0">{{ error }}</p>
+                        <!-- Product -->
+                        <div class="mb-3">
+                            <label for="{{ form.product.id_for_label }}" class="form-label fw-semibold">
+                                Product <span class="text-danger">*</span>
+                            </label>
+                            <select name="{{ form.product.html_name }}" id="{{ form.product.id_for_label }}"
+                                class="form-select {% if form.product.errors %}is-invalid{% endif %}" required>
+                                <option value="">-- Select a product --</option>
+                                {% for choice in form.product.field.queryset %}
+                                <option value="{{ choice.pk }}"
+                                    data-category="{{ choice.category_id|default:'' }}"
+                                    {% if form.product.value == choice.pk|stringformat:"s" %}selected{% endif %}>
+                                    {{ choice }}
+                                </option>
                                 {% endfor %}
-                            </div>
-                            {% endif %}
+                            </select>
+                            {% for error in form.product.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="{{ form.product.id_for_label }}" class="form-label fw-semibold">
-                                    Product <span class="text-danger">*</span>
-                                </label>
-                                <select name="{{ form.product.html_name }}" id="{{ form.product.id_for_label }}"
-                                    class="form-select {% if form.product.errors %}is-invalid{% endif %}" required>
-                                    <option value="">-- Select a product --</option>
-                                    {% for choice in form.product.field.queryset %}
-                                    <option value="{{ choice.pk }}"
-                                        {% if form.product.value == choice.pk|stringformat:"s" %}selected{% endif %}>
-                                        {{ choice }}
-                                    </option>
-                                    {% endfor %}
-                                </select>
-                                {% for error in form.product.errors %}
-                                <div class="invalid-feedback">{{ error }}</div>
-                                {% endfor %}
-                            </div>
+                        <!-- Quantity -->
+                        <div class="mb-3">
+                            <label for="{{ form.quantity.id_for_label }}" class="form-label fw-semibold">
+                                Quantity <span class="text-danger">*</span>
+                            </label>
+                            <input type="number"
+                                name="{{ form.quantity.html_name }}"
+                                id="{{ form.quantity.id_for_label }}"
+                                class="form-control {% if form.quantity.errors %}is-invalid{% endif %}"
+                                value="{{ form.quantity.value|default:'' }}"
+                                min="1" required>
+                            {% for error in form.quantity.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="{{ form.quantity.id_for_label }}" class="form-label fw-semibold">
-                                    Quantity <span class="text-danger">*</span>
-                                </label>
+                        <!-- Price -->
+                        <div class="mb-3">
+                            <label for="{{ form.price.id_for_label }}" class="form-label fw-semibold">
+                                Price <span class="text-danger">*</span>
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text">&#8358;</span>
                                 <input type="number"
-                                    name="{{ form.quantity.html_name }}"
-                                    id="{{ form.quantity.id_for_label }}"
-                                    class="form-control {% if form.quantity.errors %}is-invalid{% endif %}"
-                                    value="{{ form.quantity.value|default:'' }}"
-                                    min="1"
-                                    required>
-                                {% for error in form.quantity.errors %}
-                                <div class="invalid-feedback">{{ error }}</div>
-                                {% endfor %}
+                                    name="{{ form.price.html_name }}"
+                                    id="{{ form.price.id_for_label }}"
+                                    class="form-control {% if form.price.errors %}is-invalid{% endif %}"
+                                    value="{{ form.price.value|default:'' }}"
+                                    step="0.01" min="0" required>
+                                {% for error in form.price.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="{{ form.price.id_for_label }}" class="form-label fw-semibold">
-                                    Price <span class="text-danger">*</span>
-                                </label>
-                                <div class="input-group">
-                                    <span class="input-group-text">₦</span>
-                                    <input type="number"
-                                        name="{{ form.price.html_name }}"
-                                        id="{{ form.price.id_for_label }}"
-                                        class="form-control {% if form.price.errors %}is-invalid{% endif %}"
-                                        value="{{ form.price.value|default:'' }}"
-                                        step="0.01"
-                                        min="0"
-                                        required>
-                                    {% for error in form.price.errors %}
-                                    <div class="invalid-feedback">{{ error }}</div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-
-                            <div class="d-flex gap-2 mt-4">
-                                <button type="submit" class="btn btn-primary flex-grow-1">
-                                    <i class="ti ti-check me-1"></i> Add Sale
-                                </button>
-                                <a href="{% url 'sales:index' %}" class="btn btn-outline-secondary">
-                                    Cancel
-                                </a>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="d-flex gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary flex-grow-1">
+                                <i class="ti ti-check me-1"></i> Add Sale
+                            </button>
+                            <a href="{% url 'sales:index' %}" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -135,57 +107,66 @@
 {% endblock %}
 
 {% block extra_js %}
-<!-- html5-qrcode library -->
 <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
-<!-- Shared scanner module -->
 <script src="{% static 'js/scanner.js' %}"></script>
 <script>
-  const BARCODE_LOOKUP_URL = "{% url 'products:barcode_lookup' %}";
+const BARCODE_LOOKUP_URL = "{% url 'products:barcode_lookup' %}";
 
-  document.getElementById('openScannerBtn').addEventListener('click', () => {
-    MamasScanner.open({
-      title: 'Scan Product Barcode',
-      onSuccess: (code) => lookupAndFill(code)
+// Category filter
+document.getElementById('category_filter').addEventListener('change', function () {
+    var catId = this.value;
+    var productSelect = document.getElementById('{{ form.product.id_for_label }}');
+    Array.from(productSelect.options).forEach(function (opt) {
+        if (!opt.value) return; // keep placeholder
+        opt.hidden = catId && opt.dataset.category !== catId;
     });
-  });
+    // Reset selection if hidden
+    if (productSelect.selectedOptions[0] && productSelect.selectedOptions[0].hidden) {
+        productSelect.value = '';
+    }
+});
 
-  function lookupAndFill(code) {
-    fetch(`${BARCODE_LOOKUP_URL}?code=${encodeURIComponent(code)}`)
-      .then(r => r.json())
-      .then(data => {
-        if (data.found) {
-          // Auto-select the product in the dropdown
-          const select = document.getElementById('{{ form.product.id_for_label }}');
-          if (select) {
-            const opt = [...select.options].find(o => o.value == data.id);
-            if (opt) {
-              select.value = data.id;
-              // Auto-fill price
-              const priceInput = document.getElementById('{{ form.price.id_for_label }}');
-              if (priceInput && !priceInput.value) priceInput.value = data.price;
+// Scanner
+document.getElementById('openScannerBtn').addEventListener('click', function () {
+    MamasScanner.open({
+        title: 'Scan Product Barcode',
+        onSuccess: function (code) { lookupAndFill(code); }
+    });
+});
+
+function lookupAndFill(code) {
+    fetch(BARCODE_LOOKUP_URL + '?code=' + encodeURIComponent(code))
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+            if (data.found) {
+                var select = document.getElementById('{{ form.product.id_for_label }}');
+                if (select) {
+                    var opt = Array.from(select.options).find(function (o) { return o.value == data.id; });
+                    if (opt) {
+                        select.value = data.id;
+                        var priceInput = document.getElementById('{{ form.price.id_for_label }}');
+                        if (priceInput && !priceInput.value) priceInput.value = data.price;
+                    }
+                }
+                showChip('Scanned: ' + data.name);
+            } else {
+                showChip('Code "' + code + '" not found. Fill in manually.', true);
             }
-          }
-          showChip(`Scanned: ${data.name}`);
-        } else {
-          showChip(`Code "${code}" — not found. Fill in manually.`, true);
-        }
-      })
-      .catch(() => showChip('Lookup failed. Fill in manually.', true));
-  }
+        })
+        .catch(function () { showChip('Lookup failed. Fill in manually.', true); });
+}
 
-  function showChip(text, warn = false) {
-    const chip = document.getElementById('scanResultChip');
-    const txt  = document.getElementById('scanResultText');
+function showChip(text, warn) {
+    var chip = document.getElementById('scanResultChip');
+    var txt = document.getElementById('scanResultText');
     txt.textContent = text;
     chip.classList.remove('d-none');
     chip.style.borderColor = warn ? '#f59e0b' : '#8b5cf6';
-    chip.querySelector('i').className = warn
-      ? 'ti ti-alert-triangle text-warning'
-      : 'ti ti-check-circle text-success';
-  }
+    chip.querySelector('i').className = warn ? 'ti ti-alert-triangle text-warning' : 'ti ti-check-circle text-success';
+}
 
-  document.getElementById('clearScanResult').addEventListener('click', () => {
+document.getElementById('clearScanResult').addEventListener('click', function () {
     document.getElementById('scanResultChip').classList.add('d-none');
-  });
+});
 </script>
 {% endblock %}
