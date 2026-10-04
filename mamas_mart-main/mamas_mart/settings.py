@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 from urllib.parse import urlparse
 
 from dotenv import load_dotenv # pyright: ignore[reportMissingImports]
@@ -44,7 +45,7 @@ vercel_hosts = [
     if os.environ.get(name, '').strip()
 ]
 ALLOWED_HOSTS = [
-    host.strip()
+    host.strip()                                                                                                                                                                                                                                            
     for host in os.environ.get(
         'ALLOWED_HOSTS',
         'mamasmart-seven.vercel.app'
@@ -137,30 +138,21 @@ SESSION_COOKIE_SECURE = USE_HTTPS
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-def _database_config_from_env():
-    database_url = os.getenv('DATABASE_URL')
-    if database_url:
-        parsed = urlparse(database_url)
-        return {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': parsed.path.lstrip('/'),
-            'USER': parsed.username or os.getenv('DB_USER', 'postgres'),
-            'PASSWORD': parsed.password or os.getenv('DB_PASSWORD', ''),
-            'HOST': parsed.hostname or os.getenv('DB_HOST', 'localhost'),
-            'PORT': str(parsed.port or os.getenv('DB_PORT', '5432')),
-        }
+DATABASE_URL = os.environ.get('DATABASE_URL')
 
-    return {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'mamas_mart'),
-        'USER': os.getenv('DB_USER', 'postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'Ocean$6000'),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '5432'),
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
 
 
-DATABASES = {'default': _database_config_from_env()}
 
 
 # Password validation
