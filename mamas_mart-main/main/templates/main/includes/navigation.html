@@ -2,7 +2,7 @@
 <aside class="left-sidebar flex-shrink-0">
     <div class="brand-logo d-flex align-items-center justify-content-between p-3">
         <a href="{% url 'main:index' %}" class="text-nowrap logo-img text-decoration-none">
-            <span class="fw-bold fs-5" style="color: #4f46e5; letter-spacing: 0.5px;">Mamas Mart</span>
+            <span class="fw-bold fs-5 brand-logo-text">Mamas Mart</span>
         </a>
         <button type="button" class="btn btn-link sidebar-toggle" aria-label="Toggle sidebar">
             <i class="ti ti-menu-2"></i>
@@ -19,16 +19,6 @@
                 class="ti ti-stack me-2"></i><span>Inventory</span></a>
         <a href="{% url 'sales:index' %}" class="nav-link sidebar-link"><i
                 class="ti ti-chart-bar me-2"></i><span>Sales</span></a>
-        <a href="{% url 'inventory:warehouse' %}" class="nav-link sidebar-link"><i
-                class="ti ti-building me-2"></i><span>Warehouse</span></a>
-        <a href="{% url 'inventory:supplier' %}" class="nav-link sidebar-link"><i
-                class="ti ti-truck me-2"></i><span>Suppliers</span></a>
-        <a href="{% url 'inventory:transfer_product' %}" class="nav-link sidebar-link"><i
-                class="ti ti-arrows-right-left me-2"></i><span>Transfer Product</span></a>
-        <a href="{% url 'inventory:stock' %}" class="nav-link sidebar-link"><i
-                class="ti ti-stack-2 me-2"></i><span>Stock</span></a>
-        <a href="{% url 'inventory:invoice' %}" class="nav-link sidebar-link"><i
-                class="ti ti-file-invoice me-2"></i><span>Invoice</span></a>
         <a href="{% url 'accounts:user_management' %}" class="nav-link sidebar-link"><i
                 class="ti ti-users me-2"></i><span>User Management</span></a>
         <a href="{% url 'accounts:profile' %}" class="nav-link sidebar-link"><i class="ti ti-user me-2"></i><span>My

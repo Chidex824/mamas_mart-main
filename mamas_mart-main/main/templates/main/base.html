@@ -12,116 +12,6 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <link rel="stylesheet" href="{% static 'css/sidebar-toggle.css' %}" />
     <link rel="stylesheet" href="{% static 'css/sidebar-submenu.css' %}">
-    <style>
-        .auth-layout {
-            display: block !important;
-            width: 100vw !important;
-            min-height: 100vh !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            overflow-x: hidden;
-        }
-        .auth-layout .body-wrapper {
-            margin-left: 0 !important;
-            padding: 0 !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            min-height: 100vh !important;
-        }
-        .header-dropdown-menu {
-            min-width: 320px;
-            max-width: 380px;
-            border-radius: 12px;
-            box-shadow: 0 12px 36px rgba(0,0,0,0.15);
-            border: 1px solid rgba(0,0,0,0.08);
-            padding: 0;
-            overflow: hidden;
-        }
-        .header-dropdown-header {
-            padding: 12px 16px;
-            background: #f8fafc;
-            border-bottom: 1px solid #edf2f7;
-        }
-        .header-dropdown-body {
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        .header-dropdown-footer {
-            padding: 10px 16px;
-            background: #f8fafc;
-            border-top: 1px solid #edf2f7;
-            text-align: center;
-        }
-        .header-item-row {
-            padding: 10px 16px;
-            border-bottom: 1px solid #f1f5f9;
-            transition: background 0.15s;
-            text-decoration: none;
-            display: block;
-            color: #334155;
-        }
-        .header-item-row:hover {
-            background: #f8fafc;
-            color: #1e293b;
-        }
-        .header-item-row.unread {
-            background: #f0f7ff;
-        }
-        .badge-count {
-            font-size: 0.65rem;
-            padding: 0.25em 0.5em;
-        }
-        /* Global Modal Fixes - Remove Dark Dimmed Backdrop Overlap & Transparent Inputs */
-        .modal-backdrop {
-            z-index: 1040 !important;
-            background-color: rgba(15, 23, 42, 0.4) !important;
-        }
-        .modal {
-            z-index: 1055 !important;
-        }
-        .modal-content {
-            background-color: #ffffff !important;
-            color: #0f172a !important;
-            border-radius: 16px !important;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
-            border: 1px solid rgba(0, 0, 0, 0.08) !important;
-            opacity: 1 !important;
-        }
-        .modal-header {
-            background-color: #f8fafc !important;
-            border-bottom: 1px solid #e2e8f0 !important;
-            color: #0f172a !important;
-        }
-        .modal-body {
-            background-color: #ffffff !important;
-            color: #0f172a !important;
-            opacity: 1 !important;
-        }
-        .modal-footer {
-            background-color: #f8fafc !important;
-            border-top: 1px solid #e2e8f0 !important;
-        }
-        .modal .form-control,
-        .modal .form-select,
-        .modal .input-group-text {
-            background-color: #ffffff !important;
-            color: #0f172a !important;
-            border: 1px solid #cbd5e1 !important;
-            opacity: 1 !important;
-        }
-        .modal .form-control:focus,
-        .modal .form-select:focus {
-            background-color: #ffffff !important;
-            color: #0f172a !important;
-            border-color: #6366f1 !important;
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15) !important;
-        }
-        .modal label,
-        .modal .form-label {
-            color: #1e293b !important;
-            font-weight: 600 !important;
-        }
-    </style>
     {% block extra_css %}{% endblock %}
 </head>
 
@@ -131,16 +21,17 @@
         {% block navigation %}
         {% include 'main/includes/navigation.html' %}
         {% endblock %}
+        <div class="sidebar-backdrop"></div>
         {% endif %}
         <div class="body-wrapper flex-grow-1" id="shared-content-wrapper">
             {% if request.user.is_authenticated %}
             <header
                 class="shared-header d-flex justify-content-between align-items-center gap-3 p-3 bg-white shadow-sm">
-                <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-2 gap-sm-3">
                     <button type="button" class="btn btn-light sidebar-toggle border-0 rounded-3 d-flex align-items-center justify-content-center p-2" aria-label="Toggle sidebar" title="Toggle sidebar">
                         <i class="ti ti-menu-2 fs-5"></i>
                     </button>
-                    <form class="d-flex gap-2" method="get" action="{% url 'products:product_list' %}" role="search">
+                    <form class="d-flex gap-2"  method="get" action="{% url 'products:product_list' %}" role="search">
                         <input class="form-control" name="search" type="search" placeholder="Search products..."
                             aria-label="Search products">
                         <button class="btn btn-outline-primary" type="submit" aria-label="Search">
@@ -182,8 +73,8 @@
                                         </div>
                                         <div class="flex-grow-1">
                                             <div class="fw-semibold small text-dark">{{ n.title }}</div>
-                                            <div class="text-muted small text-truncate" style="max-width: 250px;">{{ n.message }}</div>
-                                            <div class="text-muted" style="font-size: 0.72rem;">{{ n.created_at|timesince }} ago</div>
+                                            <div class="text-muted small text-truncate header-text-truncate">{{ n.message }}</div>
+                                            <div class="text-muted header-time-text">{{ n.created_at|timesince }} ago</div>
                                         </div>
                                     </div>
                                 </a>
@@ -223,10 +114,10 @@
                                         <div class="flex-grow-1">
                                             <div class="d-flex justify-content-between">
                                                 <span class="fw-semibold small text-dark">{{ m.sender.get_short_name|default:m.sender.username }}</span>
-                                                <span class="text-muted" style="font-size: 0.7rem;">{{ m.created_at|timesince }} ago</span>
+                                                <span class="text-muted header-time-text">{{ m.created_at|timesince }} ago</span>
                                             </div>
-                                            <div class="small text-dark fw-medium text-truncate" style="max-width: 250px;">{{ m.subject }}</div>
-                                            <div class="text-muted small text-truncate" style="max-width: 250px;">{{ m.body }}</div>
+                                            <div class="small text-dark fw-medium text-truncate header-text-truncate">{{ m.subject }}</div>
+                                            <div class="text-muted small text-truncate header-text-truncate">{{ m.body }}</div>
                                         </div>
                                     </div>
                                 </a>
@@ -244,21 +135,21 @@
                     <a href="{% url 'accounts:profile' %}"
                         class="d-flex align-items-center text-decoration-none text-dark p-1 rounded" title="View Profile">
                         {% if request.user.profile_picture %}
-                        <img src="{{ request.user.profile_picture.url }}" alt="Profile" class="rounded-circle me-2"
-                            width="40" height="40" style="object-fit: cover;">
+                        <img src="{{ request.user.profile_picture.url }}" alt="Profile" class="rounded-circle me-2 user-profile-img" width="40" height="40">
                         {% else %}
-                        <img src="{% static 'images/profile/user-1.jpg' %}" alt="Profile" class="rounded-circle me-2"
-                            width="40" height="40" style="object-fit: cover;">
+                        <img src="{% static 'images/profile/user-1.jpg' %}" alt="Profile" class="rounded-circle me-2 user-profile-img" width="40" height="40">
                         {% endif %}
                         <div class="d-none d-sm-block text-start">
-                            <span class="fw-semibold d-block text-dark" style="font-size: 0.9rem; line-height: 1.2;">{{ request.user.get_short_name|default:request.user.username }}</span>
-                            <small class="text-muted text-capitalize" style="font-size: 0.75rem;">{{ request.user.role.get_name_display|default:'Staff' }}</small>
+                            <span class="fw-semibold d-block text-dark user-name-text">{{ request.user.get_short_name|default:request.user.username }}</span>
+                            <small class="text-muted text-capitalize user-role-text">{{ request.user.role.get_name_display|default:'Staff' }}</small>
                         </div>
                     </a>
                 </div>
             </header>
             {% endif %}
-            {% block body %}{% endblock %}
+            {% block body %}
+            {% block content %}{% endblock %}
+            {% endblock %}
         </div>
     </div>
 
@@ -269,7 +160,7 @@
     <script src="{% static 'js/sidebarmenu.js' %}"></script>
     <script src="{% static 'js/sidebar-toggle.js' %}"></script>
     <script src="{% static 'js/app.min.js' %}"></script>
-    <div id="globalToastContainer" class="position-fixed top-0 end-0 p-3" style="z-index: 1090;"></div>
+    <div id="globalToastContainer" class="position-fixed top-0 end-0 p-3 toast-container-top-end"></div>
     <script>
         document.addEventListener('show.bs.modal', function (event) {
             const modal = event.target;
@@ -284,9 +175,8 @@
             const alertType = (type === 'danger' || type === 'error') ? 'danger' : (type === 'success' ? 'success' : 'info');
             const iconName = alertType === 'success' ? 'check' : (alertType === 'danger' ? 'alert-triangle' : 'info-circle');
             
-            alertDiv.className = `alert alert-${alertType} alert-dismissible fade show shadow-lg rounded-3 mb-2`;
+            alertDiv.className = `alert alert-${alertType} alert-dismissible fade show shadow-lg rounded-3 mb-2 toast-alert`;
             alertDiv.role = 'alert';
-            alertDiv.style.minWidth = '300px';
             alertDiv.innerHTML = `
                 <div class="d-flex align-items-center gap-2">
                     <i class="ti ti-${iconName} fs-5"></i>
