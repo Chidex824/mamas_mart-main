@@ -1,6 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "django",
+  "buildCommand": "pip install -r requirements.txt && cd mamas_mart-main && python manage.py migrate --noinput && python manage.py init_roles",
   "functions": {
     "mamas_mart-main/mamas_mart/wsgi.py": {
       "maxDuration": 60

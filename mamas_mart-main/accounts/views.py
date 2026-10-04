@@ -75,18 +75,29 @@ def register(request):
     2. Admin user logged in -> Can register new staff/admin accounts with explicit password & role.
     3. Non-admin visitor -> Access restricted notice indicating only administrators can issue credentials.
     """
-    is_first_user = User.objects.count() == 0
+    try:
+        is_first_user = User.objects.count() == 0
+    except Exception:
+        is_first_user = True
+
     is_admin = request.user.is_authenticated and (
         request.user.is_superuser or request.user.is_staff or (request.user.role and request.user.role.name == 'admin')
     )
 
     if not is_first_user and not is_admin:
+        try:
+            roles = Role.objects.all()
+        except Exception:
+            roles = []
         return render(request, 'accounts/register.html', {
             'is_allowed': False,
-            'roles': Role.objects.all(),
+            'roles': roles,
         })
 
-    roles = Role.objects.all()
+    try:
+        roles = Role.objects.all()
+    except Exception:
+        roles = []
 
     if request.method == 'POST':
         username = request.POST.get('username', '').strip()

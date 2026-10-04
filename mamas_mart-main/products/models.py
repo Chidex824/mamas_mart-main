@@ -4,8 +4,6 @@ from django.urls import reverse
 from django.utils import timezone
 from django.conf import settings
 
-from accounts.models import User
-
 User = settings.AUTH_USER_MODEL
 
 class Category(models.Model):
