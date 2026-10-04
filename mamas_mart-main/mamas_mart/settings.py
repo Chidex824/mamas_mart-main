@@ -200,7 +200,7 @@ STATICFILES_DIRS = [
 if DEBUG:
     staticfiles_backend = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 else:
-    staticfiles_backend = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    staticfiles_backend = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 STORAGES = {
     'default': {
