@@ -1,8 +1,8 @@
 import graphene
 from graphene_django import DjangoObjectType
 from datetime import datetime, timedelta
+from django.db.models import Sum, F
 from django.utils import timezone
-from products.models import Sale
 from sales.models import Sale as SaleModel
 
 class SaleType(graphene.ObjectType):
@@ -27,7 +27,7 @@ class Query(graphene.ObjectType):
         for sale in sales:
             result.append(SaleType(
                 date=sale.date.strftime('%Y-%m-%d'),
-                total_amount=sale.total_amount,
+                total_amount=float(sale.price * sale.quantity),
                 quantity=sale.quantity
             ))
         return result
@@ -44,7 +44,7 @@ class Query(graphene.ObjectType):
             month_sales = SaleModel.objects.filter(
                 date__year=date.year,
                 date__month=date.month
-            ).aggregate(total_amount_sum=graphene.Float())['total_amount_sum'] or 0
+            ).aggregate(total_amount_sum=Sum(F('price') * F('quantity')))['total_amount_sum'] or 0
 
             # For simplicity, expenses are set to 0 here; implement as needed
             month_expenses = 0

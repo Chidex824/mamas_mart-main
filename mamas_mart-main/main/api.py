@@ -91,33 +91,44 @@ def get_dashboard_data():
 def get_stock_report():
     """API to get stock report data"""
     products = Product.objects.all().values(
-        'id', 'name', 'product_id', 'price', 'category__name', 'stock', 'status'
+        'id', 'name', 'barcode', 'price', 'category__name', 'stock', 'is_available'
     )
     stock_list = []
     for p in products:
+        # Derive a display status from stock level and availability
+        if not p['is_available']:
+            status = 'Unavailable'
+        elif p['stock'] == 0:
+            status = 'Out of Stock'
+        elif p['stock'] <= 10:
+            status = 'Low Stock'
+        else:
+            status = 'In Stock'
+
         stock_list.append({
             'id': p['id'],
             'items': p['name'],
-            'product_id': p['product_id'],
+            'product_id': p['barcode'] or f'PRD-{p["id"]}',
             'price': p['price'],
             'category': p['category__name'],
             'quantity': p['stock'],
-            'status': p['status'],
+            'status': status,
         })
     return stock_list
 
 def get_top_selling_products():
     """API to get top selling products data"""
     sales = Sale.objects.values(
-        'date', 'product__name', 'product__product_id', 'price', 'quantity', 'total_amount'
+        'date', 'product__name', 'product__barcode', 'product__id',
+        'unit_price', 'quantity', 'total_amount'
     ).order_by('-date')[:10]
     top_selling_list = []
     for s in sales:
         top_selling_list.append({
             'date': s['date'].strftime('%d/%m/%Y') if s['date'] else '',
             'items': s['product__name'],
-            'product_id': s['product__product_id'],
-            'price': s['price'],
+            'product_id': s['product__barcode'] or f'PRD-{s["product__id"]}',
+            'price': s['unit_price'],
             'sales': s['quantity'],
             'earnings': s['total_amount'],
         })
