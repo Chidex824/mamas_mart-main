@@ -145,7 +145,7 @@ def _database_config_from_env():
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': parsed.path.lstrip('/'),
             'USER': parsed.username or os.getenv('DB_USER', 'postgres'),
-            'PASSWORD': parsed.password or os.getenv('DB_PASSWORD', ''),
+            'PASSWORD': parsed.password or os.getenv('DB_PASSWORD', 'Ocean$6000'),
             'HOST': parsed.hostname or os.getenv('DB_HOST', 'localhost'),
             'PORT': str(parsed.port or os.getenv('DB_PORT', '5432')),
         }
