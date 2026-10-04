@@ -7,6 +7,10 @@
         "maxLambdaSize": "15mb",
         "runtime": "python3.12"
       }
+    },
+    {
+      "src": "mamas_mart_static/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
